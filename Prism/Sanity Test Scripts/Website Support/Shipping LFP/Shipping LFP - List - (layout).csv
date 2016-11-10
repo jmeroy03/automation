@@ -1,0 +1,14 @@
+element_name_visble,element_name_location,element_label,element_location,element Field,column Name,column Location
+8,,14,,5,8,
+bread crumbs,css=ol.breadcrumb,Large Format Product,//div[@id='wid-id-18']/div/div/form/div[1]/label,//div[@id='wid-id-18']/div/div/form/div/div/div/div/a/span,Product ID,//th[1]
+Website Facility Override Icon,css=span.widget-icon > i.fa.fa-truck,Quantity Per Box,//div[@id='wid-id-18']/div/div/form/div[3]/label,//div[@id='wid-id-18']/div/div/form/div[3]/div/input,Website Code,//th[2]
+Website Facility Override label,css=h2,Box,//div[@id='wid-id-18']/div/div/form/div[4]/label,//div[@id='wid-id-18']/div/div/form/div[4]/div/div/a/span,Product Name,//th[3]
+Add to Shipping API,//div[3]/div/div/div/div[1]/form/div[5]/div/div/button,Package Type,//div[@id='wid-id-18']/div/div/form/div[2]/label,,Quantity Per Box,//th[4]
+Shipping Large Format Products Table,//div[@id='wid-id-18']/div/table,Boxed,//div[@id='wid-id-18']/div/div/form/div[2]/div/div/label/span,,Box ID,//th[5]
+Search Field,xpath=(//input[@type='text'])[5],Tube,//div[@id='wid-id-18']/div/div/form/div[2]/div/div/label[2]/span,,Action,//th[6]
+,,Website Support,css=ol.breadcrumb > li,,,
+,,Shipping LFP,//div[@id='ribbon']/ol/li[2],,,
+,,Manage Shipping Large Format Products,css=h2,,,
+,,Add to Shipping API,//div[3]/div/div/div/div[1]/form/div[5]/div/div/button,,,
+,,Previous,//div[@id='wid-id-18']/div/div[3]/div/div/button,,,
+,,Next,//div[@id='wid-id-18']/div/div[3]/div/div/button[2],,,

@@ -1,0 +1,9 @@
+element_name_visble,element_location,element_label_name,element_label_location
+9,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Store Credit Outstanding report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Store Credit Outstandingreport icon,css=span.widget-icon > i.fa.fa-table,Sales and Revenue,//div[@id='ribbon']/ol/li[3]
+Store Credit Outstanding Report label,css=h2,Store Credit Outstanding,//div[@id='ribbon']/ol/li[4]
+Select month and year section,css=section.col.col-3,Store Credit Outstanding Report,css=h2
+Select month and year label,css=label.label,Select month and year,css=label.label
+Select month and year datepicker,id=as_of_month_year,,

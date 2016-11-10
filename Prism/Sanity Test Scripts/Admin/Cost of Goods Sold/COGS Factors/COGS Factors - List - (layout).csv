@@ -1,0 +1,17 @@
+element_name_visble,element_name_location,element_label,element_location,column Name,column Location,Factor Code Visible,Factor name,add_element_name_visble,add_element_name_location,add_element_field_name_location,edit_element_name_visble,edit_element_name_location,edit_element_field_name_location
+17,,7,,4,,16,,12,,4,12,,4
+bread crumbs,css=ol.breadcrumb,Admin,css=ol.breadcrumb > li,Factor Code,//div[3]/div/section/div/article/div/div/div/div[2]/div/div[3]/div[2]/div/table/thead/tr[1]/th[1]/div,avg_gang_coverage,Average Gang Coverage (with respect to Sheet Area),Factor Code *,//div[3]/div/section/div/article/div/div/div/div/div/form/fieldset/div[1]/label,//div[3]/div/section/div/article/div/div/div/div/div/form/fieldset/div[1]/div/div/input,Factor Code,//div[3]/div/section/div/article/div/div/div/div/div/form/div[1]/label,//div[3]/div/section/div/article/div/div/div/div/div/form/div[1]/div/div/div/div
+COGS Factors Module,css=div.widget-body-toolbar,Cost Of Goods Sold,//div[@id='ribbon']/ol/li[2],Factor Name,//div[3]/div/section/div/article/div/div/div/div[2]/div/div[3]/div[2]/div/table/thead/tr[1]/th[2]/div,cost_per_gang,Cost per Gang,Factor Name *,//div[3]/div/section/div/article/div/div/div/div/div/form/fieldset/div[2]/label,//div[3]/div/section/div/article/div/div/div/div/div/form/fieldset/div[2]/div/div/input,Factor Name *,//div[3]/div/section/div/article/div/div/div/div/div/form/div[2]/label,//div[3]/div/section/div/article/div/div/div/div/div/form/div[2]/div/div/input
+COGS Factors Icon,css=span.widget-icon,COGS Factors,//div[@id='ribbon']/ol/li[3],,,cost_per_in,Cost per Inch,Add COGS Factor,css=h2,,Update,xpath=(//button[@type='button'])[3],
+COGS Factors label,css=h2,COGS Factors,css=h2,,,cost_per_pc,Cost per Piece,Save,//div[3]/div/section/div/article/div/div/div/div/div/div/div/div/button,,Update,//button[@type='submit button'],
+Add button,link=Add,Add,link=Add,,,cost_per_sq_in,Cost per Square Inch,Save,//div[3]/div/section/div/article/div/div/div/div/div/form/fieldset/div[4]/div/div/button[1],,Reset,css=div.col-md-12 > button.btn.btn-default,
+COGS Factors Table,id=gbox_jqGrid,,,,,cut_cost_per_k,Cut Cost per Cut Quantity,Reset,css=div.col-md-12 > button.btn.btn-default,,Back,xpath=(//button[@type='button'])[5],
+Pagination Section,id=jqGridPager_right,,,,,cut_qty,Cut Quantity,Back,xpath=(//button[@type='button'])[5],,Edit COGS Factor,css=h2,
+|<< button,css=span.fa.fa-fast-backward,,,,,cut_setup_cost,Cut Setup Cost,Admin,css=ol.breadcrumb > li,,Admin,css=ol.breadcrumb > li,
+<< button,css=span.fa.fa-backward,,,,,gutter,Sheet Gutter,Cost Of Goods Sold,//div[@id='ribbon']/ol/li[2],,Cost Of Goods Sold,//div[@id='ribbon']/ol/li[2],
+Page label,id=input_jqGridPager,,,,,no_sd,Number of Sides,COGS Factors,//div[@id='ribbon']/ol/li[3],,COGS Factors,//div[@id='ribbon']/ol/li[3],
+page input,css=input.ui-pg-input,,,,,run_qty,Run Quantity,,,,,,
+total no. of pages,id=sp_1_jqGridPager,,,,,setup_cost,Setup Cost,,,,,,
+>> button,css=span.fa.fa-forward,,,,,sheet_height,Sheet Height,,,,,,
+>>| button,css=span.fa.fa-fast-forward,,,,,sheet_width,Sheet Width,,,,,,
+no. of shown list dropdown,//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select,,,,,,,,,,,,

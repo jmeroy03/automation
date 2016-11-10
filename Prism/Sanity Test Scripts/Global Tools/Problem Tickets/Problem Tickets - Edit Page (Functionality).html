@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Problem Tickets - Edit Page (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Problem Tickets - Edit Page (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Uploading Files->-->
+<tr>
+	<td>type</td>
+	<td>css=input[type=&quot;file&quot;]</td>
+	<td>C:\Automation\Prism\Files for Testing\3019283_front_DHC_TEST_FILE.pdf</td>
+</tr>
+<!------Downloading Uploaded File------>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/tbody/tr/td[4]/button</td>
+	<td></td>
+</tr>
+<!--<-Adding Notes->-->
+<!----Selecting Random "job item" option---->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div[5]/div/div/div/div/ng-include/div/div/div/div/div/div[1]/form/div[1]/div/div/ul/li</td>
+	<td>totalJobItemOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalJobItemOptions</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div[5]/div/div/div/div/ng-include/div/div/div/div/div/div[1]/form/div[1]/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing Selected Job Item Option---->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/div/a/span</td>
+	<td>jobItemIdDropdown</td>
+</tr>
+<!----Inserting Notes---->
+<tr>
+	<td>click</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<!----Storing Notes Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/textarea</td>
+	<td>notesField</td>
+</tr>
+<!----Submitting Notes---->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[10]</td>
+	<td></td>
+</tr>
+<!--<-Checking of Notes->-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div</td>
+	<td></td>
+</tr>
+<!----Verifiy if content for selected jobitem is correct---->
+<tr>
+	<td>verifyText</td>
+	<td>css=span.text-primary</td>
+	<td>Job Item ${jobItemIdDropdown}</td>
+</tr>
+<!----Verifiy if content for selected Note Text is correct---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[4]</td>
+	<td>${notesField}</td>
+</tr>
+<!--<-Closing Problem Ticket->-->
+<tr>
+	<td>storeEval</td>
+	<td>$storedStatusFieldText == &quot;Closed&quot;</td>
+	<td>statusResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${statusResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset/h3/span[2]/a[2]</td>
+	<td></td>
+</tr>
+<!----Selecting a Test Manager---->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div/div[2]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>Edsel Quiachon${KEY_ENTER}</td>
+</tr>
+<!----Selecting a Test Issue---->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[2]/div[2]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>IMS/Website${KEY_ENTER}</td>
+</tr>
+<!----Selecting a Test Underlying Issue---->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[3]/div[2]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>Payment Error${KEY_ENTER}</td>
+</tr>
+<!----Selecting a Entering a test Notes on Investigation---->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[4]/div[2]/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[4]/div[2]/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<!----Submitting Manager Action---->
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset/h3/span[2]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<!--<-Closing Ticket->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<!--<-Verifying If ticket is closed->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[7]/div/span</td>
+	<td>Closed</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td>Reopen</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/div/div[2]/span[2]/span</td>
+	<td>Closed</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

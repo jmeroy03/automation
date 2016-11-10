@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Sample Request - Edit Page - filters UI (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Sample Request - Edit Page - filters UI (layout)</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Global Tools\Sample Requests\Sample Request - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageLayoutRowCount</td>
+	<td>2,11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageFieldRowCount</td>
+	<td>2,13</td>
+</tr>
+<!--<-Checking of element label if its correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},12</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageFieldRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},13</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing Selected and typed information from add to edit page->-->
+<!------Delivery Details------>
+<!----Company or Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[1]/div/span</td>
+	<td>${storedCompanyOrNameText}</td>
+</tr>
+<!----First Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[2]/div/span</td>
+	<td>${storedFirstNameText}</td>
+</tr>
+<!----Last Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[3]/div/span</td>
+	<td>${storedLastNameText}</td>
+</tr>
+<!----Email---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[4]/div/span</td>
+	<td>${storedEmailText}</td>
+</tr>
+<!----Phone---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[5]/div/span</td>
+	<td>${storedPhoneText}</td>
+</tr>
+<!----Address 1---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[6]/div/span</td>
+	<td>${storeAddressText}</td>
+</tr>
+<!----Address 2---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[7]/div/span</td>
+	<td>(None)</td>
+</tr>
+<!----City or Town---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[8]/div/span</td>
+	<td>${storeCityOrTownText}</td>
+</tr>
+<!----Country---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[9]/div/span</td>
+	<td>${storedCountryText}</td>
+</tr>
+<!----State or Province---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[10]/div/span</td>
+	<td>${storedStateOrProvinceText}</td>
+</tr>
+<!----Postal Code---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div/div/fieldset[2]/div[11]/div/span</td>
+	<td>${storedPostalCodeText}</td>
+</tr>
+<!------Sample Kits Details------>
+<!----Company---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[1]/div/span</td>
+	<td>${storedCompanyText}</td>
+</tr>
+<!----Website---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[2]/div/span</td>
+	<td>${storedWebsiteText}</td>
+</tr>
+<!----Date Requested---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[3]/div/span</td>
+	<td>${storedDateRequestText}</td>
+</tr>
+<!----Sample Kit Type---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[4]/div/span</td>
+	<td>${storedSampleKitTypeText}</td>
+</tr>
+<!----Status---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[5]/div/span</td>
+	<td>Open</td>
+</tr>
+<!----Comments---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[6]/div/span</td>
+	<td>${storedCommentsText}</td>
+</tr>
+<!----Date Sent---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[7]/div/span</td>
+	<td>(None)</td>
+</tr>
+<!----Tracking Code---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[8]/div/span</td>
+	<td>(None)</td>
+</tr>
+<!------Other Information------>
+<!----Industry---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[1]/div/span</td>
+	<td>${storedIndustryText}</td>
+</tr>
+<!----Subindustry---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[2]/div/span</td>
+	<td>${storedSubIndustryText}</td>
+</tr>
+<!----Designation---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[3]/div/span</td>
+	<td>${storedDesignationText}</td>
+</tr>
+<!----Where did you learn about us?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[4]/div/span</td>
+	<td>${storedWhereDidYouLearnAboutUsText}</td>
+</tr>
+<!----Products interested in?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[5]/div/span</td>
+	<td>${storedProductsInterestedInText}</td>
+</tr>
+<!----When is your next print job?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[6]/div/span</td>
+	<td>${storedWhenIsYourNextPrintJobText}</td>
+</tr>
+<!----How much printing do you do each year?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[7]/div/span</td>
+	<td>${storedHowMuchPrintingDoYouDoEachYearText}</td>
+</tr>
+<!----How many years have you been in business?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[8]/div/span</td>
+	<td>${storedHowMuchyearsYouHaveBeenInBusinessText}</td>
+</tr>
+<!----How many employees do you have?---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/form/div/div/div/fieldset[2]/div[9]/div/span</td>
+	<td>${storedHowManyEmployeesDoYouHaveText}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

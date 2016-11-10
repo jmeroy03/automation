@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Sample Request - Edit Page - Tagging as Sent (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Sample Request - Edit Page - Tagging as Sent (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Adding Notes->-->
+<!----Inserting Notes---->
+<tr>
+	<td>click</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<!----Storing Notes Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/textarea</td>
+	<td>notesField</td>
+</tr>
+<!----Submitting Notes---->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--<-Checking of Notes->-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div</td>
+	<td></td>
+</tr>
+<!----Verifiy if content for selected Note Text is correct---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td>${notesField}</td>
+</tr>
+<!--<-Tagging Sample Request as Sent->-->
+<!----Checking Status if still set as "Open"---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/div/div[2]/span/span</td>
+	<td>Open</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[5]/div/span</td>
+	<td>Open</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>Tag as Sent</td>
+</tr>
+<!--<-Tagging Sample Request as Sent->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!----Checking Status if Sample Request has been "Sent"---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/div/div[2]/span/span</td>
+	<td>Sent</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[5]/div/span</td>
+	<td>Sent</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td>Tag as NOT Sent</td>
+</tr>
+<!----Checking of Date sent If date has change from None to the current date it was sent---->
+<tr>
+	<td>verifyNotText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[7]/div/span</td>
+	<td>(None)</td>
+</tr>
+<!----Checking of Tracking Code has been generated---->
+<tr>
+	<td>verifyNotText</td>
+	<td>//div[@id='content']/div[3]/div[2]/form/div/div/div/fieldset[2]/div[8]/div/span</td>
+	<td>(None)</td>
+</tr>
+</tbody></table>
+</body>
+</html>

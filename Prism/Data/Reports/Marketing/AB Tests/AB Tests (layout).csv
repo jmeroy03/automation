@@ -1,0 +1,18 @@
+element_name_visble,element_location,element_label_name,element_label_location
+18,,10,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+AB Tests report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+AB Tests report icon,css=span.widget-icon > i.fa.fa-table,A/B Tests,//div[@id='ribbon']/ol/li[3]
+AB Tests Report label,css=h2,AB Tests Report,css=h2
+AB Test Section,//div[@id='filter']/form/fieldset/div/section,AB Test,css=label.control-label.label
+AB Test Label,css=label.control-label.label,AB Test Version ID,//div[@id='filter']/form/fieldset/div/section[2]/label
+AB Test dropdown,//div[@id='filter']/form/fieldset/div/section/label[2]/div/a/span,Start Datetime,//div[@id='filter']/form/fieldset/div/section[3]/label
+AB Test Version Section,//div[@id='filter']/form/fieldset/div/section[2],End Datetime,//div[@id='filter']/form/fieldset/div/section[4]/label
+AB Test Version Label,//div[@id='filter']/form/fieldset/div/section[2]/label,,
+AB Test Version dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/a/span,,
+Start Datetime Section,//div[@id='filter']/form/fieldset/div/section[3],,
+Start Datetime Label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Start Datetime Label,//div[@id='filter']/form/fieldset/div/section[3]/label[2],,
+End Datetime Section,//div[@id='filter']/form/fieldset/div/section[4],,
+End Datetime Label,//div[@id='filter']/form/fieldset/div/section[4]/label,,
+End Datetime Label,//div[@id='filter']/form/fieldset/div/section[4]/label[2],,

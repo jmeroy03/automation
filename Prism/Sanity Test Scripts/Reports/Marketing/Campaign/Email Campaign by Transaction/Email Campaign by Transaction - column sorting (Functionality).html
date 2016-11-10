@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job order - column sorting (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job order - column sorting (Functionality)</td></tr>
+</thead><tbody>
+<!--Connecting excel sheet to Selenium-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Marketing\Campaign\Email Campaign by Transaction\Email Campaign by Transaction columns (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_name_row_count</td>
+	<td>2,1</td>
+</tr>
+<!--Clicking column to see descending and ascending functionality-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${column_name_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_location</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

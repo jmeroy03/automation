@@ -1,0 +1,36 @@
+element_name_visble,element_name_location,element_label,element_location,column name
+36,,36,,17
+bread crumbs,css=ol.breadcrumb,Prepress,css=ol.breadcrumb > li,Website
+Batch Assignment Module,css=div.widget-body-toolbar,Batch Assignment,//div[@id='ribbon']/ol/li[2],Payment Status
+Batch Assignment Icon,css=span.widget-icon > i.fa.fa-list-alt,Batch Assignment,css=h2,Assigned To
+Batch Assignment label,css=h2,Proofing Category,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[1]/label,Invoice
+Proofing Category Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[1],[Clear],link=[Clear],Item
+Proofing Category Multiselect box,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[1]/label[2]/select,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section/label[2]/em,Product
+Website Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[2],Website,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[2]/label,Item Status
+Website Multiselect box,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[2]/label[2]/select,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]",Approved Date and Time
+Payment Status Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[3],(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[2]/label[2]/em,Gang By Date and Time
+Payment Status Multiselect box,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[3]/label[2]/select,Payment Status,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[3]/label,Proof By Date and Time
+Item Status Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[1],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]",Due Date
+Item Status MultiselectBox,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[1]/label[2]/select,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div/section[3]/label[2]/em,Turnaround
+Exclude Checkbox,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section/label/label/input,Item Status Exclude,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section/label,Paper / Material
+TurnAround Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[2]/label,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[4]",Custom Flag
+Turn Around dropdown,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[2]/label[2]/div/a/span,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section/label[2]/em,Is With Alert
+If With Open Alert Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[3]/label,Turnaround,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[2]/label,
+If With Open Alert dropdown,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[3]/label[2]/div/a/span,If With Open Alert,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[2]/section[3]/label,
+Proof By Date Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[1],Proof By Date,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[1]/label,
+Proof By Date DatePicker,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[1]/div/input,=,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[1]/div/span/div/a,
+Gang By Date Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[2],Gang By Date,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[2]/label,
+Gang By Date DatePicker,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[2]/div/input,=,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[2]/div/span/div/a,
+Due Date Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[3],Due Date,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[3]/label,
+Due Date DatePicker,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[3]/section[3]/label[2]/input,Product,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[1]/label,
+Product Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[1],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[5]",
+Product DatePicker,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[1]/label[2]/select,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[1]/label[2]/em,
+Paper / Material Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[2],Paper / Material,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[2]/label,
+Paper / Material DatePicker,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[2]/label[2]/select,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[6]",
+Assigned To Section,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[3],(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[2]/label[2]/em,
+Assigned To Dropdown,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[3]/label[2]/div/a/span,Assigned To,//div[@id='wid-id-18']/div/div/div/div/div/div/div/fieldset/div[4]/div/section[3]/label,
+Proofer User Types Section,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[1],Proofer User Types,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[1]/label,
+Proofer User Types MultiselectBox,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[1]/label[2]/select,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[7]",
+Proofers Section,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[2],Proofers,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[2]/label,
+Proofers MultiselectBox,//div[@id='wid-id-18']/div/div/div/div/div[2]/div[2]/form/fieldset/div/section[2]/label[2]/select,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[8]",
+Search button,//button[@value=''],Assign,//div[3]/div/div/div/div[1]/div/div/div[2]/div[2]/div/section/div/button,

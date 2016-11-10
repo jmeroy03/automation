@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Add Page (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Add Page (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Adding a File issue Category->-->
+<!--<-File Issue Category->-->
+<tr>
+	<td>store</td>
+	<td>File_Issue_category_</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=category_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=category_name</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing File Name Text---->
+<tr>
+	<td>storeValue</td>
+	<td>name=category_name</td>
+	<td>storedFileIssueCategoryText</td>
+</tr>
+<!--<-Hide Category Checkbox->-->
+<tr>
+	<td>click</td>
+	<td>css=label &gt; span.text-muted</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>storedHideCategoryCheckbox</td>
+</tr>
+<!--<-Verifying Save buttons has been enabled->-->
+<!------Save Button Header------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<!------Save Button Footer------>
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+<!--<-Saving Additional File Issue->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

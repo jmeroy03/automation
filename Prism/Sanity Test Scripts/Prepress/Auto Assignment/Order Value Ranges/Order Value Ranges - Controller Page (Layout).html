@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Associations - List Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Associations - List Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Prepress\Auto Assignment\Order Value Ranges\Order Value Ranges - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name_row_count</td>
+	<td>2,3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name_visible_row_count</td>
+	<td>2,1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_name_count</td>
+	<td>2,5</td>
+</tr>
+<!--<-Checking of element label if its correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${element_label_name_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},4</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${element_name_visible_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of Columns if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${column_name_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_name</td>
+	<td>${x},5</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_location</td>
+	<td>${x},6</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${column_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${column_location}</td>
+	<td>${column_name}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

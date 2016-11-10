@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../Global Functions/Re-usable Functions.html">Re-usable Functions</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - Redirection to page.html">Job order - Redirection to page</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - filters UI (layout).html">Job order - filters UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - filter selection(functionality).html">Job order - filter selection(functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - html report UI (layout).html">Job order - html report UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - column sorting (Functionality).html">Job order - column sorting (Functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - clear selected filter (functionality).html">Job order - clear selected filter (functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Job Orders/Job order - Generate Spread Sheet Report (functionality).html">Job order - Generate Spread Sheet Report (functionality)</a></td></tr>
+</tbody></table>
+</body>
+</html>

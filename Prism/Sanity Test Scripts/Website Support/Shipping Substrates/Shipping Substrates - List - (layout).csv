@@ -1,0 +1,15 @@
+element_name_visble,element_name_location,element_label,element_location,element Field,column Name,column Location
+7,,15,,8,7,
+bread crumbs,css=ol.breadcrumb,Attribute Value ID,//div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/form/div[1]/label,//div[@id='wid-id-18']/div/div/div/div/div/div[2]/form/div[1]/div/input,Value Attribute ID,//th[1]
+Website Facility Override Icon,css=span.widget-icon > i.fa.fa-dropbox,Box,//div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/form/div[2]/label,//div[@id='wid-id-18']/div/div/div/div/div/div[2]/form/div[2]/div/div/a/span,Box,//th[2]
+Website Facility Override label,css=h2,Max Length,//div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/form/div[3]/label,//div[@id='wid-id-18']/div/div/div/div/div/div[2]/form/div[3]/div/input,Max Length,//th[3]
+Shipping Substratses Table,//div[@id='wid-id-18']/div/div/table,Max Weight,//div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/form/div[4]/label,//div[@id='wid-id-18']/div/div/div/div/div/div[2]/form/div[4]/div/input,Max Weight,//th[4]
+Search Field,xpath=(//input[@type='text'])[5],New Value Attribute ID,//div[3]/div/div/div/div/div[1]/div[2]/div/div[2]/form/div[1]/label,//div[@id='wid-id-18']/div/div/div/div[2]/div/div[2]/form/div/div/input,Delete,//th[5]
+,,Existing Value Attribute ID,//div[3]/div/div/div/div/div[1]/div[2]/div/div[2]/form/div[2]/label,//div[@id='wid-id-18']/div/div/div/div[2]/div/div[2]/form/div[2]/div/div/a/span,,
+,,Website Support,css=ol.breadcrumb > li,,,
+,,Shipping Substrates,//div[@id='ribbon']/ol/li[2],,,
+,,Manage Shipping Substrates,css=h2,,,
+,,Save,//div[3]/div/div/div/div/div[1]/div[1]/div/div[3]/div/div/div/button,,,
+,,Copy,//div[3]/div/div/div/div/div[1]/div[2]/div/div[3]/div/div/div/button,,,
+,,Previous,//div[@id='wid-id-18']/div/div/div[3]/div/div/button,,,
+,,Next,//div[@id='wid-id-18']/div/div/div[3]/div/div/button[2],,,

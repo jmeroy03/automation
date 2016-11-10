@@ -1,0 +1,21 @@
+element_name_visble,element_name_location,element_label,element_location,column name
+21,,8,,6
+bread crumbs,css=ol.breadcrumb,Prepress,css=ol.breadcrumb > li,Job Item ID
+Files For Twist Processing Module,css=div.widget-body-toolbar,Files For Twist Processing,//div[@id='ribbon']/ol/li[2],Time in Queue
+Files For Twist Processing Icon,//div[@id='wid-id-1']/header/span/i,Files For Twist Processing,css=h2,Job Item Status
+Files For Twist Processing label,css=h2,Cancel Process,xpath=(//button[@type='button'])[3],Twist Status
+Files For Twist Processing Table,id=gbox_jqTwistItems,Resend Jobs,xpath=(//button[@type='button'])[4],
+Files For Twist Processing Total records label,//td[@id='twistGridPagerId_left']/div/strong,Refresh List,xpath=(//button[@type='button'])[5],
+Pagination Section,id=twistGridPagerId_right,,,
+|<< button,css=span.fa.fa-fast-backward,,,
+<< button,css=span.fa.fa-backward,,,
+Page label,id=input_twistGridPagerId,,,
+page input,css=input.ui-pg-input,,,
+total no. of pages,id=sp_1_twistGridPagerId,,,
+>> button,css=span.fa.fa-forward,,,
+>>| button,css=span.fa.fa-fast-forward,,,
+no. of shown list dropdown,//td[@id='twistGridPagerId_right']/table/tbody/tr/td[8]/select,,,
+Job item Search Field,//th[2]/div/table/tbody/tr/td[2]/input,,,
+Time in Queue Search Field,//th[3]/div/table/tbody/tr/td[2]/input,,,
+Job item Status Search Field,//th[4]/div/table/tbody/tr/td[2]/input,,,
+Twist Status Search Field,//th[5]/div/table/tbody/tr/td[2]/input,,,

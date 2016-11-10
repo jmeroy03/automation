@@ -1,0 +1,15 @@
+team_lead,dropdown_content,dropdown_label,department dropdown name,department dropdown location
+15,,,4,
+Grace,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li/label,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li/label,Prepress,//div[@id='wid-break-period']/div/div/div/div/div/div/div/ul/li[1]/label
+Joy,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[2]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[2]/label,Texas Art Team,//div[@id='wid-break-period']/div/div/div/div/div/div/div/ul/li[2]/label
+Michelle,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[3]/label,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[3]/label,,
+PPRISM,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[4]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[4]/label,,
+Rainier,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[5]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[5]/label,,
+Reggie,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[6]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[6]/label,,
+Richard,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[7]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[7]/label,,
+Rico,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[8]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[8]/label,,
+Ronald,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[9]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[9]/label,,
+Test Team,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[10]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[10]/label,,
+Texas Art Team,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[11]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[11]/label,,
+Topher,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[12]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[12]/label,,
+Vincent,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[13]/label/i,//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/ul/li[13]/label,,

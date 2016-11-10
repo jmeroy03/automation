@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job order - clear selected filter (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job order - clear selected filter (functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Returning to current date-->
+<tr>
+	<td>clickAt</td>
+	<td>id=end_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].cellIndex; }</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1 + ${current_column_date}</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current daw column count: ${current_column_date}</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].parentNode.rowIndex; }</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${current_row_date} - 1</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current row count: ${current_row_date}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td></td>
+</tr>
+<!--Returning to current date-->
+<tr>
+	<td>clickAt</td>
+	<td>id=start_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].cellIndex; }</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1 + ${current_column_date}</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current daw column count: ${current_column_date}</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].parentNode.rowIndex; }</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${current_row_date} - 1</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current daw row count: ${current_row_date}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td></td>
+</tr>
+<!--Clearing Selected filters-->
+<tr>
+	<td>click</td>
+	<td>link=[Clear]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[3]</td>
+	<td></td>
+</tr>
+<!--Checking of selected filters has been cleared-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

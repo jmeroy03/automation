@@ -1,0 +1,8 @@
+column_name,column_location,layout_name,layout_location,,
+8,,4,,,
+Date Ordered,id=jqgh_jqGrid_order_datetime,job orders table,id=gbox_jqGrid,, 
+Invoice No.,id=jqgh_jqGrid_job_order_id,pagination,css=div.ui-paging-info > strong,,
+Item No.,id=jqgh_jqGrid_job_item_id,,,,
+Website Code,id=jqgh_jqGrid_website_code,,,,
+Stock Image Cost,id=jqgh_jqGrid_stock_image_cost,,,,
+No. of Stock Images,id=jqgh_jqGrid_num_stock_images,,,,

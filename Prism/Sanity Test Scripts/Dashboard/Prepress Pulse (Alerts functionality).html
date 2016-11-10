@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Prepress Pulse (Alerts functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Prepress Pulse (Alerts functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//ul[@id='Tab']/li[4]/a</td>
+	<td></td>
+</tr>
+<!--Checking of available Buttons-->
+<!--Search field-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='alerts']/div/div/div/div/div/span</td>
+	<td></td>
+</tr>
+<!--Search functionality-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>dr trainees</td>
+</tr>
+<!--Checking of columns-->
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td>Alert ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td>Job Order ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td>Job Item ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td>Opened By</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td>Date Opened</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td>Alert Type</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td>Assigned To</td>
+</tr>
+<!--Column Sorting Checking-->
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Refresh Button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td>Refresh</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--redirected to tickets page-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>dr trainees</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'DR Trainees')])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroominc.com" />
+<title>Job order items - clear selected filter (functionality)</title>
+<style>
+.failed {color: red; background-color: #ffcccc;}
+.passed {color: green; background-color: #ccffcc;}
+.done {color: #404040; background-color: #ccffcc;}
+.comment {color: #404040; background-color: #d0d0d0;}
+body, table { font-family: Verdana, Arial, sans-serif; font-size: 12pt; }
+table { border-collapse: collapse; border: 1px solid #ccc; }
+th, td { padding-left: 0.3em; padding-right: 0.3em; border: 1px solid #ccc; }
+#suiteSummaryTable thead { font-size: 14pt; font-weight: 800; }
+.test_case thead { font-size: 14pt; font-weight: 400; }
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr><td colspan="4">Test case: Job order items - clear selected filter (functionality)</td></tr>
+</thead><tbody>
+<tr class="">
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Returning "to date" to current date</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//input[@id='to_date']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Returning "From date" to current date</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//input[@id='from_date']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Returning filters to default options</td>
+</tr>
+<tr class="">
+	<td>clickAt</td>
+	<td>//section[4]/label[2]/div/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>All${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[7]/label[2]/div/a/span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>All${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clearing Selected filters</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>link=[Clear]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[4]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of selected filters has been cleared</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

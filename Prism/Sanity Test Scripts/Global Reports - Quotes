@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../Global Functions/Re-usable Functions.html">Re-usable Functions</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - Redirection to page.html">Quotes - Redirection to page</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - filters UI (layout).html">Quotes - filters UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - filter selection(functionality).html">Quotes - filter selection(functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - html report UI (layout).html">Quotes - html report UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - column sorting (Functionality).html">Quotes - column sorting (Functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - clear selected filter (functionality).html">Quotes - clear selected filter (functionality)</a></td></tr>
+<tr><td><a href="Reports/Global Reports/Quotes/Quotes - Generate Spread Sheet Report (functionality).html">Quotes - Generate Spread Sheet Report (functionality)</a></td></tr>
+</tbody></table>
+</body>
+</html>

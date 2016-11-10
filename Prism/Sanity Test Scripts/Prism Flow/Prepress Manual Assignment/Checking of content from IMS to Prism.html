@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--<-Accessing Stored Job oder in Prism->-->
+<tr>
+	<td>clickAt</td>
+	<td>//header[@id='header']/div[3]/span/form/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input[type=&quot;text&quot;]</td>
+	<td>Job Orders${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=search_box</td>
+	<td>${storedJobOrderID}${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!------Checking if page has been redirected to Job Order Page------>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/job-order/${storedJobOrderID}</td>
+	<td></td>
+</tr>
+<!----Start of checking for Job Order header from Prism and IMS---->
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/section/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>rowCountPrism</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$section=1; $section&lt;=${rowCountPrism}; $section++</td>
+	<td></td>
+</tr>
+<!--<-Clicking First available Header->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header</td>
+	<td></td>
+</tr>
+<!------Storing Element If element is present------>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>itemHeader1</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>itemHeader2</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>itemHeader3</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>itemHeader4</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>itemHeader5</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>itemHeader6</td>
+</tr>
+<!------Checking for Elements in the header that are not present------>
+<tr>
+	<td>if</td>
+	<td>${itemHeader1} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][0]</td>
+	<td>jobItemIdArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>${jobItemIdArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader2} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][2]</td>
+	<td>jobItemStatusArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>${jobItemStatusArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader3} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][5]</td>
+	<td>jobItemTurnAroundArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>${jobItemTurnAroundArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader4} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approved_datetime</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proof_by_date</td>
+	<td>word_2</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]@ng-if</td>
+	<td>elementChecker</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>element_attribute</td>
+	<td>attribute=$elementChecker, attribute_2=$elementChecker, word_attr=$word, word_attr_2=$word_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approvedBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3][1]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>Approved By: ${approvedByArray}</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proofBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${approvedByArray}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader5} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader6} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6][1]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>Ship By: ${shipByArray}</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${shipByArrayy}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking parent item has a child item->-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section/ng-include/section/div/article/div/header</td>
+	<td>subItemHeader</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>$subItemHeader == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section/ng-include/section/div/article/div/header</td>
+	<td>subRowCountPrism</td>
+</tr>
+<!--<-Checking of content for Child item->-->
+<tr>
+	<td>for</td>
+	<td>$ctr=1; $ctr&lt;=${subRowCountPrism}; $ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$a++</td>
+	<td></td>
+</tr>
+<!--<-Clicking First available Header->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td></td>
+</tr>
+<!------Storing Element If element is present------>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>itemHeader1</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>itemHeader2</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>itemHeader3</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>itemHeader4</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>itemHeader5</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>itemHeader6</td>
+</tr>
+<!------Next Step for elements that are not present------>
+<tr>
+	<td>if</td>
+	<td>${itemHeader1} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][0]</td>
+	<td>jobItemIdArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>${jobItemIdArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader2} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][2]</td>
+	<td>jobItemStatusArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>${jobItemStatusArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader3} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][5]</td>
+	<td>jobItemTurnAroundArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>${jobItemTurnAroundArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader4} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approved_datetime</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proof_by_date</td>
+	<td>word_2</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]@ng-if</td>
+	<td>elementChecker</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>element_attribute</td>
+	<td>attribute=$elementChecker, attribute_2=$elementChecker, word_attr=$word, word_attr_2=$word_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approvedBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3][1]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>Approved By: ${approvedByArray}</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proofBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${approvedByArray}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader5} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader6} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6][1]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>Ship By: ${shipByArray}</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${shipByArrayy}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$a++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Storing Job Item ID Prism->-->
+<!------Job Item 1------>
+<tr>
+	<td>storeText</td>
+	<td>//section[1]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td>storedJobItemID1Text</td>
+</tr>
+<!------Job Item 2------>
+<tr>
+	<td>storeText</td>
+	<td>//section[2]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td>storedJobItemID2Text</td>
+</tr>
+<!------Job Item 3------>
+<tr>
+	<td>storeText</td>
+	<td>//section[3]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td>storedJobItemID3Text</td>
+</tr>
+<!------Job Item 4------>
+<tr>
+	<td>storeText</td>
+	<td>//section[4]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td>storedJobItemID4Text</td>
+</tr>
+</tbody></table>
+</body>
+</html>

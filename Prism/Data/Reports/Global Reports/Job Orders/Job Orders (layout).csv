@@ -1,0 +1,36 @@
+element_name_visble,element_location,element_label_name,element_label_location
+36,,20,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Job order report Form,//section[@id='widget-grid']/div/article,Global Reports,//div[@id='ribbon']/ol/li[2]
+Job order report icon,css=span.widget-icon > i.fa.fa-table,Job Orders,//div[@id='ribbon']/ol/li[3]
+Job Order Report label,css=h2,Job Order Report,css=h2
+from date section,css=section.col.col-4,From Date,css=label.label
+from date label,css=label.label,To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+from date datepicker,id=from_date,Date,//div[@id='filter']/form/fieldset/div/section[3]/label
+to date section,//div[@id='filter']/form/fieldset/div/section[2],Company,css=section.col.col-3 > label.label
+to date label,//div[@id='filter']/form/fieldset/div/section[2]/label,Website,//div[@id='filter']/form/fieldset[2]/div/section[2]/label
+to date datepicker,id=to_date,Status,//div[@id='filter']/form/fieldset[2]/div/section[3]/label
+Date dropdown section,//div[@id='filter']/form/fieldset/div/section[3],Origin,//div[@id='filter']/form/fieldset[2]/div/section[4]/label
+date label,//div[@id='filter']/form/fieldset/div/section[3]/label,Transaction Type,//div[@id='filter']/form/fieldset[2]/div/section[4]/label[3]
+date dropdown,css=#date_option_selection_chosen > a.chosen-single > span,[Clear],link=[Clear]
+company section,css=section.col.col-3,(No Selection = All),css=label.select.select-multiple > em
+company label,css=section.col.col-3 > label.label,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+company multiselect box,id=company_code,(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[2]/label[2]/em
+clear link,link=[Clear],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]"
+(No Selection = All),css=label.select.select-multiple > em,(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[3]/label[2]/em
+Website section,//div[@id='filter']/form/fieldset[2]/div/section[2],,
+Website label,//div[@id='filter']/form/fieldset[2]/div/section[2]/label,,
+website multiselect box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[2]/label[2]/em,,
+Status section,//div[@id='filter']/form/fieldset[2]/div/section[3],,
+status label,//div[@id='filter']/form/fieldset[2]/div/section[3]/label,,
+status multiselect box,id=job_order_status,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[3]",,
+(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[3]/label[2]/em,,
+origin & Transaction dropdown section,//div[@id='filter']/form/fieldset[2]/div/section[4],,
+origin label,//div[@id='filter']/form/fieldset[2]/div/section[4]/label,,
+origin dropdown,//div[@id='filter']/form/fieldset[2]/div/section[4]/label[2]/div/a/span,,
+Transaction Type label,//div[@id='filter']/form/fieldset[2]/div/section[4]/label[3],,
+Transaction Type dropdown,//div[@id='filter']/form/fieldset[2]/div/section[4]/label[4]/div/a/span,,
+Generate button section,css=div.btn-group.button-right,,

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Files For Process (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Files For Process (Layout)</td></tr>
+</thead><tbody>
+<!--<-Checking of available Layout in the File For Processing table->-->
+<!------Header text------>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@id='wid-id-1']/header/h2)[3]</td>
+	<td>Files For Processing</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-1']/header/h2)[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-1']/header/h2)[3]</td>
+	<td></td>
+</tr>
+<!------Buttons------>
+<!----Select Website Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@id='wid-id-1']/div/div/div/div/div/div/div/button)[2]</td>
+	<td>Select Website</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-1']/div/div/div/div/div/div/div/button)[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-1']/div/div/div/div/div/div/div/button)[2]</td>
+	<td></td>
+</tr>
+<!----Batch Assignment List Button---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div[2]/a</td>
+	<td>Batch Assignment List</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div[2]/a</td>
+	<td></td>
+</tr>
+<!----Batch Assignment List Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>Refresh</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<!------Files For Processing Chart------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#files-for-processing &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<!--<-Checking of website ->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@id='wid-id-1']/div/div/div/div/div/div/div/button)[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Files for Processing.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>webCtr</td>
+	<td>2,1</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${webCtr}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>webName</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/ul/li[${ctr}]/label</td>
+	<td>${webName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/ul/li[${ctr}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/ul/li[${ctr}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/ul/li[${ctr}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//div[@id='wid-id-1']/div/div/div/div/div/div/div/button)[2]</td>
+	<td></td>
+</tr>
+<!--<-Checking for Batch ASsignment Redirection->-->
+<tr>
+	<td>click</td>
+	<td>link=Batch Assignment List</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectPopUp</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!----Verifying if page has opened a new tab and was redirected correctly to Batch Assignment page---->
+<tr>
+	<td>selectWindow</td>
+	<td>PRiSM - Batch Assignment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/batch-jobs-list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

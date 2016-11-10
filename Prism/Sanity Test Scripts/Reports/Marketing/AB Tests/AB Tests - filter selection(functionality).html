@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job Orders</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job Orders</td></tr>
+</thead><tbody>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Selecting Filters-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td>calculator shipping${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td>53${KEY_ENTER}</td>
+</tr>
+<!--Checking of Start date & End date time values-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[2]</td>
+	<td>March 12, 2014 23:59:59</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[4]/label[2]</td>
+	<td>June 4, 2014 23:59:59</td>
+</tr>
+</tbody></table>
+</body>
+</html>

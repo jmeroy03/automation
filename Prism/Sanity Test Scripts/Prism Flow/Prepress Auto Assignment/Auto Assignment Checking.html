@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Auto Assignment Checking</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Auto Assignment Checking</td></tr>
+</thead><tbody>
+<!--<-Clearing already assigned Job Items from User->-->
+<tr>
+	<td>click</td>
+	<td>//span[@id='activity']/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='logo-group']/span[2]/span/div/div/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/div/div[1]/label[2]</td>
+	<td>Assignment (0)</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=button.btn.btn-success</td>
+	<td>startProofingChecker</td>
+</tr>
+<!--<-Checking if proofing button has been started proofing->-->
+<tr>
+	<td>storeEval</td>
+	<td>$startProofingChecker == &quot;Start Proofing&quot;</td>
+	<td>startProofingResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${startProofingResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>assignmentCountCounter</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>ASSIGNMENT VERIFICATION</td>
+	<td></td>
+</tr>
+<!--<-Verifying If job orders has been assigned to user->-->
+<!------Checking if the Alert Notification for assignment has appeared------>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/span/b</td>
+	<td>jobsAssignedNotification</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>$jobsAssignedNotification == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/span/b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='activity']/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='logo-group']/span[2]/span/div/div/label[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/span/b</td>
+	<td>noOfAssignedJobs</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/div/div[2]/ul/li/span</td>
+	<td>totalNoAssignment</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/div/div[2]/ul/li[1]/span@class</td>
+	<td>attribute</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var checker; var x = &quot;${attribute}&quot;; var n = x.match(/padding-10 unread/g);&nbsp;&nbsp;if (n == null) { checker = window.document.getElementsByClassName('padding-10 unread').length;attribute_checker = checker - 1;attribute_checker;&nbsp;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker = window.document.getElementsByClassName('padding-10 unread').length;attribute_checker;&nbsp;&nbsp;}</td>
+	<td>totalComputedAssigneedJobs</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='logo-group']/span[2]/span/div/div/label[2]</td>
+	<td>Assignment (${totalComputedAssigneedJobs})</td>
+</tr>
+<!--<-Redirecting to Assigned Job Order->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//ng-include[1]/header/div[1]/span[2]/span/div/div[2]/ul/li[1]/span/span/a@href</td>
+	<td>jobOrderID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['jobOrderID'].match(/\d+/);</td>
+	<td>jobOrderID</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='logo-group']/span[2]/span/div/div[2]/ul/li/span/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!------Checking of page redirection------>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/job-order/${jobOrderID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var uls = window.document.getElementsByClassName('notification-body'); var lis = uls[0].getElementsByTagName('li'); var x = lis[0].querySelectorAll('span span'); var y = x[0].innerText; var y1 = y.split(&quot; &quot;); console.log(y1.length); var y3 =[]; for (var i =0 ;i&lt;y1.length ; i++) {&nbsp;&nbsp;&nbsp;var y2 = y1[i].substring(0,7);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isNaN(y2))&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y3.push(y2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;} y3.sort();</td>
+	<td>storedAssignedJobItems</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var uls = window.document.getElementsByClassName('notification-body'); var lis = uls[0].getElementsByTagName('li'); var x = lis[0].querySelectorAll('span span'); var y = x[0].innerText; var y1 = y.split(&quot; &quot;); var y3 =[]; for (var i =0 ;i&lt;y1.length ; i++) {&nbsp;&nbsp;&nbsp;var y2 = y1[i].substring(0,7);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (!isNaN(y2))&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y3.push(y2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;} y3.length;</td>
+	<td>totalJobItemsAssigned</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='activity']/i</td>
+	<td></td>
+</tr>
+<!------Checking of job order no.------>
+<tr>
+	<td>verifyText</td>
+	<td>css=strong</td>
+	<td>JOB # 0${jobOrderID}</td>
+</tr>
+<!--<-Proceeding to refreshing of page to see if job orders has been assigned->-->
+<tr>
+	<td>for</td>
+	<td>$x=1; $x&lt;=${totalJobItemsAssigned}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>JOBITEM VERIFICATION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td>jobItemIdPrism</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$storedAssignedJobItems[${a}]</td>
+	<td>jobItemIDArray</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${jobItemIdPrism} == ${jobItemIDArray}</td>
+	<td>jobItemResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${jobItemResult} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>JOBITEM VERIFICATION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is green or has been assigned->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${ctr}]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${ctr}]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;Yes&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item has been assigned&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${ctr}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/span</td>
+	<td>Assigned to dri automation by System Admin </td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${ctr}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>$jobsAssignedNotification == false &amp;&amp; ${assignmentCountCounter} != 4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$assignmentCountCounter++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>goto</td>
+	<td>ASSIGNMENT VERIFICATION</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;There were no Job Item that has been assigned for this User, Manually check if the user has already a Job item assigned or a problem occurred in Job item assignment!&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('There were no Job Item that has been assigned for this User, Manually check if the user has already a Job item assigned or a problem occurred in Job item assignment!');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

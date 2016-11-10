@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>test2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test2</td></tr>
+</thead><tbody>
+<!--Waiting for HTML Report to appear-->
+<tr>
+	<td>pause</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Accounting\Sales and Revenue\Monthly\Monthly - Table Row (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>moduleCountColumn</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>columnModule</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>6</td>
+	<td>columnModulePath</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>click_count</td>
+	<td>2,1</td>
+</tr>
+<!--Start of looping for clicking menus nav-->
+<tr>
+	<td>for</td>
+	<td>$i=3; $i&lt;=${click_count}; $i++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>moduleCount</td>
+	<td>2,${moduleCountColumn}</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>clickModuleName</td>
+	<td>${i},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${row}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${clickModuleName}</td>
+	<td></td>
+</tr>
+<!--Checking of text, visibility of the menu nav and presence of the elements-->
+<tr>
+	<td>for</td>
+	<td>$row=3; $row&lt;=${moduleCount}; $row++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>moduleName</td>
+	<td>${row},${columnModule}</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>modulePath</td>
+	<td>${row},${columnModulePath}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${moduleName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${modulePath}</td>
+	<td>${moduleName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${modulePath}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${modulePath}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--End of 2nd loop and Start of incrementing values in excel sheet-->
+<tr>
+	<td>storeEval</td>
+	<td>2 + (${columnModule})</td>
+	<td>columnModule</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>2 + (${columnModulePath})</td>
+	<td>columnModulePath</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>2 + (${moduleCountColumn})</td>
+	<td>moduleCountColumn</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

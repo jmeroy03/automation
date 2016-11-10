@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job Orders</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job Orders</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Selecting date "From Date"-->
+<tr>
+	<td>click</td>
+	<td>id=from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>1</td>
+</tr>
+<!--Selecting date "To Date"-->
+<tr>
+	<td>click</td>
+	<td>id=to_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev &gt; span.fa.fa-chevron-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>31</td>
+</tr>
+<!--Selecting filters from multi select boxes-->
+<tr>
+	<td>addSelection</td>
+	<td>id=website_code</td>
+	<td>label=UPrinting</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;string:UP&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>id=website_code</td>
+	<td>label=Next Day Flyers</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>id=state_code</td>
+	<td>label=New York</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=option[value=&quot;string:NY&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>id=state_code</td>
+	<td>label=California</td>
+</tr>
+<!--Selecting Dropdown in the filter-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td>Digital Room, Inc.${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[4]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>Existing${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[3]/label[6]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>With Phone Number</td>
+</tr>
+<!--Entering domain in the Filter by Domain text box-->
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>@uprinting.com</td>
+</tr>
+<!--Generating HTML report-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

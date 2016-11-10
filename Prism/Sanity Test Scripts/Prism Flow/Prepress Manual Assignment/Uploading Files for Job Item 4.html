@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Uploading Files</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Uploading Files</td></tr>
+</thead><tbody>
+<!--<-Uploading files for third job order item->-->
+<!------Downloading files------>
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!----Checking if timer becomes Available---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<!------Selecting For Team Lead Checking as an upload option------>
+<tr>
+	<td>click</td>
+	<td>//label[3]/span</td>
+	<td></td>
+</tr>
+<!----Checking if File can not be processed checkbox---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//label[4]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//label[4]/span</td>
+	<td></td>
+</tr>
+<!----Clicking "File Cannot be processed. checkbox"-->
+<tr>
+	<td>click</td>
+	<td>//label[4]/span</td>
+	<td></td>
+</tr>
+<!----Checking if Add/Replace button has changed to submit button---->
+<tr>
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Submit</td>
+</tr>
+<!----Checking if Print File Button is not hidden---->
+<!------Print File Upload Button visible------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div/div/div[2]/div/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div/div/div[2]/div/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[2]/div/div/div[2]/div/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------Print File Label visible------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//h6</td>
+	<td></td>
+</tr>
+<!------No file uploaded Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div/div/div/div/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div/div/div/div/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<!----Checking if Proof Button is not hidden---->
+<!------Proof File Upload Button visible------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------Proof File Label visible------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<!------No file uploaded Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<!--<-Clicking Submit Button->-->
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<!------Setting Up issue Found & Fix-ups Done Scenario------>
+<!----Clicking "Issue Found & Fix-Ups Done." Radio Buttion---->
+<tr>
+	<td>click</td>
+	<td>//div/label[2]/span</td>
+	<td></td>
+</tr>
+<!----Selecting Variable Printing for category option---->
+<tr>
+	<td>clickAt</td>
+	<td>//form/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td>Variable${KEY_ENTER}</td>
+</tr>
+<!----Checking if File Issue Fix-up Remains Blank---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div[2]/div/div/div[2]/div</td>
+	<td></td>
+</tr>
+<!----Selecting Issue List---->
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/div/div/div/div/div/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/label/span</td>
+	<td></td>
+</tr>
+<!----Selecting File Issue Fix-up---->
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/div/div/label/span</td>
+	<td></td>
+</tr>
+<!----Storing Steps Field content---->
+<tr>
+	<td>verifyNotText</td>
+	<td>//div[3]/div/div/div[2]/div/div[2]/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Issues<br />Artwork has slices since it was converted on a lower version of compatibility on PDF 1.3. The current artwork is not centered and will produce uneven borders on the finished piece.<br />Repairs<br />Center artwork to produce even borders on the finished piece.<br />Next Steps<br />Please download and review your proof carefully. Please convert PDF to higher version compatibility PDF 1.7 to avoid slices. &quot;Please confirm centering of the design is acceptable to produce even borders on the finished piece. Approve the proof if everything is in order so we could proceed to printing. Otherwise, disapprove the proof and upload your replacement file. Please provide us with feedback if you disapprove the proof. You may send us instructions on how you want your file to be processed. Please print the PDF proof on actual size to check if the print qualities of the issue/s and repair/s made mentioned are acceptable. Shipping or pick-up date calculation will start once the proof is approved.</td>
+	<td>nextStepText4</td>
+</tr>
+<!--<-Submitting uploaded file using "Add/Replace" Button->-->
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td>pop_up_alert</td>
+</tr>
+<!--Verifying alert pop-up appears-->
+<tr>
+	<td>if</td>
+	<td>${pop_up_alert}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+</tr>
+<!--Verfiying if pop-up for found similar updates shows-->
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=h3.modal-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.modal-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Recheking Job item after uploading a file->-->
+<!--<-Checking if job item header color is light blue or not yet assigned for Job item 1->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[4]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[4]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Job Item ID------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span)[27]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span)[27]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span)[27]</td>
+	<td>${storedJobItemID4Text}</td>
+</tr>
+<!------Job Item Status------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[3])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[3])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[3])[4]</td>
+	<td>For Team Lead Checking</td>
+</tr>
+<!------Turn Around Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[5])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[5])[4]</td>
+	<td></td>
+</tr>
+<!------Proof By Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[7])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[7])[4]</td>
+	<td></td>
+</tr>
+<!------No additional Header Label------>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[9])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>xpath=(//div[@id='wid-id-0']/header/h2/strong/span[9])[4]</td>
+	<td></td>
+</tr>
+<!------Checking of the file that was uploaded------>
+<!----File---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div/img</td>
+	<td></td>
+</tr>
+<!----File name---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td>test_file_2.pdf</td>
+</tr>
+<!----Checking if timer becomes Un-available---->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<!----No Proof File Available---->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div[2]/div/img</td>
+	<td></td>
+</tr>
+<!----Assigned user image becomes Un-available---->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<!--<-Checking of Comments in notes->-->
+<!------Comment Section------>
+<tr>
+	<td>store</td>
+	<td>Issues<br /> • Artwork has slices since it was converted on a lower version of compatibility on PDF 1.3.<br />• The current artwork is not centered and will produce uneven borders on the finished piece.<br /> Repairs<br /> • Center artwork to produce even borders on the finished piece.<br /> Next Steps<br /> • Please download and review your proof carefully.<br />• Please convert PDF to higher version compatibility PDF 1.7 to avoid slices.<br />• &quot;Please confirm centering of the design is acceptable to produce even borders on the finished piece.<br />• Approve the proof if everything is in order so we could proceed to printing. Otherwise, disapprove the proof and upload your replacement file.<br />• Please provide us with feedback if you disapprove the proof. You may send us instructions on how you want your file to be processed.<br />• Please print the PDF proof on actual size to check if the print qualities of the issue/s and repair/s made mentioned are acceptable.<br />• Shipping or pick-up date calculation will start once the proof is approved.</td>
+	<td>storedNextStepsFieldText</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[2]</td>
+	<td>${storedNextStepsFieldText}</td>
+</tr>
+<!------Recent Uploader Print File Name------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td>${storedUploadedByTextItem5}</td>
+</tr>
+<!--<-Checking of Comments->-->
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Comment Section------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<!------Recent Uploader------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td>dri automation</td>
+</tr>
+<!------Job Item------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td>Job Item ${storedJobItemID4Text}</td>
+</tr>
+<!------Comment------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td>${nextStepText3}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

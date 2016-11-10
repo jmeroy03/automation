@@ -1,0 +1,9 @@
+element_name_visble,element_location,element_label_name,element_label_location
+9,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Net report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Net Revenue report icon,css=span.widget-icon > i.fa.fa-table,Sales and Revenue,//div[@id='ribbon']/ol/li[3]
+Net Revenue Report label,css=h2,Net Revenue,//div[@id='ribbon']/ol/li[4]
+Revenue Month section,css=section.col.col-3,Net Revenue Report,css=h2
+Revenue Month label,css=label.label,Revenue Month,css=label.label
+Revenue Month datepicker,id=month_year,,

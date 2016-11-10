@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div[2]/form/div[6]/div/div/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>randomCheckbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>if</td>
+	<td>${_result} == ${storedProductionText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;List page Stored Data and Edit page checkbox taly&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Add and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Add and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

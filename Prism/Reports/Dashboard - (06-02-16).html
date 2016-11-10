@@ -1,0 +1,2551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.failed {color: red; background-color: #ffcccc;}
+.passed {color: green; background-color: #ccffcc;}
+.done {color: #404040; background-color: #ccffcc;}
+.comment {color: #404040; background-color: #d0d0d0;}
+body, table { font-family: Verdana, Arial, sans-serif; font-size: 12pt; }
+table { border-collapse: collapse; border: 1px solid #ccc; }
+th, td { padding-left: 0.3em; padding-right: 0.3em; border: 1px solid #ccc; }
+#suiteSummaryTable thead { font-size: 14pt; font-weight: 800; }
+.test_case thead { font-size: 14pt; font-weight: 400; }
+</style>
+</head>
+<body>
+<table id="suiteSummaryTable" class="selenium">
+<thead><tr class="passed"><td>Test Suite: Admin Dashboard View</td></tr></thead>
+<tbody>
+<tr><td>Test cases: 19 total / <span class="passed">19</span> passed / <span class="failed">0</span> failed</td></tr>
+<tr><td>Commands: 372 total / <span class="passed">372</span> passed / <span class="failed">0</span> failed / <span class="skipped">0</span> skipped</td></tr>
+</tbody></table><br>
+<table id="suiteTable" class="selenium">
+<thead><tr><td>Index of test cases</td></tr></thead>
+<tbody>
+<tr class="done"><td><a href="#test0">Re-usable Functions</a></td></tr>
+<tr class="passed"><td><a href="#test1">Hourly HeartBeat</a></td></tr>
+<tr class="passed"><td><a href="#test2">Hourly HeartBeat (functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test3">Hourly HeartBeat (functionality tabs)</a></td></tr>
+<tr class="done"><td><a href="#test4">Hourly HeartBeat (Date by filter)</a></td></tr>
+<tr class="passed"><td><a href="#test5">Cumulative Hourly Heartbeat</a></td></tr>
+<tr class="passed"><td><a href="#test6">Cumulative Hourly Heartbeat (functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test7">Cumulative Hourly Heartbeat (functionality tabs)</a></td></tr>
+<tr class="done"><td><a href="#test8">Cumulative Hourly Heartbeat (Date by filter)</a></td></tr>
+<tr class="passed"><td><a href="#test9">Current Assigned Items</a></td></tr>
+<tr class="done"><td><a href="#test10">Current Assigned Items (functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test11">Break Periods</a></td></tr>
+<tr class="passed"><td><a href="#test12">Break Periods (functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test13">Prepress Pulse</a></td></tr>
+<tr class="passed"><td><a href="#test14">Prepress Pulse (Available Proofers functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test15">Prepress Pulse (Tickets functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test16">Prepress Pulse (Alerts functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test17">Search panel</a></td></tr>
+<tr class="passed"><td><a href="#test18">left panel (admin view)(layout)</a></td></tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test0"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Re-usable Functions</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4"><-Setting Environment-></td>
+</tr>
+<tr class="done">
+	<td>function</td>
+	<td>Environment</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>open</td>
+	<td>http://${env}.digitalroominc.com/</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test1"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Hourly HeartBeat</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking if hourly heart beat graph is visible and showing correct UI</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=h1.page-title.txt-color-blueDark</td>
+	<td>Dashboard &gt; My Dashboard</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=h2</td>
+	<td>Hourly Heartbeat</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/span/i</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>id=widget-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of tab if UI appears</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Orders Tab</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Orders</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=span.hidden-mobile.hidden-tablet</td>
+	<td>Orders</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-shopping-cart</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Sales Tab</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Sales</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//ul[@id='Tab']/li[2]/a/span</td>
+	<td>Sales</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-dollar</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">AOV Tab</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=AOV</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//ul[@id='Tab']/li[3]/a/span</td>
+	<td>AOV</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-dollar</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Buttons</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div[2]/div/button</td>
+	<td>Filter by Website</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div[2]/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>link=Generate Report</td>
+	<td>Generate Report</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Generate Report</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test2"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Hourly HeartBeat (functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Click the Filter by website button Checking</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div[2]/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>Uprinting</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=gra-UP</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li/label</td>
+	<td>UPrinting</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=text.highcharts-subtitle &gt; tspan</td>
+	<td>Websites: UP</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Looping test for dropdown contents as well as label website checking</td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Hourly_Loop_filter_by_website.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=1;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>while</td>
+	<td>row&lt;=16</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>web_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>website</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>web_value</td>
+	<td>${x},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>dropdown_name</td>
+	<td>${x},4</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${web_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${dropdown_name}</td>
+	<td>${web_name}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${website}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${web_value}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=text.highcharts-subtitle &gt; tspan</td>
+	<td>${web_value}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test3"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Hourly HeartBeat (functionality tabs)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=text.highcharts-title &gt; tspan</td>
+	<td>Hourly Heartbeat (Total Orders)</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Sales</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#highcharts-18 &gt; svg &gt; text.highcharts-title &gt; tspan</td>
+	<td>Hourly Heartbeat (Total Sales)</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=AOV</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#highcharts-22 &gt; svg &gt; text.highcharts-title &gt; tspan</td>
+	<td>Hourly Heartbeat (Total AOVs)</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Orders</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=text.highcharts-title &gt; tspan</td>
+	<td>Hourly Heartbeat (Total Orders)</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test4"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Hourly HeartBeat (Date by filter)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div/div/div/ul/li/div/div/table/tbody/tr/td[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clicking and selecting date in the date picker</td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking Hourly Heartbeat if its collapsable</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clicking Generating report button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate Report</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test5"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Cumulative Hourly Heartbeat</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking if hourly heart beat graph is visible and showing correct UI</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#wid-id-1 &gt; header &gt; h2</td>
+	<td>Cumulative Hourly Heartbeat</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/header/span/i</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>id=wid-id-1</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>id=widget-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of tab if UI appears</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Orders Tab</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/header/ul/li/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/header/ul/li/a/span</td>
+	<td>Orders</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/header/ul/li/a/i</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Sales Tab</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/header/ul/li[2]/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/header/ul/li[2]/a/span</td>
+	<td>Sales</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/header/ul/li[2]/a/i</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Buttons</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/button</td>
+	<td>Filter by Website</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//a[contains(text(),'Generate Report')])[2]</td>
+	<td>Generate Report</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Generate Report')])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test6"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Cumulative Hourly Heartbeat (functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Click the Filter by website button Checking</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>Uprinting</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=gra-UP</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/ul/li/label</td>
+	<td>UPrinting</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Looping test for dropdown contents as well as label website checking</td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Cumulative_Loop_filter_by_website.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=1;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>while</td>
+	<td>row&lt;=16</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>web_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>website</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>web_value</td>
+	<td>${x},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>dropdown_name</td>
+	<td>${x},4</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${web_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${dropdown_name}</td>
+	<td>${web_name}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${website}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${web_value}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test7"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Cumulative Hourly Heartbeat (functionality tabs)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#widget-grid2 svg &gt; text.highcharts-title&gt; tspan</td>
+	<td>Hourly Heartbeat (Total Orders)</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/header/ul/li[2]/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/header/ul/li/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#widget-grid2 svg &gt; text.highcharts-title&gt; tspan</td>
+	<td>Hourly Heartbeat (Total Orders)</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test8"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Cumulative Hourly Heartbeat (Date by filter)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clicking and selecting date in the date picker</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/ul/li/div/div/table/tbody/tr/td[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clicking Generating report button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Generate Report')])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test9"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Current Assigned Items</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Verifying if the Current Assigned Items table is available</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of layout for Current Assigned Items</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-1 &gt; header &gt; h2</td>
+	<td>Current Assigned Items</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-bar-chart</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking layout Buttons</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td>View All</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div/button</td>
+	<td>Select Team</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td>Select User</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>Refresh</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of columns in the current assigned items table</td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\current_assigned_items_table.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=2;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>while</td>
+	<td>row&lt;=12</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>col_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>html_column</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${col_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${html_column}</td>
+	<td>${col_name}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${html_column}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_gridCurrentAssignedItems_prepress_agent</td>
+	<td>Agent</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test10"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Current Assigned Items (functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">collapse button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-1 &gt; header &gt; div.jarviswidget-ctrls &gt; a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-1 &gt; header &gt; div.jarviswidget-ctrls &gt; a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">View all button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">select team button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=cat-103</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=cat-109</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Select User button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=cau-2411</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=cau-2399</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">pagination</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.fa.fa-forward</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.fa.fa-fast-forward</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.fa.fa-backward</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=first_currentAssignedItemsPager</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">refresh button</td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test11"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Break Periods</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Verifying if the Break Periods table is available</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=#break-period &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>css=#break-period &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of layout for Break Periods</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#wid-break-period &gt; header &gt; h2</td>
+	<td>Break Periods</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-clock-o</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">select team button</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td>Select Team</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Break periods table & column</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=div.container-fluid &gt; strong</td>
+	<td>On Break</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=th.text-center</td>
+	<td>Proofer Name</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div/div/div/table/thead/tr/th[2]</td>
+	<td>Running Time</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/strong</td>
+	<td>On Lunch</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/div/table/thead/tr/th</td>
+	<td>Proofer Name</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/div/table/thead/tr/th[2]</td>
+	<td>Running Time</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test12"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Break Periods (functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Select Team Dropdown Contents</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\break_periods_table.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=2;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>while</td>
+	<td>row&lt;=12</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>team_lead</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>dropdown_content</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>dropdown_label</td>
+	<td>${x},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${team_lead}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${dropdown_label}</td>
+	<td>${team_lead}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${dropdown_content}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Break Periods collapsable button</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=#wid-break-period &gt; header &gt; div.jarviswidget-ctrls &gt; a.button-icon.jarviswidget-toggle-btn &gt; i.fa.fa-minus </td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=i.fa.fa-plus</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test13"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Prepress Pulse</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Verfying if the Prepress Pulse is visible</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">UI Tabs</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Pulse tabs</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Pulse</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-0 &gt; header &gt; #Tab &gt; li.active &gt; a &gt; span.hidden-mobile.hidden-tablet</td>
+	<td>Pulse</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-heartbeat</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Available Proofers tabs</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Available Proofers</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//ul[@id='Tab']/li[2]/a/span)[2]</td>
+	<td>Available Proofers</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-users</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Tickets tabs</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>link=Tickets</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//ul[@id='Tab']/li[3]/a/span)[2]</td>
+	<td>Tickets</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//ul[@id='Tab']/li[3]/a/i)[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Alerts tabs</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//ul[@id='Tab']/li[4]/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//ul[@id='Tab']/li[4]/a/span</td>
+	<td>Alerts</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//ul[@id='Tab']/li[4]/a/i</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Buttons</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Select team buttons</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='pulse']/div/div/div/div/div/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='pulse']/div/div/div/div/div/button</td>
+	<td>Select Team</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Select User button</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[2]/button</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[2]/button</td>
+	<td>Select User</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Refresh button</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td>Refresh</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test14"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Prepress Pulse (Available Proofers functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//ul[@id='Tab']/li[2]/a/span)[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of available Buttons</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search field</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>css=span.input-group-addon</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search functionality</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>prepress 2</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of columns</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th</td>
+	<td>Prepress Agent</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[2]</td>
+	<td>Status</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[3]</td>
+	<td>Start Proofing Date and Time</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[4]</td>
+	<td>Proofer Type</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[5]</td>
+	<td>Stop Proofing</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Refresh Button</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>Refresh</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test15"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Prepress Pulse (Tickets functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Tickets</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of available Buttons</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search field</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='tickets']/div/div/div/div/div/span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search functionality</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>assigned</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of columns</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td>Problem Ticket ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td>Ticket Status</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td>Job Order ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td>Job Item ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td>Opened By</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td>Date Opened</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_category_problem</td>
+	<td>Underlying Cause</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Column Sorting Checking</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_jqGrid_category_problem</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Refresh Button</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td>Refresh</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">redirected to tickets page</td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>new</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=td[title=&quot;New&quot;] &gt; a</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test16"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Prepress Pulse (Alerts functionality)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//ul[@id='Tab']/li[4]/a</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of available Buttons</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search field</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>//div[@id='alerts']/div/div/div/div/div/span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Search functionality</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>dr trainees</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of columns</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td>Alert ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td>Job Order ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td>Job Item ID</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td>Opened By</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td>Date Opened</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td>Alert Type</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td>Assigned To</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Column Sorting Checking</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_order_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_item_id</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_opened_by</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_datetime_opened</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_alert_type</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=jqgh_alertsJqGrid_assigned_to</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Refresh Button</td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td>Refresh</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">redirected to tickets page</td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>dr trainees</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'DR Trainees')])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test17"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Search panel</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Header\search_panel.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>store</td>
+	<td>KEY_ENTER</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Storing "enter" key as variable</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Selecting and testing Search panel</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$row=3; $row&lt;=9; $row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>search_options</td>
+	<td>${row},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>user_input</td>
+	<td>${row},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>page_url</td>
+	<td>${row},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>layout_id</td>
+	<td>${row},4</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>id_element</td>
+	<td>${row},5</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${search_options}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>clickAt</td>
+	<td>css=div &gt; b</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>css=input[type=&quot;text&quot;]</td>
+	<td>${search_options}${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>css=a.chosen-single &gt; span</td>
+	<td>${search_options}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>css=a.chosen-single &gt; span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>id=search_box</td>
+	<td>${user_input}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=div.input-group-btn &gt; button.btn.btn-default</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyNotLocation</td>
+	<td>http://qaprism.digitalroominc.com/#/404</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyLocation</td>
+	<td>${page_url}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${id_element}</td>
+	<td>${layout_id}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${id_element}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${id_element}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test18"></a><table class="test_case"><thead><tr><td colspan="4">Test case: left panel (admin view)(layout)</td></tr></thead><tbody><tr class="done">
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Left Panel\left_panel.csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>4</td>
+	<td>moduleCountColumn</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>4</td>
+	<td>columnModule</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>5</td>
+	<td>columnModulePath</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Start of looping for clicking menus nav</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$i=3; $i&lt;=25; $i++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>moduleCount</td>
+	<td>2,${moduleCountColumn}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>clickModuleName</td>
+	<td>${i},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${row}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${clickModuleName}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of text, visibility of the menu nav and presence of the elements</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$row=3; $row&lt;=${moduleCount}; $row++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>moduleName</td>
+	<td>${row},${columnModule}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>modulePath</td>
+	<td>${row},${columnModulePath}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${moduleName}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${modulePath}</td>
+	<td>${moduleName}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${modulePath}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${modulePath}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">End of 2nd loop and Start of incrementing values in excel sheet</td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>2 + (${columnModule})</td>
+	<td>columnModule</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>2 + (${columnModulePath})</td>
+	<td>columnModulePath</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>2 + (${moduleCountColumn})</td>
+	<td>moduleCountColumn</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+</body></html>

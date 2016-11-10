@@ -1,0 +1,50 @@
+element_name_visble,element_location,element_label_name,element_label_location
+50,,26,
+Bread Crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Job order items report Form,//section[@id='widget-grid']/div/article,Global Reports,//div[@id='ribbon']/ol/li[2]
+Job order items report icon,css=span.widget-icon,Job Order Items,//div[@id='ribbon']/ol/li[3]
+Job Order items Report label,css=h2,Job Order Items Report,css=h2
+Date section,css=section.col.col-3,Date,css=label.label
+Date label,css=label.label,From Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+Date dropdown,//div[@id='filter']/form/fieldset/div/section/label[2]/div/a/span,To Date,//div[@id='filter']/form/fieldset/div/section[3]/label
+From Date Section,//div[@id='filter']/form/fieldset/div/section[2],Type,//div[@id='filter']/form/fieldset/div/section[4]/label
+From Date label,//div[@id='filter']/form/fieldset/div/section[2]/label,Paper,//div[@id='filter']/form/fieldset/div/section[5]/label
+From Date date picker,id=from_date,Printed Side,//div[@id='filter']/form/fieldset/div/section[6]/label
+To Date Section,//div[@id='filter']/form/fieldset/div/section[3],Weight,//div[@id='filter']/form/fieldset/div/section[7]/label
+To Date label,//div[@id='filter']/form/fieldset/div/section[3]/label,View Paper & Printed Side,//div[@id='filter']/form/fieldset/div/section[8]/label
+To Date date picker,id=to_date,Company,//div[@id='filter']/form/fieldset/div/section[9]/label
+Type Section,//div[@id='filter']/form/fieldset/div/section[4],[Clear],link=[Clear]
+Type label,//div[@id='filter']/form/fieldset/div/section[4]/label,(No Selection = All),css=label.select.select-multiple > em
+Type dropdown,//div[@id='filter']/form/fieldset/div/section[4]/label[2]/div/a/span,Website,//div[@id='filter']/form/fieldset/div/section[10]/label
+Paper section,//div[@id='filter']/form/fieldset/div/section[5],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+Paper label,//div[@id='filter']/form/fieldset/div/section[5]/label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[10]/label[2]/em
+Paper dropdown,//div[@id='filter']/form/fieldset/div/section[5]/label[2]/div/a,Product,//div[@id='filter']/form/fieldset/div/section[11]/label
+Printed side section,//div[@id='filter']/form/fieldset/div/section[6],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]"
+printed side label,//div[@id='filter']/form/fieldset/div/section[6]/label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[11]/label[2]/em
+printed side dropdown,//div[@id='filter']/form/fieldset/div/section[6]/label[2]/div/a,Status,//div[@id='filter']/form/fieldset/div/section[12]/label
+weight section,//div[@id='filter']/form/fieldset/div/section[7],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[4]"
+weight label,//div[@id='filter']/form/fieldset/div/section[7]/label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[12]/label[2]/em
+weight dropdown,//div[@id='filter']/form/fieldset/div/section[7]/label[2]/div/a,,
+view paper & printed side section,//div[@id='filter']/form/fieldset/div/section[8],,
+view paper & printed side label,//div[@id='filter']/form/fieldset/div/section[8]/label,,
+view paper & printed side dropdown,//div[@id='filter']/form/fieldset/div/section[8]/label[2]/div/a/span,,
+Company section,//div[@id='filter']/form/fieldset/div/section[9],,
+Company label,//div[@id='filter']/form/fieldset/div/section[9]/label,,
+company multiselect box,id=company_code,,
+clear link,link=[Clear],,
+(No Selection = All) label,css=label.select.select-multiple > em,,
+website section,//div[@id='filter']/form/fieldset/div/section[10],,
+Website label,//div[@id='filter']/form/fieldset/div/section[10]/label,,
+website multiselect box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div/section[10]/label[2]/em,,
+product section,//div[@id='filter']/form/fieldset/div/section[11],,
+Product label,//div[@id='filter']/form/fieldset/div/section[11]/label,,
+product multiselect box,id=product,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[3]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div/section[11]/label[2]/em,,
+Status section,//div[@id='filter']/form/fieldset/div/section[12],,
+Status label,//div[@id='filter']/form/fieldset/div/section[12]/label,,
+status multiselect  box,id=status,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[4]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div/section[12]/label[2]/em,,

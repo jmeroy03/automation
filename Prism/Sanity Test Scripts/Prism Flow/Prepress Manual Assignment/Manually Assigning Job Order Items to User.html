@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Manually Assigning Job Order Items to User</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Manually Assigning Job Order Items to User</td></tr>
+</thead><tbody>
+<!--<-Assigning  Job order to User->-->
+<!------Checking assign to proofer dropdown default layout is disabled------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td></td>
+</tr>
+<!--<-Checking if assigned button has been automatically start proofing->-->
+<!------Start Proofing Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button.btn.btn-success</td>
+	<td>Start Proofing</td>
+</tr>
+<!----Clicking Start Proofing Button---->
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--<-Checking if assigned button has been automatically start proofing->-->
+<!------Stop Proofing Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn.btn-danger</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=button.btn.btn-danger</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button.btn.btn-danger</td>
+	<td>Stop Proofing</td>
+</tr>
+<!------Go on break Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=button.btn.btn-warning</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=button.btn.btn-warning</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=button.btn.btn-warning</td>
+	<td>Go on Break</td>
+</tr>
+<!------Lunch Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//header[@id='header']/div[2]/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//header[@id='header']/div[2]/div/button[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//header[@id='header']/div[2]/div/button[3]</td>
+	<td>Lunch</td>
+</tr>
+<!--<-Checking if job item header color is light blue or not yet assigned for Job item 1->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is light blue or not yet assigned for job item 2->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is light blue or not yet assigned for job item 3->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[3]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[3]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Click Select All Job items checkbox->-->
+<tr>
+	<td>click</td>
+	<td>css=label &gt; span</td>
+	<td></td>
+</tr>
+<!------Verifying checkbox after selecting all job items for assignment------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div[2]/div/form/div[1]/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!------Verifying checkbox after fist job item for assignment------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div/span/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!------Verifying checkbox after second job item for assignment------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div/span/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!------Verifying checkbox after Third job item for assignment------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[3]/ng-include/section/div/article/div/span/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--<-Assigning Job Items to self->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='content']/div[2]/div/form/div[2]/span/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td>Assign to Self${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<!------Checking of assigned job item pop-up------>
+<!----Checking of title---->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.modal-header &gt; h3</td>
+	<td>Assign Job Items</td>
+</tr>
+<!----Checking of Content---->
+<tr>
+	<td>verifyText</td>
+	<td>css=p</td>
+	<td>Continue assignment of these items ${storedJobItemID1Text}, ${storedJobItemID2Text}, ${storedJobItemID3Text}, ${storedJobItemID4Text}?</td>
+</tr>
+<!------Checking of assigned job item pop-up buttons------>
+<!----Cancel button---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div/div[3]/button</td>
+	<td>Cancel</td>
+</tr>
+<!----Continue button---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/button[2]</td>
+	<td>Continue</td>
+</tr>
+<!--<-Proceeding to assigned Job Items->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/button[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

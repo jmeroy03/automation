@@ -1,0 +1,12 @@
+element_name_visble,element_location,element_label_name,element_label_location
+12,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Sales Rep 12 Month Average report Form,//section[@id='widget-grid']/div/article,CS and Sales,//div[@id='ribbon']/ol/li[2]
+Sales Rep 12 Month Average report icon,css=span.widget-icon > i.fa.fa-table,Sales Rep 12 Month Average,//div[@id='ribbon']/ol/li[3]
+Sales Rep 12 Month Average Report label,css=h2,Sales Rep 12 Month Average Report,css=h2
+12 Month Period Ending At section,css=section.col.col-3,12 Month Period Ending At,css=label.label
+12 Month Period Ending At label,css=label.label,Exclude NDF Reps,css=label.checkbox
+12 Month Period Ending At datepicker,id=date,,
+Exclude NDF Reps  section,//section[2]/label[2],,
+Exclude NDF Reps label,css=label.checkbox,,
+Exclude NDF Reps checkbox,css=label.checkbox > i,,

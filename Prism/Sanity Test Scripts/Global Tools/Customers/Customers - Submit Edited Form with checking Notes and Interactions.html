@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Submit Edited Form with checking Notes and Interactions</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Submit Edited Form with checking Notes and Interactions</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[3]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=div.textoFoto &gt; span</td>
+	<td>alert_notification</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${alert_notification}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.textoFoto &gt; p</td>
+	<td>alert_message</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Interaction successfully created.</td>
+	<td>customer_created_message</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$alert_message==$customer_created_message</td>
+	<td>customer_updated</td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>if</td>
+	<td>$customer_updated==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Interaction successfully created&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Other error occured upon submiting form&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert ('Check logs for error');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>exitTest</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

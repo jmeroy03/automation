@@ -1,0 +1,9 @@
+element_name_visble,element_location,element_label_name,element_label_location
+9,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Deferred Revenue report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Deferred Revenue report icon,css=span.widget-icon > i.fa.fa-table,Sales and Revenue,//div[@id='ribbon']/ol/li[3]
+Deferred Revenue Report label,css=h2,Deferred Revenue,//div[@id='ribbon']/ol/li[4]
+As of Date section,css=section.col.col-4,Deferred Revenue Report,css=h2
+As of Date label,css=label.label,As of date,css=label.label
+As of Date datepicker,id=asOfDate,,

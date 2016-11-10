@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Break Periods</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Break Periods</td></tr>
+</thead><tbody>
+<!--Verifying if the Break Periods table is available-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#break-period &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=#break-period &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<!--Checking of layout for Break Periods-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#wid-break-period &gt; header &gt; h2</td>
+	<td>Break Periods</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-clock-o</td>
+	<td></td>
+</tr>
+<!--select Department button-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td>Select Department</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<!--select team button-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/button</td>
+	<td>Select Team</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+</tr>
+<!--Break periods table & column-->
+<tr>
+	<td>verifyText</td>
+	<td>css=div.container-fluid &gt; strong</td>
+	<td>On Break</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=th.text-center</td>
+	<td>Proofer Name</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div/div/div/table/thead/tr/th[2]</td>
+	<td>Running Time</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/strong</td>
+	<td>On Lunch</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/div/table/thead/tr/th</td>
+	<td>Proofer Name</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div[2]/div/div[2]/div/div/table/thead/tr/th[2]</td>
+	<td>Running Time</td>
+</tr>
+</tbody></table>
+</body>
+</html>

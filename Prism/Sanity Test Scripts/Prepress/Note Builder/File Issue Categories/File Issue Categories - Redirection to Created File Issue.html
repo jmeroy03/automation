@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Fix-Ups - Redirection to Created File Issue</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Fix-Ups - Redirection to Created File Issue</td></tr>
+</thead><tbody>
+<!--<-Searching for the added Fix Up issue->-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>rowCounter</td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>NOT_FOUND</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$rowCounter++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr/td[1]</td>
+	<td>currentRowCount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$currentRowCount +1</td>
+	<td>currentRowCount</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${rowCounter}]/td[2]/a</td>
+	<td>fixUpCell1</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$fixUpCell1 == $storedFileIssueCategoryText</td>
+	<td>searchCellResult</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${searchCellResult}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoIf</td>
+	<td>${searchCellResult} == false &amp;&amp; ${rowCounter} &lt; ${currentRowCount}</td>
+	<td>NOT_FOUND</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${rowCounter} == ${currentRowCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Added Fix Ups was not found on the list Kindly Double check the Table&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Added Fix Ups was not found on the list Kindly Double check the Table&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert(&quot;Added Fix Ups was not found on the list Kindly Double check the Table&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Storing File Issue Category Id------>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${rowCounter}]/td[1]/a</td>
+	<td>storedFileIssueCategoryIdColumn</td>
+</tr>
+<!------Comparing File Category Issue Column------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${rowCounter}]/td[2]/a</td>
+	<td>${storedFileIssueCategoryText}</td>
+</tr>
+<!------Comparing Status------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${rowCounter}]/td[3]/span</td>
+	<td>${storedFileIssuesCategoryStatus}</td>
+</tr>
+<!--<-Redirecting to newly added fix ups->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${rowCounter}]/td[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!------Checking of the redirection of the page------>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/category-edit/${storedFileIssueCategoryIdColumn}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

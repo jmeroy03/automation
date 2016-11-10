@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Current Assigned Items</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Current Assigned Items</td></tr>
+</thead><tbody>
+<tr>
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+</tr>
+<!--Verifying if the Current Assigned Items table is available-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<!--Checking of layout for Current Assigned Items-->
+<tr>
+	<td>verifyText</td>
+	<td>css=#prepress-widget &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-1 &gt; header &gt; h2</td>
+	<td>Current Assigned Items</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-bar-chart</td>
+	<td></td>
+</tr>
+<!--Checking layout Buttons-->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td>View All</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div/button</td>
+	<td>Select Department</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td>Select Team</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[3]/button</td>
+	<td>Select User</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div/div/div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>Refresh</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<!--Checking of columns in the current assigned items table-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\current_assigned_items_table.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>2</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${row}&lt;=12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>col_name</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>html_column</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${col_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${html_column}</td>
+	<td>${col_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${html_column}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>$row++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_gridCurrentAssignedItems_prepress_agent</td>
+	<td>Agent</td>
+</tr>
+</tbody></table>
+</body>
+</html>

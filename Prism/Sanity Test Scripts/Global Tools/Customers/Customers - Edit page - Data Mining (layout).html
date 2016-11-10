@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Data Mining (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Data Mining (layout)</td></tr>
+</thead><tbody>
+<!--<-Layout Verification->-->
+<!------Data Mining Header------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Data Mining Header&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset/h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset/h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset/h3</td>
+	<td>Data Mining</td>
+</tr>
+<!------Business Type Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Business Type Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/label/strong</td>
+	<td>Business Type</td>
+</tr>
+<!------Business Type Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Business Type Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_business_type == &quot;None&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div/div/span</td>
+	<td>${stored_business_type}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Year Business Started Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Year Business Started Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/label/strong</td>
+	<td>Year Business Started</td>
+</tr>
+<!------Year Business Started Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Year Business Started Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_origin_business_year == &quot;&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[2]/div/span</td>
+	<td>${stored_origin_business_year}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Company Website------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Company Website&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/label/strong</td>
+	<td>Company Website</td>
+</tr>
+<!------Company Website------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Company Website&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_company_website == &quot;&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td>${stored_company_website}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Company Website&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[3]/label/strong</td>
+	<td></td>
+</tr>
+<!------Who do you primarily print for? label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Who do you primarily print for? label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/label/strong</td>
+	<td>Who do you primarily print for?</td>
+</tr>
+<!------Who do you primarily print for? Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Who do you primarily print for? Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_who_dypf == &quot;None&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[4]/div/span</td>
+	<td>${stored_who_dypf}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of additional Fields for "How do you print for"->-->
+<tr>
+	<td>storeEval</td>
+	<td>5</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_who_dypf == &quot;For My Company&quot;)</td>
+	<td>additional_field</td>
+</tr>
+<!------"Selected option is For My Company"------>
+<tr>
+	<td>if</td>
+	<td>${additional_field} == true</td>
+	<td></td>
+</tr>
+<!------How many employees does your company have? Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How many employees does your company have? Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td>How many employees does your company have?</td>
+</tr>
+<!------How many employees does your company have? Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How many employees does your company have? Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>${stored_design_firm}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------"Selected option is For Clients"------>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_who_dypf == &quot;For Clients&quot;)</td>
+	<td>additional_field</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${additional_field} == true</td>
+	<td></td>
+</tr>
+<!------ How big is your design firm/agency?  Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How big is your design firm/agency?&nbsp;&nbsp;Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span/strong</td>
+	<td>How big is your design firm/agency?</td>
+</tr>
+<!------ How big is your design firm/agency?  Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How big is your design firm/agency?&nbsp;&nbsp;Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>${stored_design_firm}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------How did you hear about us? Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How did you hear about us? Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td>How did you hear about us?</td>
+</tr>
+<!------How did you hear about us? Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How did you hear about us? Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_how_did_you_hear == &quot;None&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>${stored_how_did_you_hear}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!------How many times do you print in a year? Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How many times do you print in a year? Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td>How many times do you print in a year?</td>
+</tr>
+<!------How many times do you print in a year? Field------>
+<tr>
+	<td>echo</td>
+	<td>&quot;How many times do you print in a year? Field&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_how_many_times == &quot;None&quot;)</td>
+	<td>data_field_none</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${data_field_none} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/div/span</td>
+	<td>${stored_how_many_times}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!------Are you interested in? Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Are you interested in? Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/strong</td>
+	<td>Are you interested in?</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!------Variable Data Printing Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Variable Data Printing Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td>Variable Data Printing</td>
+</tr>
+<!------Variable Data Printing Checkbox------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Variable Data Printing Checkbox&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>image_checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--checkbox result stored from add and edit page comparison-->
+<tr>
+	<td>storeEval</td>
+	<td>$_result == $stored_variable_data_printing</td>
+	<td>checkbox_comparison</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checkbox_comparison} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Add page and Edit page checkbox taly&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Add and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Add and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!------ Mailing Services  Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Mailing Services Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td>Mailing Services</td>
+</tr>
+<!------ Mailing Services  Checkbox------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Mailing Services Checkbox&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>image_checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>storeEval</td>
+	<td>$_result == $stored_checkbox_mailing_service</td>
+	<td>checkbox_comparison</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checkbox_comparison} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Add page and Edit page checkbox taly&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Add and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Add and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${ctr}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!------Design Services  Label------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Design Services Label&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/span</td>
+	<td>Design Services</td>
+</tr>
+<!------Design Services Checkbox------>
+<tr>
+	<td>echo</td>
+	<td>&quot;Design Services Checkbox&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[@id='profile']/div[2]/ng-include[2]/div/form/fieldset[2]/div[${ctr}]/label/i@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>image_checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>storeEval</td>
+	<td>$_result == $stored_checkbox_design_service</td>
+	<td>checkbox_comparison</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${checkbox_comparison} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Add page and Edit page checkbox taly&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Add and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Add and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

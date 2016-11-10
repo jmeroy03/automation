@@ -1,0 +1,41 @@
+1. Create AUTOMATION folder in C: and extract the zipped file to C:\AUTOMATION
+
+2. Download and install the following Selenium IDE plugins for FireFox:
+ - Selenium IDE
+ - SeLite Extension Sequencer -> https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/
+ - SeLite TestCase Debug Context -> https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/
+ - SeLite Miscellaneous -> https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/
+ - SelBlocks Global version 2.60 -> https://addons.mozilla.org/en-us/firefox/addon/selite-selblocks-global/versions/
+ - ScreenShot on Fail -> https://addons.mozilla.org/en-US/firefox/addon/screenshot-on-fail-selenium/
+ - File Logging (Optional)
+ - Stored Variables -> https://addons.mozilla.org/en-US/firefox/addon/stored-variables-viewer-seleni/
+
+
+NOTE: Make sure to disable auto update of the said plug-ins.
+
+
+3. At Selenium ide - Input the directories below in the Selenium Core Extensions field found in 'Options' > 'Options' > 'General'
+
+   C:\AUTOMATION\Prism\Java Script\CSVRead_Selenium-IDE.js, C:\AUTOMATION\Prism\Java Script\stored_vars.js, C:\AUTOMATION\Prism\Java Script\user-extensions.js
+
+4. Edit the credentials in js\stored_vars.js (optional)
+
+
+5. For auto file downloading, download the plugin -> https://addons.mozilla.org/en-US/firefox/addon/force-content-type/.
+ - Go to Add-ons > Extensions
+ - Search for Force Content-Type and click options
+ - Disable - Disable Force Content Type
+ - Click New and add the following information
+ - Add on the option 
+	URL: (.pdf)$ 
+	Old Content-Type: application/octet-stream 
+	New Content-Type: application/pdf
+
+6. Disable the popup blocker in settings> content.
+
+
+7. Open the test suite file you want to test.
+
+    sample directory: C:\AUTOMATION\Prism\Sanity Test Scripts\Admin Dashboard View
+
+8. If ever issue encountered in running the test script. Restart Selenium IDE.

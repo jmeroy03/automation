@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Redirection to Created File Issue</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Redirection to Created File Issue</td></tr>
+</thead><tbody>
+<!--<-Redirection from list page to created File Issue->-->
+<!------Searching for Created file issue using File Issue------>
+<tr>
+	<td>type</td>
+	<td>id=gs_file_issue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=gs_file_issue</td>
+	<td>${storedFileIssueNameText}${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!--<-Comparing Stored Data from add page to List->-->
+<!------Storing File Issue ID------>
+<tr>
+	<td>storeText</td>
+	<td>//td/a</td>
+	<td>storedFileIssueId</td>
+</tr>
+<!------File Issue------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[2]/a</td>
+	<td>${storedFileIssueNameText}</td>
+</tr>
+<!------Description------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[3]/a</td>
+	<td>${storedDefaultDescriptionText}</td>
+</tr>
+<!------Next Steps------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[4]/a</td>
+	<td>${completeNextStepsCustomerActions}</td>
+</tr>
+<!------File Issue Category------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[5]/a</td>
+	<td>${storedFileIssueCategoryText}</td>
+</tr>
+<!------Fix Ups------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[6]/a</td>
+	<td>${storeIFixUpText}</td>
+</tr>
+<!------Status------>
+<tr>
+	<td>verifyText</td>
+	<td>//td[7]/span</td>
+	<td>${storedFileIssueStatus}</td>
+</tr>
+<!--<-redirecting to the added file issue->-->
+<tr>
+	<td>click</td>
+	<td>//td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!----Checking of the redirection of the page---->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/file-issue-edit/${storedFileIssueId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

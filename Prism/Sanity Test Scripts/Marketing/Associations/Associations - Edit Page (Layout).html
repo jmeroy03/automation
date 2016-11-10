@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Associations - Edit Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Associations - Edit Page (Layout)</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Storing Association Id->-->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div/div/div/div/div/div</td>
+	<td>storedAssociationIdText</td>
+</tr>
+<!--<-Checking of the redirection of the page->-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/edit-association/${storedAssociationIdText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Marketing\Associations\Associations - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageLayoutRowCount</td>
+	<td>2,11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageFieldRowCount</td>
+	<td>2,13</td>
+</tr>
+<!--<-Checking of element label if its correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},12</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageFieldRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},13</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of Save button if disabled->-->
+<!----Association ID Field---->
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!----Website Field---->
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[2]/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!----Owner CID Field---->
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[3]/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!--<-Comparing Selected and typed information from add to edit page->-->
+<!----Website---->
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[2]/div/div/div/div/div</td>
+	<td>${storedWebsiteText}</td>
+</tr>
+<!----Owner CID---->
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[3]/div/div/div/div/div</td>
+	<td>${storedOwnerIdText}</td>
+</tr>
+<!----Association Code---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[4]/div/div/div/div/input</td>
+	<td>${storedAssociationCodeText}</td>
+</tr>
+<!----Program Name---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[5]/div/div/div/div/input</td>
+	<td>${storedProgramNameText}</td>
+</tr>
+<!----Association Group---->
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[6]/div/div/div/div/a/span</td>
+	<td>${storedAssociationGroupText}</td>
+</tr>
+<!----Access Code---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[7]/div/div/div/div/input</td>
+	<td>${storedAccessCodeText}</td>
+</tr>
+<!----Contact Name---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[8]/div/div/div/div/input</td>
+	<td>${storedContactNameText}</td>
+</tr>
+<!----Contact Number---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[9]/div/div/div/div/input</td>
+	<td>${storedContactNumberText}</td>
+</tr>
+<!----Rebate Percentage---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[10]/div/div/div/div/input</td>
+	<td>${storedRebatePercentageText}</td>
+</tr>
+<!----Minimum Spend---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[11]/div/div/div/div/input</td>
+	<td>${storedMinimumSpendText}</td>
+</tr>
+<!--<-Dropdown Checking->-->
+<!------Program Name------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='editAssociationForm']/fieldset/div[6]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageLayoutRowCount</td>
+	<td>2,14</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},14</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/fieldset/div[6]/div/div[1]/div/div/div/ul/li[${ctr}]</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/fieldset/div[6]/div/div[1]/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/form/fieldset/div[6]/div/div[1]/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

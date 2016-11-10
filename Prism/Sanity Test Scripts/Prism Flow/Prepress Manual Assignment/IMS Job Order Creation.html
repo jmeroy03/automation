@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>IMS Job Order Creation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">IMS Job Order Creation</td></tr>
+</thead><tbody>
+<!--<-Open and access Prism->-->
+<tr>
+	<td>call</td>
+	<td>loginPrism</td>
+	<td>env=$prism_environment, prism_email=$prepress_email, prism_pass=$prepress_pass</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/dashboard</td>
+	<td></td>
+</tr>
+<!--<-Open and access IMS->-->
+<tr>
+	<td>call</td>
+	<td>loginIms</td>
+	<td>env=$ims_environment, ims_email=$ims_email, ims_pass=$ims_pass</td>
+</tr>
+<!--<-Creating Job order in Up using an Existing account->-->
+<tr>
+	<td>click</td>
+	<td>link=An Order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='widget_keywords']/div/div[3]/input</td>
+	<td>${email}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='searchForm']/div[2]/span/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=496817</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Create an Order for Customer ID 496817, Edsel quiachon? <br /> <br />(NOTE: If you click &quot;OK,&quot; you may start adding Items to the Order by clicking the green &quot;+New Item&quot; button on the left side of the page.)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--<-Creating Job order ->-->
+<!--<-Storing Job order ID->-->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='main_body']/div/div[4]/div/strong</td>
+	<td>jobOrderID</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['jobOrderID'].match(/\d+/); </td>
+	<td>storedJobOrderID</td>
+</tr>
+<!--<-Adding Job item->-->
+<tr>
+	<td>click</td>
+	<td>link=New Item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting a Job Item (brochrure)------>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/div[3]/div[3]/div[2]/ul/li[6]/a/span[1]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting Job item Specs------>
+<tr>
+	<td>type</td>
+	<td>id=order_spec_PROJNAME</td>
+	<td>TEST Job Order Do not Process! Thanks</td>
+</tr>
+<!------Submiting job item------>
+<tr>
+	<td>click</td>
+	<td>//div/div[3]/div/div[4]/div/form/div[4]/ul/li[11]/center/span[1]/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--<-Adding 2nd Job item->-->
+<tr>
+	<td>click</td>
+	<td>link=New Item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting a Job Item (LFP - Yard Signs)------>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/div[3]/div[3]/div[4]/ul/li[27]/a/span[1]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting Job item Specs------>
+<tr>
+	<td>type</td>
+	<td>id=order_spec_PROJNAME</td>
+	<td>TEST Job Order Do not Process! Thanks</td>
+</tr>
+<!------Submiting job item------>
+<tr>
+	<td>click</td>
+	<td>//div/div[3]/div/div[4]/div/form/div[4]/ul/li[11]/center/span[1]/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting a Job Item (Digital - Menus)------>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/div[3]/div[3]/div[3]/ul/li[7]/a/span[1]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting Job item Specs------>
+<tr>
+	<td>type</td>
+	<td>id=order_spec_PROJNAME</td>
+	<td>TEST Job Order Do not Process! Thanks</td>
+</tr>
+<!------Submiting job item------>
+<tr>
+	<td>click</td>
+	<td>//div/div[3]/div/div[4]/div/form/div[4]/ul/li[11]/center/span[1]/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=New Item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting a Job Item (Digital - Business Cards)------>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/div[3]/div[3]/div[2]/ul/li[9]/a/span[1]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Selecting Job item Specs------>
+<tr>
+	<td>type</td>
+	<td>id=order_spec_PROJNAME</td>
+	<td>TEST Job Order Do not Process! Thanks</td>
+</tr>
+<!------Submiting job item------>
+<tr>
+	<td>click</td>
+	<td>//div/div[3]/div/div[4]/div/form/div[4]/ul/li[11]/center/span[1]/span/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<!--<-Entering Job Shipping level->-->
+<tr>
+	<td>click</td>
+	<td>link=Manage Shipping Information</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Use Saved Address</td>
+	<td></td>
+</tr>
+<!------Selecting existing valid Customer Address------>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=DPC</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Verify and Get Rates</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='div_shipping_rates_0']/td/table/tbody/tr[2]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-shipping-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure? This will override the shipping information of all items in this invoice.<br /><br />Continue?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>25000</td>
+	<td></td>
+</tr>
+<!--<-Paying current balance due->-->
+<tr>
+	<td>click</td>
+	<td>//span[@id='div_payment_status']/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>PaymentsWindow</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=PaymentsWindow</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=div.dijitArrowButtonInner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=payment_method_code_popup0</td>
+	<td></td>
+</tr>
+<!--Saving added information using "Save" button-->
+<tr>
+	<td>clickAndWait</td>
+	<td>id=dijit_form_Button_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--<-Uploading file on first item->-->
+<tr>
+	<td>selectWindow</td>
+	<td>IMS ${storedJobOrderID}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add/Replace</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=upload_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.addRep_opt.for_csr &gt; li &gt; label &gt; input[name=&quot;status&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=frontFile</td>
+	<td>C:\Automation\Prism\Files for Testing\8.5x11.pdf</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=backFile</td>
+	<td>C:\Automation\Prism\Files for Testing\8.5x11.pdf</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/form/div[2]/div[7]/div[1]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>24000</td>
+	<td></td>
+</tr>
+<!--<-Uploading file on second item->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add/Replace')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=upload_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.addRep_opt.for_csr &gt; li &gt; label &gt; input[name=&quot;status&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=frontFile</td>
+	<td>C:\Automation\Prism\Files for Testing\TEST_FILE_1.pdf</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/form/div[2]/div[7]/div[1]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>24000</td>
+	<td></td>
+</tr>
+<!--<-Uploading file on 3rd item->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add/Replace')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=upload_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.addRep_opt.for_csr &gt; li &gt; label &gt; input[name=&quot;status&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=frontFile</td>
+	<td>C:\Automation\Prism\Files for Testing\TEST_FILE_3.pdf</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/form/div[2]/div[7]/div[1]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>24000</td>
+	<td></td>
+</tr>
+<!--<-Uploading file on 4th item->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add/Replace')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=upload_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=ul.addRep_opt.for_csr &gt; li &gt; label &gt; input[name=&quot;status&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=frontFile</td>
+	<td>C:\Automation\Prism\Files for Testing\TEST_FILE_2.pdf</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[1]/div/div/form/div[2]/div[7]/div[1]/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>24000</td>
+	<td></td>
+</tr>
+<!--<-Storing File Item Info->-->
+<!------First Job Item with 2 uploaded file------>
+<tr>
+	<td>click</td>
+	<td>link=Archives</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>12000</td>
+	<td></td>
+</tr>
+<!-----File Name Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[2]</td>
+	<td>storedFileNameTextItem1</td>
+</tr>
+<!-----Uploaded By Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[3]</td>
+	<td>storedUploadedByTextItem1</td>
+</tr>
+<!-----Date & Time Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[4]</td>
+	<td>storedDateTimeItem1</td>
+</tr>
+<!-----Notes Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[5]</td>
+	<td>storedNotesTextItem1</td>
+</tr>
+<!-----Disapproval Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[6]</td>
+	<td>storedDisapprovalNotesTextItem1</td>
+</tr>
+<!--<-2nd Uploaded File->-->
+<!-----File Name Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[3]/td[2]</td>
+	<td>storedFileNameTextItem2</td>
+</tr>
+<!-----Uploaded By Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[3]/td[3]</td>
+	<td>storedUploadedByTextItem2</td>
+</tr>
+<!-----Date & Time Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[3]/td[4]</td>
+	<td>storedDateTimeItem2</td>
+</tr>
+<!-----Notes Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[3]/td[5]</td>
+	<td>storedNotesTextItem2</td>
+</tr>
+<!-----Disapproval Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[3]/td[6]</td>
+	<td>storedDisapprovalNotesTextItem2</td>
+</tr>
+<!--<-closing pop-up->-->
+<tr>
+	<td>click</td>
+	<td>css=#modBox &gt; div.jfH &gt; a.jeX</td>
+	<td></td>
+</tr>
+<!------Second Job Item with 1 uploaded file------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Archives')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>12000</td>
+	<td></td>
+</tr>
+<!-----File Name Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[2]</td>
+	<td>storedFileNameTextItem3</td>
+</tr>
+<!-----Uploaded By Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[3]</td>
+	<td>storedUploadedByTextItem3</td>
+</tr>
+<!-----Date & Time Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[4]</td>
+	<td>storedDateTimeItem3</td>
+</tr>
+<!-----Notes Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[5]</td>
+	<td>storedNotesTextItem3</td>
+</tr>
+<!-----Disapproval Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[6]</td>
+	<td>storedDisapprovalNotesTextItem3</td>
+</tr>
+<!--<-closing pop-up->-->
+<tr>
+	<td>click</td>
+	<td>css=#modBox &gt; div.jfH &gt; a.jeX</td>
+	<td></td>
+</tr>
+<!------3rd Job Item with 1uploaded file------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Archives')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>12000</td>
+	<td></td>
+</tr>
+<!-----File Name Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[2]</td>
+	<td>storedFileNameTextItem4</td>
+</tr>
+<!-----Uploaded By Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[3]</td>
+	<td>storedUploadedByTextItem4</td>
+</tr>
+<!-----Date & Time Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[4]</td>
+	<td>storedDateTimeItem4</td>
+</tr>
+<!-----Notes Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[5]</td>
+	<td>storedNotesTextItem4</td>
+</tr>
+<!-----Disapproval Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[6]</td>
+	<td>storedDisapprovalNotesTextItem4</td>
+</tr>
+<!--<-closing pop-up->-->
+<tr>
+	<td>click</td>
+	<td>css=#modBox &gt; div.jfH &gt; a.jeX</td>
+	<td></td>
+</tr>
+<!------4th Job Item with 1 uploaded file------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Archives')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>12000</td>
+	<td></td>
+</tr>
+<!-----File Name Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[2]</td>
+	<td>storedFileNameTextItem5</td>
+</tr>
+<!-----Uploaded By Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[3]</td>
+	<td>storedUploadedByTextItem5</td>
+</tr>
+<!-----Date & Time Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[4]</td>
+	<td>storedDateTimeItem5</td>
+</tr>
+<!-----Notes Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[5]</td>
+	<td>storedNotesTextItem5</td>
+</tr>
+<!-----Disapproval Column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[1]/div/div/div[3]/table/tbody/tr[2]/td[6]</td>
+	<td>storedDisapprovalNotesTextItem5</td>
+</tr>
+<!--<-closing pop-up->-->
+<tr>
+	<td>click</td>
+	<td>css=#modBox &gt; div.jfH &gt; a.jeX</td>
+	<td></td>
+</tr>
+<!--<-Storing Job order info->-->
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus;</td>
+	<td>imsSpecs</td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>PRiSM - Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/dashboard</td>
+	<td></td>
+</tr>

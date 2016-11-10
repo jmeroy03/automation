@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Edit Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Edit Page (Layout)</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Prepress\Note Builder\File Issues\File Issues - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageLayoutRowCount</td>
+	<td>2,16</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageElementRowCount</td>
+	<td>2,15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageFieldRowCount</td>
+	<td>2,17</td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},16</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageElementRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},16</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageFieldRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},17</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Dropdown Checking->-->
+<!------ Not Applicable Websites------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='select_1_chosen']/ul/li/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notApplicableWebsiteDropdownCount</td>
+	<td>2,11</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${notApplicableWebsiteDropdownCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>optionDropdownName</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>storeVisible</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td>selectedNotApplicableWebistes</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${selectedNotApplicableWebistes} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${optionDropdownName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td>${optionDropdownName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='select_1_chosen']/ul/li/span</td>
+	<td>selectedWebsiteElement</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td>${selectedWebsiteElement}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[3]/label/span</td>
+	<td></td>
+</tr>
+<!------Website Specific Description------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[5]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>fileIssueCategoryDropdownCount</td>
+	<td>2,18</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${fileIssueCategoryDropdownCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>optionDropdownName</td>
+	<td>${x},18</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td>dropdownOption</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$optionDropdownName == $dropdownOption</td>
+	<td>selectedWebsiteSpecificDescriptionElement</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${selectedWebsiteSpecificDescriptionElement}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${selectedWebsiteSpecificDescriptionElement} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${optionDropdownName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td>${optionDropdownName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='select_1_chosen']/ul/li/span</td>
+	<td>selectedWebsiteElement</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>optionDropdownName</td>
+	<td>${x},18</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td>${optionDropdownName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[5]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements fix-up is enabled->-->
+<!------save button on header------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<!------save button on footer------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<!--<-Checking of Fix up table and columns->-->
+<!------Edit file issue table------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table</td>
+	<td></td>
+</tr>
+<!------Checking of columns------>
+<tr>
+	<td>storeCellValue</td>
+	<td>addFileIssuesColumnCount</td>
+	<td>2,14</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addFileIssuesColumnCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addColumnName</td>
+	<td>${x},14</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${addColumnName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/table/thead/tr/th[${ctr}]</td>
+	<td>${addColumnName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/table/thead/tr/th[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/form/table/thead/tr/th[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of stored data from add page to edit page->-->
+<!------File Issue Category Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div/div/div/label/strong</td>
+	<td>${storedFileIssueCategoryText}</td>
+</tr>
+<!------File Issue Name Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[2]/div/div/input</td>
+	<td>${storedFileIssueNameText}</td>
+</tr>
+<!------ Not Applicable Websites Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='select_1_chosen']/ul/li/span</td>
+	<td>${storedNotApplicableWebsiteText}</td>
+</tr>
+<!------ Default Description Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[4]/div/div/input</td>
+	<td>${storedDefaultDescriptionText}</td>
+</tr>
+<!------  Website Specific Description Dropdown------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[5]/div/div/div/div/a/span</td>
+	<td>${storedWebsiteSpecificDescriptionDropdownText}</td>
+</tr>
+<!------  Website Specific Description Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[5]/div/div/div[2]/div/input</td>
+	<td>${storedWebsiteSpecificDescriptionText}</td>
+</tr>
+<!------1st Next Steps/Customer Actions  Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[6]/div/div/input</td>
+	<td>${storedNextStepsCustomerActionsText}</td>
+</tr>
+<!------2nd Next Steps/Customer Actions  Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[7]/div/div/input</td>
+	<td>${stored2ndNextStepsCustomerActionsText}</td>
+</tr>
+<!------3rd Next Steps/Customer Actions  Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[8]/div/div/input</td>
+	<td>${stored3rdNextStepsCustomerActionsText}</td>
+</tr>
+<!------Hide File Issue Checkbox------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[9]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Hide File Issue has been been stored as Hidden&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>HIDDEN</td>
+	<td>storedFileIssueStatus</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Hide File Issue has been been stored as Visible&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>VISIBLE</td>
+	<td>storedFileIssueStatus</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Hide File Issue result has been detected is neither True or False&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error('&quot;Hide File Issue result has been detected is neither True or False&quot;');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert(&quot;Hide File Issue result has been detected is neither True or False&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Fix Ups Dropdown------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[10]/div/div/div/a/span</td>
+	<td>Select an Option</td>
+</tr>
+<!------Id Cell------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td</td>
+	<td>${storeIdText}</td>
+</tr>
+<!------Fix Up Cell------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[2]</td>
+	<td>${storeIFixUpText}</td>
+</tr>
+<!------Description Cell------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[3]</td>
+	<td>${storedDescriptionColumnText}</td>
+</tr>
+<!------Status Cell------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[4]/span</td>
+	<td>${storeStatusColumnText}</td>
+</tr>
+<!------Remove Cell------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[5]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[5]/button</td>
+	<td></td>
+</tr>
+<!--<-Completing Next Steps/Customer Actions for comparison onlist->-->
+<tr>
+	<td>store</td>
+	<td>${storedNextStepsCustomerActionsText},<br />${stored2ndNextStepsCustomerActionsText},<br />${stored3rdNextStepsCustomerActionsText}</td>
+	<td>completeNextStepsCustomerActions</td>
+</tr>
+<!--<-Redirecting to List Page->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!------Checking of the redirection of the page------>
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/file-issue-list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

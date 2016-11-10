@@ -1,0 +1,59 @@
+column_name,column_location,grid_label,grid_label_location,data_label,data_compare_location
+59,,18,,17,
+Customer ID,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th/div,For the month of:,//div[@id='gridContainer']/div/div/strong,No. of Accounts Assigned,//div[@id='gridContainer']/div/div[4]
+Company Name,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div,No of Accounts,//div[@id='gridContainer']/div/div[3]/strong,Orders in Date Range,//div[@id='gridContainer']/div[2]/div[2]
+First Name,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div,Total Orders in Date Range,//div[@id='gridContainer']/div[2]/div/strong,Sales in Date Range,//div[@id='gridContainer']/div[2]/div[4]
+Last Name,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div,Total Sales in Date Range,//div[@id='gridContainer']/div[2]/div[3]/strong,CY - Orders MTD,//div[@id='gridContainer']/div[3]/div[2]
+Email Address,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div,Current Year Orders MTD,//div[@id='gridContainer']/div[3]/div/strong,CY - Sales MTD,//div[@id='gridContainer']/div[6]/div[2]
+Phone,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[6]/div,Previous Year Orders MTD,//div[@id='gridContainer']/div[3]/div[3]/strong,CY - Orders QTD,//div[@id='gridContainer']/div[4]/div[2]
+Phone 2,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[7]/div,Current Year Orders QTD,//div[@id='gridContainer']/div[4]/div/strong,CY - Sales QTD,//div[@id='gridContainer']/div[7]/div[2]
+Fax,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[8]/div,Previous Year Orders QTD,//div[@id='gridContainer']/div[4]/div[3]/strong,CY - Orders YTD,//div[@id='gridContainer']/div[5]/div[2]
+Origin Company,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[9]/div,Current Year Orders YTD,//div[@id='gridContainer']/div[5]/div/strong,CY - Sales YTD,//div[@id='gridContainer']/div[8]/div[2]
+Origin Website,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[10]/div,Previous Year Orders YTD,//div[@id='gridContainer']/div[5]/div[3]/strong,PY - Orders MTD,//div[@id='gridContainer']/div[3]/div[4]
+Business Type,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[11]/div,Current Year Sales MTD,//div[@id='gridContainer']/div[6]/div/strong,PY - Sales MTD,//div[@id='gridContainer']/div[6]/div[4]
+Title,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[12]/div,Previous Year Sales MTD,//div[@id='gridContainer']/div[6]/div[3]/strong,PY - Orders QTD,//div[@id='gridContainer']/div[4]/div[4]
+Company Website,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[13]/div,Current Year Sales QTD,//div[@id='gridContainer']/div[7]/div/strong,PY - Sales QTD,//div[@id='gridContainer']/div[7]/div[4]
+Who do you primarily print for,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[14]/div,Previous Year Sales QTD,//div[@id='gridContainer']/div[7]/div[3]/strong,PY - Orders YTD,//div[@id='gridContainer']/div[5]/div[4]
+How big is your design firm/agency,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[15]/div,Current Year Sales YTD,//div[@id='gridContainer']/div[8]/div/strong,PY - Sales YTD,//div[@id='gridContainer']/div[8]/div[4]
+How many employees does your company have,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[16]/div,Previous Year Sales YTD,//div[@id='gridContainer']/div[8]/div[3]/strong,,
+How did you hear about us,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[17]/div,,,,
+Date Registered,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[18]/div,,,,
+Date Assigned to Rep,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[19]/div,,,,
+Orders in Date Range,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[20]/div,,,,
+Sales in Date Range,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[21]/div,,,,
+CY Orders - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[22]/div,,,,
+CY Sales (Online) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[23]/div,,,,
+CY Sales (Phone) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[24]/div,,,,
+CY Sales (FFR) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[25]/div,,,,
+CY Sales (Quotes) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[26]/div,,,,
+CY Total Sales - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[27]/div,,,,
+CY Orders - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[28]/div,,,,
+CY Sales (Online) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[29]/div,,,,
+CY Sales (Phone) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[30]/div,,,,
+CY Sales (FFR) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[31]/div,,,,
+CY Sales (Quotes) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[32]/div,,,,
+CY Total Sales - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[33]/div,,,,
+CY Orders - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[34]/div,,,,
+CY Sales (Online) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[35]/div,,,,
+CY Sales (Phone) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[36]/div,,,,
+CY Sales (FFR) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[37]/div,,,,
+CY Sales (Quotes) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[38]/div,,,,
+CY Total Sales - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[39]/div,,,,
+PY Orders - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[40]/div,,,,
+PY Sales (Online) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[41]/div,,,,
+PY Sales (Phone) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[42]/div,,,,
+PY Sales (FFR) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[43]/div,,,,
+PY Sales (Quotes) - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[44]/div,,,,
+PY Total Sales - MTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[45]/div,,,,
+PY Orders - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[46]/div,,,,
+PY Sales (Online) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[47]/div,,,,
+PY Sales (Phone) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[48]/div,,,,
+PY Sales (FFR) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[49]/div,,,,
+PY Sales (Quotes) - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[50]/div,,,,
+PY Total Sales - QTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[51]/div,,,,
+PY Orders - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[52]/div,,,,
+PY Sales (Online) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[53]/div,,,,
+PY Sales (Phone) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[54]/div,,,,
+PY Sales (FFR) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[55]/div,,,,
+PY Sales (Quotes) - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[56]/div,,,,
+PY Total Sales - YTD,//div[9]/div/div/div[3]/div[2]/div/table/thead/tr/th[57]/div,,,,

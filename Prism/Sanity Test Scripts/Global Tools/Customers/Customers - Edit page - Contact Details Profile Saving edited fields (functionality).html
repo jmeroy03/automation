@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Contact Details Profile Saving edited fields (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Contact Details Profile Saving edited fields (functionality)</td></tr>
+</thead><tbody>
+<!--<-setting up store data Contact Details->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${contact_details_label_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>contact_details_label</td>
+	<td>${x},10</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>contact_details_location</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${contact_details_label}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<!------Rechecking point for layout for "Contact Details"------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${contact_details_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${contact_details_location}</td>
+	<td>${contact_details_label}</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>${contact_details_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Stored Value from edit page checking in edit page layout->-->
+<!------Company------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[2]/div</td>
+	<td>${stored_company_name}</td>
+</tr>
+<!------First Name------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[3]/div[2]</td>
+	<td>${stored_fname}</td>
+</tr>
+<!------Last Name------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[4]/div</td>
+	<td>${stored_lname}</td>
+</tr>
+<!------email------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[5]/div</td>
+	<td>${stored_email}</td>
+</tr>
+<!------Primary Phone------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[6]/div/div[2]</td>
+	<td>${stored_primary_no}</td>
+</tr>
+<!------Primary Extentsion no.------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[6]/div[3]</td>
+	<td>${stored_ext_no_primary}</td>
+</tr>
+<!------Alternate Phone------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[7]/div/div[2]</td>
+	<td>${stored_alternate_no}</td>
+</tr>
+<!------Alternate Extentsion no.------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[7]/div[3]</td>
+	<td>${stored_ext_no_alternate}</td>
+</tr>
+<!------Fax------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[8]/div</td>
+	<td>${stored_fax_no}</td>
+</tr>
+<!------Country------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[9]/div</td>
+	<td>${stored_country}</td>
+</tr>
+<!------Mailing Ghost Number------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[10]/div</td>
+	<td>${stored_ghost_no}</td>
+</tr>
+<!------USPS CRID------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[11]/div</td>
+	<td>${stored_USPS_ID}</td>
+</tr>
+<!------Default Address------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[12]/div</td>
+	<td>(None)</td>
+</tr>
+<!------Account Status------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[13]/div</td>
+	<td>INACTIVE</td>
+</tr>
+<!------Preferred Contact Method------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[14]/div/</td>
+	<td>preferred_contact_method</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[14]/div/</td>
+	<td>preferred_contact_method_location</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$preferred_contact_method==$stored_contact_method</td>
+	<td>preferred_contact_method_result</td>
+</tr>
+<!--------Checking of  element if the element value is (none)-------->
+<tr>
+	<td>if</td>
+	<td>${preferred_contact_method_result}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${preferred_contact_method_location}</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${preferred_contact_method_location}</td>
+	<td>${stored_contact_method}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Preferred Contact Frequency------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[15]/div/</td>
+	<td>preferred_contact_frequency</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[15]/div/</td>
+	<td>preferred_contact_frequency_location</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$preferred_contact_frequency==$stored_contact_frequency</td>
+	<td>preferred_contact_frequency_result</td>
+</tr>
+<!--------Checking of  element if the element value is (none)-------->
+<tr>
+	<td>if</td>
+	<td>${preferred_contact_frequency_result}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${preferred_contact_frequency_location}</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${preferred_contact_frequency_location}</td>
+	<td>${stored_contact_frequency}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

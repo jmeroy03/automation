@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Break Periods (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Break Periods (functionality)</td></tr>
+</thead><tbody>
+<!--Select Team Dropdown Contents-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\break_periods_table.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>teamCtr</td>
+	<td>2,1</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3;$x&lt;=${teamCtr}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>team_lead</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>dropdown_content</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>dropdown_label</td>
+	<td>${x},3</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${team_lead}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${dropdown_label}</td>
+	<td>${team_lead}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${dropdown_label}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${dropdown_label}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${dropdown_content}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<!--Break Periods collapsable button-->
+<tr>
+	<td>click</td>
+	<td>css=#wid-break-period &gt; header &gt; div.jarviswidget-ctrls &gt; a.button-icon.jarviswidget-toggle-btn &gt; i.fa.fa-minus </td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.fa.fa-plus</td>
+	<td></td>
+</tr>
+<!--<-Checking Department Dropdown options->-->
+<tr>
+	<td>storeCellValue</td>
+	<td>deptCtr</td>
+	<td>2,4</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3;$x&lt;=${deptCtr}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>departmentOptionName</td>
+	<td>${x},4</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>departmentOptionLocation</td>
+	<td>${x},5</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${departmentOptionLocation}</td>
+	<td>${departmentOptionName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${departmentOptionLocation}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${departmentOptionLocation}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${departmentOptionLocation}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-break-period']/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

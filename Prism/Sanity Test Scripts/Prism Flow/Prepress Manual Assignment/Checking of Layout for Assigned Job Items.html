@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--<-Checking for Layout when Item has been assigned->-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is green or has been assigned for Job item 1->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;Yes&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item has been assigned&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is green or has been assigned for Job item 2->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;Yes&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item has been assigned&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking if job item header color is green or has been assigned for Job item 3->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[3]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[3]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;Yes&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item has been assigned&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of header the color has been changed to green or has been assigned->-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1; $x&lt;=4; $x++</td>
+	<td></td>
+</tr>
+<!--<-Item Details Section->-->
+<!------Item Details label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span</td>
+	<td>Item Details ${x}</td>
+</tr>
+<!------Job Item no. order label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div/span/span</td>
+	<td>${x}</td>
+</tr>
+<!------History Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div[3]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div[3]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div/div/div[3]/div/div/button</td>
+	<td>History</td>
+</tr>
+<!--<-File Details Section->-->
+<!------File Details label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div/span</td>
+	<td>File Details</td>
+</tr>
+<!------Uploaded By Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th/span</td>
+	<td>Uploaded By</td>
+</tr>
+<!------Notes Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[2]/span</td>
+	<td>Notes</td>
+</tr>
+<!------Disapproval Notes Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/thead/tr/th[3]/span</td>
+	<td>Disapproval Notes</td>
+</tr>
+<!------File Archive Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/button</td>
+	<td>File Archive</td>
+</tr>
+<!------Assigned to and by Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[3]/div/div/span/span</td>
+	<td>Assigned to dri automation by dri automation</td>
+</tr>
+<!--<-Proofer Notes & Files Upload Section->-->
+<!------Proofer Image------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<!------Proofer Notes & File Upload label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div/span</td>
+	<td>Proofer Notes &amp; File Upload</td>
+</tr>
+<!------For Printing Radio Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[1]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[1]/span</td>
+	<td>For Printing</td>
+</tr>
+<!------For Approval Radio Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[2]/span</td>
+	<td>For Approval</td>
+</tr>
+<!------For Team Lead Checking Radio Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div/span/label[3]/span</td>
+	<td>For Team Lead Checking</td>
+</tr>
+<!------Print File Upload Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------Print File Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/h6</td>
+	<td>Print File</td>
+</tr>
+<!------No file uploaded Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/span</td>
+	<td>No file uploaded</td>
+</tr>
+<!------Proof File Upload Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------Proof File Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td>Proof File</td>
+</tr>
+<!------No file uploaded Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td>No file uploaded</td>
+</tr>
+<!------No Issue Found Radio Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label/span</td>
+	<td>No Issues Found.</td>
+</tr>
+<!------Issue Found & Fix-ups Done. Radio Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label[2]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div/label[2]/span</td>
+	<td>Issues Found &amp; Fix-ups Done.</td>
+</tr>
+<!------Select Category Dropdown------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div[2]/form/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div[2]/form/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div/div/div[2]/form/div/a/span</td>
+	<td></td>
+</tr>
+<!------Issue List Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/label</td>
+	<td>Issue List</td>
+</tr>
+<!------Issue List Multi select box------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------File Issue Fix-up Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div[2]/label</td>
+	<td>File Issue Fix-up</td>
+</tr>
+<!------File Issue Fix-up Multi select box------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div[3]/div/div/div[2]/div/div/div[2]/div</td>
+	<td></td>
+</tr>
+<!------Add/Replace button------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section[${x]]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div[2]/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${x}]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/div[2]/div/div/button</td>
+	<td>Add\Replace</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-File Details Uploaded Layout Checking->-->
+<!------ First File row checking------>
+<!----Uploaded By Column Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//td/span</td>
+	<td>${storedUploadedByTextItem1}</td>
+</tr>
+<!----Uploaded By Column Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//td/span[2]</td>
+	<td>${storedDateTimeItem1}</td>
+</tr>
+<!----Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//td[2]</td>
+	<td>${storedNotesTextItem1}</td>
+</tr>
+<!----Disapproval Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//td[3]</td>
+	<td>${storedDisapprovalNotesTextItem1}</td>
+</tr>
+<!------ Second File row checking------>
+<!----Uploaded By Column Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td/span</td>
+	<td>${storedUploadedByTextItem2}</td>
+</tr>
+<!----Uploaded By Column Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td/span[2]</td>
+	<td>${storedDateTimeItem2}</td>
+</tr>
+<!----Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td[2]</td>
+	<td>${storedNotesTextItem2}</td>
+</tr>
+<!----Disapproval Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//tr[2]/td[3]</td>
+	<td>${storedDisapprovalNotesTextItem2}</td>
+</tr>
+<!--<-File Details Uploaded Layout Checking for the 2nd job item->-->
+<!------ First File row checking------>
+<!----Uploaded By Column Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td/span</td>
+	<td>${storedUploadedByTextItem3}</td>
+</tr>
+<!----Uploaded By Column Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td/span[2]</td>
+	<td>${storedDateTimeItem3}</td>
+</tr>
+<!----Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[2]</td>
+	<td>${storedNotesTextItem3}</td>
+</tr>
+<!----Disapproval Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[3]</td>
+	<td>${storedDisapprovalNotesTextItem3}</td>
+</tr>
+<!--<-File Details Uploaded Layout Checking for the 3rd job item->-->
+<!------ First File row checking------>
+<!----Uploaded By Column Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td/span</td>
+	<td>${storedUploadedByTextItem4}</td>
+</tr>
+<!----Uploaded By Column Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td/span[2]</td>
+	<td>${storedDateTimeItem4}</td>
+</tr>
+<!----Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[2]</td>
+	<td>${storedNotesTextItem4}</td>
+</tr>
+<!----Disapproval Notes Column---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div/table/tbody/tr/td[3]</td>
+	<td>${storedDisapprovalNotesTextItem4}</td>
+</tr>
+<!--<-File Details Uploaded Item Checking->-->
+<!------ First File checking------>
+<!------Front and Back------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div/div[2]/span</td>
+	<td>FRONT</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[2]/span</td>
+	<td>BACK</td>
+</tr>
+<!----Uploaded By Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[2]/div/div/div/strong</td>
+	<td>${storedUploadedByTextItem1}</td>
+</tr>
+<!----File Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div/div[3]</td>
+	<td>${storedFileNameTextItem1}</td>
+</tr>
+<!----Uploaded By Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div/div[4]</td>
+	<td>${storedDateTimeItem1}</td>
+</tr>
+<!------ Second File checking------>
+<!----Uploaded By Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/strong</td>
+	<td>${storedUploadedByTextItem2}</td>
+</tr>
+<!----File Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[3]</td>
+	<td>${storedFileNameTextItem2}</td>
+</tr>
+<!----Uploaded By Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[4]</td>
+	<td>${storedDateTimeItem2}</td>
+</tr>
+<!------ 2nd Job item File checking------>
+<!----Uploaded By Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td>${storedUploadedByTextItem3}</td>
+</tr>
+<!----File Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td>${storedFileNameTextItem3}</td>
+</tr>
+<!----Uploaded By Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[2]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[3]</td>
+	<td>${storedDateTimeItem3}</td>
+</tr>
+<!------ 3rd Job item File checking------>
+<!----Uploaded By Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td>${storedUploadedByTextItem4}</td>
+</tr>
+<!----File Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td>${storedFileNameTextItem4}</td>
+</tr>
+<!----Uploaded By Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[3]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[3]</td>
+	<td>${storedDateTimeItem4}</td>
+</tr>
+<!------ 4th Job item File checking------>
+<!----Uploaded By Uploader---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/strong</td>
+	<td>${storedUploadedByTextItem5}</td>
+</tr>
+<!----File Name---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[2]</td>
+	<td>${storedFileNameTextItem5}</td>
+</tr>
+<!----Uploaded By Date & Time---->
+<tr>
+	<td>verifyText</td>
+	<td>//section[4]/ng-include/section/div/article/div/div/div/div/div[2]/div/div[2]/div[2]/div/div/div/div[3]</td>
+	<td>${storedDateTimeItem5}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

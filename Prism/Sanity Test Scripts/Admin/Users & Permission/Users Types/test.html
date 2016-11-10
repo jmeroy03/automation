@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroominc.com/#/dashboard" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Admin\Cost of Goods Sold\COGS Values\COGS Values - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//h4/a/span/span</td>
+	<td>factorHeadersCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1;$x&lt;=${factorHeadersCount};$x++</td>
+	<td></td>
+</tr>
+<!--<-Verifying Header element if existing and visible->-->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div/h4/a/span/span</td>
+	<td>headerTitle</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${headerTitle}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<!------Clicking Header to show dropdown Sub Elements------>
+<tr>
+	<td>click</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[2]/div[2]/div/div/div/div/label</td>
+	<td>fieldCount</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>xctr</td>
+</tr>
+<!--<-Verifying Sub element per Header if existing, has a correct label and visible->-->
+<tr>
+	<td>for</td>
+	<td>$y=1;$y&lt;=${fieldCount};$y++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[${y}]/label</td>
+	<td>storedLabel</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${storedLabel}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>label</td>
+	<td>${xctr},17</td>
+</tr>
+<!--<-Checking of elements for Label->-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[${y}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[${y}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='factors']/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[${y}]/label</td>
+	<td>${label}</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$xctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of elements for Fields->-->
+<!------Active Status Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[1]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[1]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[1]/div/div/a/span</td>
+	<td></td>
+</tr>
+<!------Start of Effectivity Date  Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[2]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[2]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[2]/div/div/input</td>
+	<td></td>
+</tr>
+<!------End of Effectivity Date Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[3]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[3]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[3]/div/div/input</td>
+	<td></td>
+</tr>
+<!------Account Type Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[4]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[4]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[4]/div/div/a/span</td>
+	<td></td>
+</tr>
+<!------Factor Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[5]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[5]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[5]/div/div/a/span</td>
+	<td></td>
+</tr>
+<!------Factor Value Field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[6]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[6]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[2]/div/div[3]/accordion/div/div[${x}]/div[2]/div/div/div/div[6]/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

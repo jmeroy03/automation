@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Problem Tickets - Edit Page - filters UI (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Problem Tickets - Edit Page - filters UI (layout)</td></tr>
+</thead><tbody>
+<!--<-Label Checking in Ticket Details->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div/label</td>
+	<td>fieldCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1; $x&lt;=${fieldCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[${x}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[${x}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[${x}]/div/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[${x}]/div/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing elements created from add page to Edit page->-->
+<!----Status field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[7]/div/span</td>
+	<td>${storedStatusFieldText}</td>
+</tr>
+<!----Complaint Type field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[8]/div/span</td>
+	<td>${storedComplaintTypeFieldText}</td>
+</tr>
+<!----Client's Deadline field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[9]/div/span</td>
+	<td>${storedClientsDeadLineDate}</td>
+</tr>
+<!----Details field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[10]/div/span</td>
+	<td>${storedDetailsFieldText}</td>
+</tr>
+<!----Attention field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[11]/div/span</td>
+	<td>${storedAttentionFieldText}</td>
+</tr>
+<!----Designated to field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[12]/div/span</td>
+	<td>${storedDesignatedToFieldText}</td>
+</tr>
+<!----Resolution field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[13]/div/span</td>
+	<td>${totalResolutionOptionsText}</td>
+</tr>
+<!----Reprinting Cost / Upgrade Turnaround field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[14]/div/span</td>
+	<td>${storedReprintingCostUpgradeTurnaroundText}</td>
+</tr>
+<!----Reshipping Cost / Upgrade Shipping field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[15]/div/span</td>
+	<td>${storedReshippingCostUpgradeShippingText}</td>
+</tr>
+<!----Refund field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[16]/div/span</td>
+	<td>${storedRefundText}</td>
+</tr>
+<!----Store Credit field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[17]/div/span</td>
+	<td>${storedStoreCreditText}</td>
+</tr>
+<!----Discount for Error field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[18]/div/span</td>
+	<td>${storedDiscountForErrorText}</td>
+</tr>
+<!----Amount Lost field---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div[19]/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<!--<-Storing count of Job item from inserted job orders->-->
+<!------checking of invoice no. in header------>
+<tr>
+	<td>verifyText</td>
+	<td>css=span.font-sm</td>
+	<td>JOB # ${jobOrderId}</td>
+</tr>
+<!------checking of invoice no.------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[2]/div/div[2]/h5</td>
+	<td>INVOICE # ${jobOrderId}</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tbody/tr/td/div/label/span</td>
+	<td>jobItemRowCount</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>descriptionCtr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$ctrx=1; $ctrx&lt;=${jobItemRowCount}; $ctrx++</td>
+	<td></td>
+</tr>
+<!------Comparing Item No. from IMS Job order item to prism Job order item------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][0]</td>
+	<td>jobItemNoArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tbody/tr[${ctrx}]/td[2]/div</td>
+	<td>Item No.: ${jobItemNoArray}</td>
+</tr>
+<!------Comparing Account Type from IMS to prism Account Type------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][1][2]</td>
+	<td>accountTypeArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tbody/tr[${ctrx}]/td[2]/div[2]</td>
+	<td>Account Type: ${accountTypeArray}</td>
+</tr>
+<!------Comparing "Amount" from IMS to prism "Amount"------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][8]</td>
+	<td>amountArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tbody/tr[${ctrx}]/td[3]/span</td>
+	<td>${amountArray}</td>
+</tr>
+<!--<-Incrementing counter for stored array->-->
+<tr>
+	<td>storeEval</td>
+	<td>$descriptionCtr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing of total priced from IMS to Prism->-->
+<!------Comparing "Printing" from IMS to prism "Printing"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div</td>
+	<td>${printingTotal}</td>
+</tr>
+<!------Comparing "Discounts" from IMS to prism "Discounts"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[2]</td>
+	<td>${discountTotal}</td>
+</tr>
+<!------Comparing "Tax" from IMS to prism "Tax"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[3]</td>
+	<td>${taxTotal}</td>
+</tr>
+<!------Comparing "Shipping Total" from IMS to prism "ShippingTotal"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[4]</td>
+	<td>${shippingTotal}</td>
+</tr>
+<!------Comparing "Grand Total" from IMS to prism "Grand Total"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[5]</td>
+	<td>${grandTotal}</td>
+</tr>
+<!------Comparing "Payment" from IMS to prism "Payment"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[6]</td>
+	<td>${paymentTotal}</td>
+</tr>
+<!------Comparing "Balance Due" from IMS to prism "Balance Due"------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[3]/div/form/div/div[2]/div[2]/fieldset[2]/div[3]/table/tfoot/tr/td[2]/div[7]</td>
+	<td>${balanceDueTotal}</td>
+</tr>
+<!--<-Checking of layout in the buttons in the header section->-->
+<!----Back Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td>Back</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<!----Assign to Self Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td>Assign to Self</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<!------Checking if the default would be close or reopen button------>
+<tr>
+	<td>storeEval</td>
+	<td>$storedStatusFieldText == &quot;Closed&quot;</td>
+	<td>statusResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${statusResult} == true</td>
+	<td></td>
+</tr>
+<!----Reopen/Close Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td>Reopen</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>Close</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----History Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>History</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<!--<-Checking of Layout for FileUpload Action->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/fieldset/h3</td>
+	<td>File Upload Action</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/fieldset/h3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/fieldset/h3</td>
+	<td></td>
+</tr>
+<!--<-Upload file layout->-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div</td>
+	<td></td>
+</tr>
+<!--<-File Name Column layout->-->
+<tr>
+	<td>verifyText</td>
+	<td>css=th.text-center</td>
+	<td>File Name</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=th.text-center</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=th.text-center</td>
+	<td></td>
+</tr>
+<!--<-Uploaded By Column layout->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[2]</td>
+	<td>Uploaded By</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[2]</td>
+	<td></td>
+</tr>
+<!--<-Date & Time Uploaded Column layout->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[3]</td>
+	<td>Date &amp; Time Uploaded</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div/div/div[3]/table/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<!--<-Label Checking for Managaer Action->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div/label</td>
+	<td>fieldCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1; $x&lt;=${fieldCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[${x}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[${x}]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[${x}]/div/span/em</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[${x}]/div/span/em</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div[4]/div/div/div[2]/form/div/fieldset[2]/div[${x}]/div/span/em</td>
+	<td>(None)</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Label Checking for Notes Tab->-->
+<!----Notes Tab---->
+<tr>
+	<td>verifyText</td>
+	<td>//ul[@id='myTab']/li/a/span[2]</td>
+	<td>Notes</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//ul[@id='myTab']/li/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//ul[@id='myTab']/li/a/span[2]</td>
+	<td></td>
+</tr>
+<!----Notes Label---->
+<tr>
+	<td>verifyText</td>
+	<td>css=label.control-label &gt; strong</td>
+	<td>Note *</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=label.control-label &gt; strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=label.control-label &gt; strong</td>
+	<td></td>
+</tr>
+<!----Job Item Dropdown---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/div/div/a/span</td>
+	<td></td>
+</tr>
+<!----Notes Field---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div/form/textarea</td>
+	<td></td>
+</tr>
+<!----Reset Button---->
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td>Reset</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[9]</td>
+	<td></td>
+</tr>
+<!----Post Button---->
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div[5]/div/div/div/div/ng-include/div/div/div/div/div/div[1]/form/div[2]/button[2]</td>
+	<td>Post</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div[5]/div/div/div/div/ng-include/div/div/div/div/div/div[1]/form/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div[5]/div/div/div/div/ng-include/div/div/div/div/div/div[1]/form/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<!----Notes board---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

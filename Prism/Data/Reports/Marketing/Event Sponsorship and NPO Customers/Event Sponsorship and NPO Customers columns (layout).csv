@@ -1,0 +1,17 @@
+column_name,column_location,layout_name,layout_location,pop_up_column_name,pop_up_column_location,pop_up_layout_name,pop_up_layout_location
+17,,4,,12,,7,
+Customer ID,id=jqgh_jqGrid_customer_id,job orders table,id=gbox_jqGrid,Job No.,id=jqgh_jqGrid1_fact_order_id,customer table,css=div.modal-content
+Customer Name,id=jqgh_jqGrid_customer_name,pagination,css=div.ui-paging-info > strong,Source,id=jqgh_jqGrid1_source,header,css=h3.modal-title
+Company Name,id=jqgh_jqGrid_company_name,,,Order Date,id=jqgh_jqGrid1_order_date,pagination,css=#jqGridPager1_left > div.ui-paging-info > strong
+Customer Type,id=jqgh_jqGrid_customer_type,,,Website Code,id=jqgh_jqGrid1_website_code,close button,css=div.modal-footer > button.btn
+Date Flagged as Event Sponsorship,id=jqgh_jqGrid_sponsor_flag_datetime,,,Subtotal,id=jqgh_jqGrid1_sub_total,export spreadsheet button,xpath=(//button[@value=''])[3]
+Date Flagged as NPO,id=jqgh_jqGrid_npo_flag_datetime,,,Discount,id=jqgh_jqGrid1_discount,,
+Assigned To,id=jqgh_jqGrid_sales_team,,,Discount Percentage,id=jqgh_jqGrid1_discount_percentage,,
+Account Status,id=jqgh_jqGrid_account_status,,,Shipping Total,id=jqgh_jqGrid1_shipping_total,,
+First Order Date,id=jqgh_jqGrid_first_order_datetime,,,Total Amount,id=jqgh_jqGrid1_total_amount,,
+Last Order Date,id=jqgh_jqGrid_last_order_datetime,,,Payment Status,id=jqgh_jqGrid1_payment_status,,
+Sales Within Date Range,id=jqgh_jqGrid_sales_within_dates,,,,,,
+Sales - Last 30 Days,id=jqgh_jqGrid_sales_last_30_days,,,,,,
+Sales - Last 6 Months,id=jqgh_jqGrid_sales_last_6_months,,,,,,
+Sales - Lifetime,id=jqgh_jqGrid_total_order_sales,,,,,,
+Orders - Lifetime,id=jqgh_jqGrid_total_order_count,,,,,,

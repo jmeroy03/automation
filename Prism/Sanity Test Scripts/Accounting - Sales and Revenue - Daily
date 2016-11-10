@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../Global Functions/Re-usable Functions.html">Re-usable Functions</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - Redirection to page.html">Daily - Redirection to page</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - filters UI (layout).html">Daily - filters UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - filter selection(functionality).html">Daily - filter selection(functionality)</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - Table Row (layout).html">Daily - Table Row (layout)</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - Table Row links (layout).html">Daily - Table Row links (layout)</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - clear selected filter (functionality).html">Daily - clear selected filter (functionality)</a></td></tr>
+<tr><td><a href="Reports/Accounting/Sales and Revenue/Daily/Daily - Generate Spread Sheet Report (functionality).html">Daily - Generate Spread Sheet Report (functionality)</a></td></tr>
+</tbody></table>
+</body>
+</html>

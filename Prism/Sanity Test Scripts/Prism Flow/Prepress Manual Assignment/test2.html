@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test2</td></tr>
+</thead><tbody>
+<!--<-Proceeding to assigned Job Items->-->
+<!--<-Checking if job item header color is light blue or not yet assigned->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[2]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

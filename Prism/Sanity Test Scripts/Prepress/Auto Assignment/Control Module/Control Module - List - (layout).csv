@@ -1,0 +1,49 @@
+element_name_visble,element_name_location,element_label,element_location
+49,,27,
+bread crumbs,css=ol.breadcrumb,Prepress,css=ol.breadcrumb > li
+Control Module,css=div.widget-body-toolbar,Auto Assignment,//div[@id='ribbon']/ol/li[2]
+Control Module Icon,css=span.widget-icon > i.fa.fa-sort-numeric-asc,Control Module,//div[@id='ribbon']/ol/li[3]
+Control Module label,css=h2,Control Module,css=h2
+Save Button,//button[@type='submit button'],Maximum Number of items to be assigned,//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[1]/div/label
+Reset Button,css=div.col-md-5.text-right > button.btn.btn-default,Twist Timeout (minutes),//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[2]/div/label
+Maximum Number of items to be assigned Section,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[1]/div,Auto Assignment Interval (seconds),//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[3]/div/label
+Maximum Number of items to be assigned Label,//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[1]/div/label,Order Value Ranges,//div[@id='wid-id-18']/div/div/div[2]/div/div/div/span
+Maximum Number of items to be assigned Field,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[1]/div/div/input,401 - Above,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div/h4/a/span/span/strong
+Twist Timeout (minutes) Section,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[2]/div,251 - 400,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div/h4/a/span/span/strong
+Twist Timeout (minutes) Label,//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[2]/div/label,151 - 250,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div/h4/a/span/span/strong
+Twist Timeout (minutes) Field,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[2]/div/div/input,0 - 150,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div/h4/a/span/span/strong
+Auto Assignment Interval (seconds) Section,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[3]/div,Proofing Categories and Prioritization,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div/span
+Auto Assignment Interval (seconds) Label,//div[3]/div/span/div/div/div/div[1]/div/div/form/fieldset[3]/div/label,Multi-pager,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div/h4/a/span/span/strong
+Auto Assignment Interval (seconds) Field,//div[@id='wid-id-18']/div/div/div/div/div/form/fieldset[3]/div/div/input,VIP/DST,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div/h4/a/span/span/strong
+ Order Value Ranges  Section,//div[@id='wid-id-18']/div/div/div[2]/div,Custom,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div/h4/a/span/span/strong
+ Order Value Ranges  Label,//div[@id='wid-id-18']/div/div/div[2]/div/div/div/span,Turnaround 0/1,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div/h4/a/span/span/strong
+401 - Above Section,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div,Folding,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[5]/ng-include/div/div/h4/a/span/span/strong
+401 - Above Label,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div/h4/a/span/span/strong,Die-cut,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[6]/ng-include/div/div/h4/a/span/span/strong
+251 - 400 Section,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div,Mailing,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[7]/ng-include/div/div/h4/a/span/span/strong
+251 - 400 Label,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div/h4/a/span/span/strong,Advanced Art Check,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[8]/ng-include/div/div/h4/a/span/span/strong
+151 - 250 Section,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div,Hard Copy Proof,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[9]/ng-include/div/div/h4/a/span/span/strong
+151 - 250 Label,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div/h4/a/span/span/strong,BC/LFP/PC/Flyers - All Products,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[10]/ng-include/div/div/h4/a/span/span/strong
+0 - 150 Section,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div,Save,//button[@type='submit button']
+0 - 150 Label,//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div/h4/a/span/span/strong,Reset,css=div.col-md-5.text-right > button.btn.btn-default
+Proofing Categories and Prioritization  Section,//div[@id='wid-id-18']/div/div/div[2]/div[2],,
+Proofing Categories and Prioritization  Label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div/span,,
+Multi-pager Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div,,
+Multi-pager label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[1]/ng-include/div/div/h4/a/span/span/strong,,
+VIP/DST Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div,,
+VIP/DST label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[2]/ng-include/div/div/h4/a/span/span/strong,,
+Custom Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div,,
+Custom label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[3]/ng-include/div/div/h4/a/span/span/strong,,
+Turnaround 0/1 Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div,,
+Turnaround 0/1 label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[4]/ng-include/div/div/h4/a/span/span/strong,,
+Folding Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[5]/ng-include/div/div,,
+Folding label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[5]/ng-include/div/div/h4/a/span/span/strong,,
+Die-cut Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[6]/ng-include/div/div,,
+Die-cut label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[6]/ng-include/div/div/h4/a/span/span/strong,,
+Mailing Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[7]/ng-include/div/div,,
+Mailing label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[7]/ng-include/div/div/h4/a/span/span/strong,,
+Advanced Art Check Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[8]/ng-include/div/div,,
+Advanced Art Check label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[8]/ng-include/div/div/h4/a/span/span/strong,,
+Hard Copy Proof Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[9]/ng-include/div/div,,
+Hard Copy Proof label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[9]/ng-include/div/div/h4/a/span/span/strong,,
+BC/LFP/PC/Flyers Section,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[10]/ng-include/div/div,,
+BC/LFP/PC/Flyers label,//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[10]/ng-include/div/div/h4/a/span/span/strong,,

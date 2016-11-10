@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroominc.com" />
+<title>Problem Tickets - filters UI (layout)</title>
+<style>
+.failed {color: red; background-color: #ffcccc;}
+.passed {color: green; background-color: #ccffcc;}
+.done {color: #404040; background-color: #ccffcc;}
+.comment {color: #404040; background-color: #d0d0d0;}
+body, table { font-family: Verdana, Arial, sans-serif; font-size: 12pt; }
+table { border-collapse: collapse; border: 1px solid #ccc; }
+th, td { padding-left: 0.3em; padding-right: 0.3em; border: 1px solid #ccc; }
+#suiteSummaryTable thead { font-size: 14pt; font-weight: 800; }
+.test_case thead { font-size: 14pt; font-weight: 400; }
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr><td colspan="4">Test case: Problem Tickets - filters UI (layout)</td></tr>
+</thead><tbody>
+<tr class="comment">
+	<td colspan="4">Checking of URL if redirected correctly</td>
+</tr>
+<tr class="passed">
+	<td>verifyLocation</td>
+	<td>http://qaprism.digitalroominc.com/#/report/global/tickets</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Connecting excel sheet to Selenium</td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Global Reports\Problem Tickets\Problem Tickets (layout).csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=3;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of element label if its correct</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=24; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},4</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of element if its visible & element is present in the page</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=47; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Separate checking for Generate button</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate Spreadsheet Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate Spreadsheet Report</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>id=gview_jqGrid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>id=gview_jqGrid</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

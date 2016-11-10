@@ -1,0 +1,21 @@
+element_name_visble,element_name_location,element_label,element_location,element Field,column Name,column Location,Website,Facility,Shipping Facility,Website Dropdown,Facility Dropdown,Shipping Facility Dropdown
+7,,9,,3,5,,11,,,,,
+bread crumbs,css=ol.breadcrumb,Website,//div[@id='wid-id-18']/div/div/form/div[1]/label,//div[@id='wid-id-18']/div/div/form/div[1]/div/div/div/a/span,Website,//th[1],Business Cards 24,Saddle Brook,Van Nuys,24HourPrint,Van Nuys,Van Nuys
+Website Facility Override Icon,css=span.widget-icon > i.fa.fa-plane,Facility,//div[@id='wid-id-18']/div/div/form/div[2]/label,//div[@id='wid-id-18']/div/div/form/div[2]/div/div/div/a/span,Facility,//th[2],Postcards.com,Saddle Brook,Van Nuys,48 Hour Print,Saddle Brook,Saddle Brook
+Website Facility Override label,css=h2,Shipping Facility,//div[@id='wid-id-18']/div/div/form/div[3]/label,//div[@id='wid-id-18']/div/div/form/div[3]/div/div/div/a/span,Shipping Facility,//th[3],Print Runner,Saddle Brook,Van Nuys,Bargain Basement Printing,Magnets4Media,Magnets4Media
+Save Button,//div[3]/div/div/div/div/form/div[4]/div/div/button,Website Support,css=ol.breadcrumb > li,,,,Printplace,Van Nuys,Arlington,Business Cards 24,Arlington,Arlington
+Website Facility Override Table,//div[@id='wid-id-18']/div/table,Shipping Facility Override,//div[@id='ribbon']/ol/li[2],,,,Printplace,Saddle Brook,Arlington,Chan Printing,Cleveland,Cleveland
+,,Manage Website Facility Override,css=h2,,,,Prints Made Easy,Saddle Brook,Van Nuys,Digital Room,,
+,,Save,//div[3]/div/div/div/div/form/div[4]/div/div/button,,,,Uprinting,Saddle Brook,Van Nuys,Hotcards,,
+,,,,,,,Uprinting,Arlington,Van Nuys,Live Nation Printing,,
+,,,,,,,Youprint,Saddle Brook,Van Nuys,Next Day Flyers,,
+,,,,,,,,,,NNA Services,,
+,,,,,,,,,,Postcards.com,,
+,,,,,,,,,,Print Runner,,
+,,,,,,,,,,Print Runner (DRI),,
+,,,,,,,,,,PrintPlace,,
+,,,,,,,,,,Prints Made Easy,,
+,,,,,,,,,,UPrinting,,
+,,,,,,,,,,V12 Group,,
+,,,,,,,,,,YouPrint,,
+,,,,,,,,,,YouPrint Labels,,

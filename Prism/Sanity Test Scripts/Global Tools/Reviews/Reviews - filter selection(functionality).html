@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job Orders</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job Orders</td></tr>
+</thead><tbody>
+<!--<-Selecting date "From Date"->-->
+<tr>
+	<td>click</td>
+	<td>id=from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>1</td>
+</tr>
+<!--<-Selecting date "To Date"->-->
+<tr>
+	<td>click</td>
+	<td>id=to_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>31</td>
+</tr>
+<!--<-Selecting Available Filters->-->
+<!------Assigned To Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>css=#user_chosen &gt; a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#user_chosen &gt; div.chosen-drop &gt; div.chosen-search &gt; input[type=&quot;text&quot;]</td>
+	<td>Marky Umali${KEY_ENTER}</td>
+</tr>
+<!------Company Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>css=#company_chosen &gt; a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#company_chosen &gt; div.chosen-drop &gt; div.chosen-search &gt; input[type=&quot;text&quot;]</td>
+	<td>Digital Room, Inc.${KEY_ENTER}</td>
+</tr>
+<!------Website Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>css=#website_chosen &gt; a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=#website_chosen &gt; div.chosen-drop &gt; div.chosen-search &gt; input[type=&quot;text&quot;]</td>
+	<td>UPrinting${KEY_ENTER}</td>
+</tr>
+<!------Payment Status Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>css=#payment_status_chosen &gt; a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='payment_status_chosen']/div/ul/li[4]</td>
+	<td>PAID</td>
+</tr>
+<!--<-Clicking the Search Button->-->
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

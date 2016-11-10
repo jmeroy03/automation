@@ -1,0 +1,31 @@
+element_name_visible,element_name_location,column_label,column_location,column attribute,Add page element label,Add page element label location,category dropdown,edit page element label,Edit page element label location,Binding Order Specs
+10,7,7,,,16,10,11,31,20,7
+Prepress,css=ol.breadcrumb > li,ID,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div/span/span[2]@class,Description *,//div[@id='wid-id-18']/div/div/form/div/label,Product,Description *,//div[@id='wid-id-18']/div/div/form/div/label,Saddle-Stitched
+Auto Assignment,//div[@id='ribbon']/ol/li[2],Proofing Category,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div/span/span[2]@class,Category *,//div[@id='wid-id-18']/div/div/form/div[2]/label,Order Specs,Category *,//div[@id='wid-id-18']/div/div/form/div[2]/label,Wire-O Binding
+Item Specifications,//div[@id='ribbon']/ol/li[3],Order Value Flag,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div/span/span[2]@class,Order Value,//div[@id='wid-id-18']/div/div/form/div[3]/div/div/label/span,Customer,Order Value,//div[@id='wid-id-18']/div/div/form/div[3]/div/div/label/span,Clear Plastic Coil with Clear Cover
+Item Specifications,css=h2,Exclusive Flag,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div/span/span[2]@class,Exclusive,//div[@id='wid-id-18']/div/div/form/div[4]/div/div/label/span,Item,Exclusive,//div[@id='wid-id-18']/div/div/form/div[4]/div/div/label/span,Perfect Binding
+Add,link=Add,Proofing Category Type,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div/span/span[2]@class,Prepress,css=ol.breadcrumb > li,Mailing,Prepress,css=ol.breadcrumb > li,No Staples
+bread crumbs,css=ol.breadcrumb,,,,Auto Assignment,//div[@id='ribbon']/ol/li[2],Custom,Auto Assignment,//div[@id='ribbon']/ol/li[2],
+Control Module,css=div.widget-body-toolbar,,,,Item Specifications,//div[@id='ribbon']/ol/li[3],Default,Item Specifications,//div[@id='ribbon']/ol/li[3],
+Control Module Icon,css=span.widget-icon > i.fa.fa-file-code-o,,,,Add Proofing Category,css=h2,Advanced Art Check,Edit Proofing Category,css=h2,
+,,,,,Save,xpath=(//button[@type='button'])[3],Hard Copy Proof,Update,xpath=(//button[@type='button'])[3],
+,,,,,Save,xpath=(//button[@type='button'])[4],,Delete,xpath=(//button[@type='button'])[4],
+,,,,,Back,xpath=(//button[@type='button'])[5],,Back,xpath=(//button[@type='button'])[5],
+,,,,,bread crumbs,css=ol.breadcrumb,,Order Spec Groups,//div[@id='wid-id-18']/div/div/div[2]/div/h4,
+,,,,,Control Module,css=div.widget-body-toolbar,,Description,//div[2]/div/div/div/form/div/label,
+,,,,,Control Module Icon,css=span.widget-icon > i.fa.fa-file-code-o,,Order Specs,//div[2]/div/div/div/form/div[2]/label,
+,,,,,Description * text box,//div[@id='wid-id-18']/div/div/form/div/div/input,,[Clear],link=[Clear],
+,,,,,Category * dropdown,//div[@id='wid-id-18']/div/div/form/div[2]/div/div/a/span,,Update,xpath=(//button[@type='button'])[6],
+,,,,,Order Value checkbox,//div[@id='wid-id-18']/div/div/form/div[3]/div/div/label/span,,Delete,xpath=(//button[@type='button'])[7],
+,,,,,Exclusive checkbox,//div[@id='wid-id-18']/div/div/form/div[4]/div/div/label/span,,Enable All,//span/div/label,
+,,,,,,,,bread crumbs,css=ol.breadcrumb,
+,,,,,,,,Control Module,css=div.widget-body-toolbar,
+,,,,,,,,Control Module Icon,css=span.widget-icon > i.fa.fa-file-code-o,
+,,,,,,,,Description * text box,//div[@id='wid-id-18']/div/div/form/div/div/input,
+,,,,,,,,Category * dropdown,//div[@id='wid-id-18']/div/div/form/div[2]/div/div/a/span,
+,,,,,,,,Order Value checkbox,//div[@id='wid-id-18']/div/div/form/div[3]/div/div/label/span,
+,,,,,,,,Exclusive checkbox,//div[@id='wid-id-18']/div/div/form/div[4]/div/div/label/span,
+,,,,,,,,Description Text Box,//div[@id='tab-0']/form/div/div/input,
+,,,,,,,,Order Specs Multi select box,//div[@id='tab-0']/form/div[2]/div/label/select,
+,,,,,,,,Enable All Switch,//div[@id='accordion-order-specs-0']/div/div/h4/a/span/span/div/label/i,
+,,,,,,,,Order Specs Header Tag,//div[3]/div/div/div/div/div[2]/div[2]/div/div/div[1]/form/div[3]/div/div/div[1]/h4/a,

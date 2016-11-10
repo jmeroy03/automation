@@ -1,0 +1,19 @@
+element_name_visble,element_location,element_label_name,element_label_location
+19,,13,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Missouri Sales Tax report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Missouri Sales Tax report icon,css=span.widget-icon > i.fa.fa-table,Sales Tax,//div[@id='ribbon']/ol/li[3]
+Missouri Sales Tax Report label,css=h2,MO Sales Tax,//div[@id='ribbon']/ol/li[4]
+From Date - To Date section,css=section.col.col-4,Missouri Sales Tax Report,css=h2
+From Date label,css=label.label,From Date,css=label.label
+From Date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section/label[3]
+To Date label,//div[@id='filter']/form/fieldset/div/section/label[3],Company,//div[@id='filter']/form/fieldset/div/section[2]/label
+To Date datepicker,id=to_date,[Clear],link=[Clear]
+Company section,//div[@id='filter']/form/fieldset/div/section[2],(No Selection = All),css=label.select.select-multiple > em
+Company Label,//div[@id='filter']/form/fieldset/div/section[2]/label,Tax Status,//div[@id='filter']/form/fieldset/div/section[3]/label
+Company Multiselect box,id=company_code,,
+clear link,link=[Clear],,
+(No Selection = All) label,css=label.select.select-multiple > em,,
+Tax Status Section,//div[@id='filter']/form/fieldset/div/section[3],,
+Tax Status Label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Tax Status dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[2]/div/a/span,,

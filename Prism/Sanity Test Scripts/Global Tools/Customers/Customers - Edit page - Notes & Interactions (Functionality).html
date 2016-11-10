@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Notes & Interactions (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Notes & Interactions (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Selecting Options in the Notes & Interaction Options->-->
+<!------Type dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[3]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[3]/div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[3]/div/div/a/span</td>
+	<td>stored_type_NI</td>
+</tr>
+<!--<-Checking of Dropdown Buttons if its enabled after selecting a Type Option->-->
+<!------Channel------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[4]/div/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>enabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 1------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[5]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>enabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>enabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>enabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<!--<-Checking if the sub category are still disabled->-->
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 1------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[5]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!--<-Continuation of selecting options in the Notes & Interaction Options->-->
+<!------Channel dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div/div/a/span</td>
+	<td>stored_channel_NI</td>
+</tr>
+<!--<-Checking if the Result Dropdown Appears after selecting a random Type and Channel->-->
+<tr>
+	<td>storeEval</td>
+	<td>$stored_type_NI == &quot;Outbound&quot;</td>
+	<td>verifying_type_text</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_channel_NI == &quot;Phone&quot;) || ($stored_channel_NI == &quot;Phone and Email&quot;)</td>
+	<td>verifying_channel_text</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>($verifying_type_text == true) &amp;&amp; ($verifying_channel_text == true)</td>
+	<td></td>
+</tr>
+<!------Checking of the "Result" label, dropdown and default options are correct------>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td>Select an Option</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/label</td>
+	<td>Result *</td>
+</tr>
+<!------Selecting an Option in the Result Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/a/span</td>
+	<td>stored_result_NI</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Continuation of selecting options in the Notes & Interaction Options->-->
+<!------Category 1 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div/div/a/span</td>
+	<td>stored_cat1_NI</td>
+</tr>
+<!--<-Checking of Dropdown Buttons are still disabled after selecting a Category 1 Option->-->
+<!------Subcategory 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Selecting an option in Subcategory 1 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div[2]/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div[2]/div/a/span</td>
+	<td>stored_subcat1_NI</td>
+</tr>
+<!------Checking of Subcategory 2 & 3 Layout------>
+<!------Subcategory 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!--<-Continuation of selecting options in the Notes & Interaction Options->-->
+<!------Category 2 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div/div/a/span</td>
+	<td>stored_cat2_NI</td>
+</tr>
+<!--<-Checking of Dropdown Buttons are still disabled after selecting a Category 2 Option->-->
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Selecting an option in Subcategory 2 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div[2]/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div[2]/div/a/span</td>
+	<td>stored_subcat2_NI</td>
+</tr>
+<!--<-Checking of Dropdown Buttons are still disabled after selecting a Category 2 Option->-->
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!--<-Continuation of selecting options in the Notes & Interaction Options->-->
+<!------Category 3 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div/div/a/span</td>
+	<td>stored_cat3_NI</td>
+</tr>
+<!------Selecting an option in Subcategory 3 dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div[2]/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div[2]/div/a/span</td>
+	<td>stored_subcat3_NI</td>
+</tr>
+<!------Typing a comment in the "Note" field------>
+<tr>
+	<td>type</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div[2]/div/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div[2]/div/textarea</td>
+	<td>stored_test_notes</td>
+</tr>
+<!------Post Button------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[3]/div/div/button@disabled</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>enabled_button</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

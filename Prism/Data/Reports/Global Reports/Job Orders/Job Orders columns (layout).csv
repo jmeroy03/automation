@@ -1,0 +1,22 @@
+column_name,column_location,layout_name,layout_location
+22,,3,
+Invoice No.,id=jqgh_jqGrid_job_order_id,job orders table,id=gbox_jqGrid
+Origin,id=jqgh_jqGrid_origin,pagination,css=div.ui-paging-info > strong
+Website Code,id=jqgh_jqGrid_website_code,total order amount,//div[@id='gview_jqGrid']/div[4]/div/table/tbody/tr/td[19]
+Customer ID,id=jqgh_jqGrid_customer_id,,
+Company Name,id=jqgh_jqGrid_company_name,,
+Customer Name,id=jqgh_jqGrid_job_full_name,,
+Email Address,id=jqgh_jqGrid_email,,
+Created Date,id=jqgh_jqGrid_create_date,,
+Created Timestamp,id=jqgh_jqGrid_create_time,,
+Order Date,id=jqgh_jqGrid_order_date,,
+Order Timestamp,id=jqgh_jqGrid_order_time,,
+Coupon Code,id=jqgh_jqGrid_coupon_code,,
+Transaction Type,id=jqgh_jqGrid_transaction_type,,
+Payment Status,id=jqgh_jqGrid_payment_status,,
+Sub Total,id=jqgh_jqGrid_sub_total,,
+Discount,id=jqgh_jqGrid_discount,,
+Sales Tax,id=jqgh_jqGrid_tax,,
+Shipping Amount,id=jqgh_jqGrid_shipping_total,,
+Order Amount,id=jqgh_jqGrid_total_amount,,
+Customer Type,id=jqgh_jqGrid_customer_type,,

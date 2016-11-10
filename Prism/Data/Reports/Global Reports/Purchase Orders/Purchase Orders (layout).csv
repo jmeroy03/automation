@@ -1,0 +1,22 @@
+element_name_visble,element_location,element_label_name,element_label_location
+22,,14,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Purchase Orders report Form,//section[@id='widget-grid']/div/article,Global Reports,//div[@id='ribbon']/ol/li[2]
+Purchase Orders report icon,css=span.widget-icon > i.fa.fa-table,Purchase Orders,//div[@id='ribbon']/ol/li[3]
+Purchase Orders Report label,css=h2,Purchase Orders Report,css=h2
+Created From Date section,css=section.row,Created From Date,css=label.label
+Created From Date label,css=label.label,Created To Date,//div[@id='filter']/form/fieldset/div/section/section[2]/label
+Created From Date datepicker,id=createdFromDate,Vendor,css=section.col.col-4 > label.label
+Created To Date section,//div[@id='filter']/form/fieldset/div/section/section[2],Created By,//div[@id='filter']/form/fieldset/div/section[3]/label
+Created To Date label,//div[@id='filter']/form/fieldset/div/section[2]/label,[Clear],link=[Clear]
+Created To Date datepicker,id=createdToDate,(No Selection = All),css=label.input > em
+Vendor section,//div[@id='filter']/form/fieldset/div/section[2],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+Vendor Label,css=section.col.col-4 > label.label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em
+Vendor Multiselect box,id=vendors,,
+clear link,link=[Clear],,
+(No Selection = All) label,css=label.input > em,,
+Created By Section,//div[@id='filter']/form/fieldset/div/section[3],,
+Created By Label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Created By multiselect box,id=users,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em,,

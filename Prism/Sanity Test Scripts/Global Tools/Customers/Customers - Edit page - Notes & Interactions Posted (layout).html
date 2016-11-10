@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Notes & Interactions Posted (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Notes & Interactions Posted (layout)</td></tr>
+</thead><tbody>
+<!--<-Checking of type and channel data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span/span</td>
+	<td>${stored_type_NI} ${stored_channel_NI} from ${stored_complete_name}</td>
+</tr>
+<!--<-Checking of Category 1 and Subcategory 1 data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span[2]/span</td>
+	<td>${stored_cat1_NI} - ${stored_subcat1_NI}</td>
+</tr>
+<!--<-Checking of Category 2 and Subcategory 2 data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span[3]/span</td>
+	<td>${stored_cat2_NI} - ${stored_subcat2_NI}</td>
+</tr>
+<!--<-Checking of Category 3 and Subcategory 3 data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span[4]/span</td>
+	<td>${stored_cat3_NI} - ${stored_subcat3_NI}</td>
+</tr>
+<!--<-Checking of Notes data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span[5]</td>
+	<td>${stored_test_notes}</td>
+</tr>
+<!--<-Storing interaction Date->-->
+<tr>
+	<td>storeText</td>
+	<td>css=span.timeline-seperator.text-center &gt; span</td>
+	<td>stored_interaction_date</td>
+</tr>
+</tbody></table>
+</body>
+</html>

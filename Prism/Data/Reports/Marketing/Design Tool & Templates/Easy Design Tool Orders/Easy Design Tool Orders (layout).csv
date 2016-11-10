@@ -1,0 +1,21 @@
+element_name_visble,element_location,element_label_name,element_label_location
+21,,15,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Easy Design Tool Orders report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+Easy Design Tool Orders,css=span.widget-icon > i.fa.fa-table,Design Tool & Templates,//div[@id='ribbon']/ol/li[3]
+Easy Design Tool Orders Report label,css=h2,Easy Design Tool Orders,//div[@id='ribbon']/ol/li[4]
+From - to date section,css=section.col.col-4,Easy Design Tool Orders Report,css=h2
+From date label,css=label.label,From Date,css=label.label
+From date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section/label[3]
+To date label,//div[@id='filter']/form/fieldset/div/section/label[3],Company,//div[@id='filter']/form/fieldset/div/section[2]/label
+To date datepicker,id=to_date,[Clear],link=[Clear]
+Company Section,//div[@id='filter']/form/fieldset/div/section[2],(No Selection = All),css=label.select.select-multiple > em
+Company Label,//div[@id='filter']/form/fieldset/div/section[2]/label,Website,//div[@id='filter']/form/fieldset/div/section[3]/label
+Company Multiselect Box,id=company_code,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+clear link,link=[Clear],(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em
+(No Selection = All),css=label.select.select-multiple > em,,
+Website Section,//div[@id='filter']/form/fieldset/div/section[3],,
+Website label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Website Multiselect Box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em,,

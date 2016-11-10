@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Prepress Pulse (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Prepress Pulse (functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>xpath=(//ul[@id='Tab']/li[2]/a/span)[2]</td>
+	<td></td>
+</tr>
+<!--Checking of available Buttons-->
+<!--Search field-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span.input-group-addon</td>
+	<td></td>
+</tr>
+<!--Search functionality-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>prepress 2</td>
+</tr>
+<!--Checking of columns-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th</td>
+	<td>Prepress Agent</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[2]</td>
+	<td>Status</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[3]</td>
+	<td>Start Proofing Date and Time</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[4]</td>
+	<td>Proofer Type</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='proofers']/div/table/thead/tr/th[5]</td>
+	<td>Stop Proofing</td>
+</tr>
+<!--Refresh Button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>Refresh</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

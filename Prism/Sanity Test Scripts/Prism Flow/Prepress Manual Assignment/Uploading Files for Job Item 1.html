@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Uploading Files</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Uploading Files</td></tr>
+</thead><tbody>
+<!--<-Uploading files for first job order item->-->
+<!------Downloading files------>
+<tr>
+	<td>click</td>
+	<td>link=Download</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!----Checking if timer becomes Available---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<!------Selecting For Printing as an upload option------>
+<tr>
+	<td>click</td>
+	<td>//span/label/span</td>
+	<td></td>
+</tr>
+<!----Checking if Proof Button is hidden---->
+<!------Proof File Upload Button Not visible------>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div</td>
+	<td></td>
+</tr>
+<!------Proof File Label not visible------>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/h6</td>
+	<td></td>
+</tr>
+<!------No file uploaded Label------>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[1]/ng-include/section/div/article/div/div/div/div/div[3]/div[2]/form/div/div[2]/div/div/div[2]/div/div[2]/div/div/div[2]/div/span</td>
+	<td></td>
+</tr>
+<!----Uploading File---->
+<tr>
+	<td>type</td>
+	<td>css=input[type=&quot;file&quot;]</td>
+	<td>${defaultFolderDownload}\${storedJobItemID1Text}_front_8.5x11.pdf</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!----Pop-up File Header---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h3.modal-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=h3.modal-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.modal-title</td>
+	<td>File Checker for Job Item ${storedJobItemID1Text}</td>
+</tr>
+<!----Order Size: 8.5" x 11" - Front and Back Label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.h5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.h5</td>
+	<td>Order Size: 8.5&quot; x 11&quot; - Front and Back</td>
+</tr>
+<!----No. of Pages: 2 (the image inside the file that was uploaded is currently 2)---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.col-xs-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.col-xs-10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-xs-10</td>
+	<td>No. of Pages: 2</td>
+</tr>
+<!----File checker verified that the file image inside the file was 2---->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[25]/div/div/div[2]/div[2]/div[2]/i[1]@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>checked_filechecker</td>
+	<td>attribute=$attr</td>
+</tr>
+<!----Print File: Label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=h4.h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=h4.h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=h4.h4</td>
+	<td>Print File:</td>
+</tr>
+<!--<-File Image 1->-->
+<!----Size with Bleed: label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.col-xs-4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.col-xs-4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-xs-4</td>
+	<td>Size with bleed:</td>
+</tr>
+<!----Size with Bleed: 11.25" x 8.75"---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.col-xs-6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.col-xs-6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-xs-6</td>
+	<td>11.25&quot; x 8.75&quot;</td>
+</tr>
+<!----File checker verified that the file image has correct size with bleed for the file---->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[1]/div[1]/div[3]/span/i[1]@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>checked_filechecker</td>
+	<td>attribute=$attr</td>
+</tr>
+<!----Trimbox Offset: label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div[3]/div/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div[3]/div/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[3]/div/div[2]/div</td>
+	<td>Trimbox Offset:</td>
+</tr>
+<!----Trimbox Offset: 0.125---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div[2]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div[2]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div[2]/div[2]</td>
+	<td>0.125</td>
+</tr>
+<!----File checker verified that the file image has correct Trimsbox Offset for the file---->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[1]/div[2]/div[3]/i[1]@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>checked_filechecker</td>
+	<td>attribute=$attr</td>
+</tr>
+<!----Page 1 Orientation label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[1]/div[3]/div[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[1]/div[3]/div[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[1]/div[3]/div[1]</td>
+	<td>Page 1 Orientation:</td>
+</tr>
+<!----Page 1 Orientation: Potrait---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div[3]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div[3]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div[3]/div[2]</td>
+	<td>Portrait</td>
+</tr>
+<!--<-File Image 2->-->
+<!----Size with Bleed: label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div[3]/div[2]/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div[3]/div[2]/div/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[3]/div[2]/div/div</td>
+	<td>Size with bleed:</td>
+</tr>
+<!----Size with Bleed: 11.25" x 8.75"---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div[2]/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div[2]/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div[2]/div/div[2]</td>
+	<td>11.25&quot; x 8.75&quot;</td>
+</tr>
+<!----File checker verified that the file image has correct size with bleed for the file---->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[2]/div[1]/div[3]/span/i[1]@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>checked_filechecker</td>
+	<td>attribute=$attr</td>
+</tr>
+<!----Trimbox Offset: label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div[3]/div[2]/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div[3]/div[2]/div[2]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div[3]/div[2]/div[2]/div</td>
+	<td>Trimbox Offset:</td>
+</tr>
+<!----Trimbox Offset: 0.125---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div[2]/div[2]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div[2]/div[2]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div[2]/div[2]/div[2]</td>
+	<td>0.125</td>
+</tr>
+<!----File checker verified that the file image has correct Trimsbox Offset for the file---->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[25]/div/div/div[2]/div[3]/div[2]/div[1]/div[3]/span/i[1]@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>checked_filechecker</td>
+	<td>attribute=$attr</td>
+</tr>
+<!----Page 2 Orientation label---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div[2]/div[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div[2]/div[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div[2]/div[3]/div</td>
+	<td>Page 2 Orientation:</td>
+</tr>
+<!----Page 2 Orientation: Potrait---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div[2]/div[3]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div[2]/div[3]/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div[2]/div[3]/div[2]</td>
+	<td>Portrait</td>
+</tr>
+<!------Continue Upload Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[1]</td>
+	<td>Continue Upload</td>
+</tr>
+<!------Change File Button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[2]</td>
+	<td>Change File</td>
+</tr>
+<!--<-Clicking Continue Upload Button->-->
+<tr>
+	<td>click</td>
+	<td>//div[25]/div/div/div[2]/div[4]/div[2]/button[1]</td>
+	<td></td>
+</tr>
+<!------Checking of layout for Filename------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.col-md-10.no-padding &gt; div &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.col-md-10.no-padding &gt; div &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=div.col-md-10.no-padding &gt; div &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-md-10.no-padding &gt; div &gt; span</td>
+	<td>Filename: ${storedJobItemID1Text}_front_8.5x11.pdf</td>
+</tr>
+<!--<-Submitting uploaded file using "Add/Replace" Button->-->
+<tr>
+	<td>verifyEditable</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td>pop_up_alert</td>
+</tr>
+<!--Verifying alert pop-up appears-->
+<tr>
+	<td>if</td>
+	<td>${pop_up_alert}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+</tr>
+<!--Verfiying if pop-up for found similar updates shows-->
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=h3.modal-title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.modal-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Recheking Job item after uploading a file->-->
+<!--<-Checking if job item header color is light blue or not yet assigned for Job item 1->-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[1]/ng-include/section/div/article/div@class</td>
+	<td>attr_2</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>background_color</td>
+	<td>attribute=$attr, attribute_2=$attr_2</td>
+</tr>
+<!------returning result from function------>
+<tr>
+	<td>storeEval</td>
+	<td>$_result == &quot;No&quot;</td>
+	<td>headerColorResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${headerColorResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Verified job item hasn't been assigned yet&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Kindly check the result of the function since an the result returns a different value&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Kindly check the result of the function since an the result returns a different value');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Job Item ID------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span</td>
+	<td>${storedJobItemID1Text}</td>
+</tr>
+<!------Job Item Status------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[3]</td>
+	<td>Approved</td>
+</tr>
+<!------Turn Around Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[5]</td>
+	<td></td>
+</tr>
+<!------Approved date time------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[7]</td>
+	<td></td>
+</tr>
+<!------Proof By Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[9]</td>
+	<td></td>
+</tr>
+<!------Ship By Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[11]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[11]</td>
+	<td></td>
+</tr>
+<!------Gang By Date------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[12]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-0']/header/h2/strong/span[12]</td>
+	<td></td>
+</tr>
+<!------Checking of the file that was uploaded------>
+<!----File---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.well.well-sm &gt; div &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=div.well.well-sm &gt; div &gt; img</td>
+	<td></td>
+</tr>
+<!----File name---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/div/div/div/div[2]</td>
+	<td>${storedJobItemID1Text}_front_8.5x11.pdf</td>
+</tr>
+<!----Checking if timer becomes Un-available---->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//div[2]/div/span[2]</td>
+	<td></td>
+</tr>
+<!----Assigned user image becomes Un-available---->
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//section[1]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotVisible</td>
+	<td>//section[1]/ng-include/section/div/article/div/header/div[2]/div/img</td>
+	<td></td>
+</tr>
+<!--<-Checking of Comments->-->
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Comment Section------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]</td>
+	<td></td>
+</tr>
+<!------Recent Uploader------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/strong</td>
+	<td>dri automation</td>
+</tr>
+<!------Job Item------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span</td>
+	<td>Job Item ${storedJobItemID1Text}</td>
+</tr>
+<!------Comment------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/ng-include/div/div/div/div/div/div[2]/div/div/ul/li/div/span[3]</td>
+	<td>dri automation uploaded the file named ${storedJobItemID1Text}_front_8.5x11.pdf for Printing.</td>
+</tr>
+</tbody></table>
+</body>
+</html>

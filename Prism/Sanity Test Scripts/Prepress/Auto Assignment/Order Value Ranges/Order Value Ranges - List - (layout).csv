@@ -1,0 +1,7 @@
+element_name_visble,element_name_location,element_label,element_location,column Name,column Location
+7,,7,,5,
+bread crumbs,css=ol.breadcrumb,Prepress,css=ol.breadcrumb > li,ID,//div[3]/div/div/div/div/div[2]/div/form/table/thead/tr/th[1]
+Order Value Ranges Module,css=div.widget-body-toolbar,Auto Assignment,//div[@id='ribbon']/ol/li[2],Minimum Value,//div[3]/div/div/div/div/div[2]/div/form/table/thead/tr/th[2]
+Order Value Ranges Icon,//div[@id='wid-id-18']/header/span/i,Order Value Ranges,//div[@id='ribbon']/ol/li[3],Maximum Value,//div[3]/div/div/div/div/div[2]/div/form/table/thead/tr/th[3]
+Order Value Ranges label,css=h2,Order Value Ranges,css=h2,,
+Edit Button,css=button.btn.btn-primary,Edit,css=button.btn.btn-primary,,

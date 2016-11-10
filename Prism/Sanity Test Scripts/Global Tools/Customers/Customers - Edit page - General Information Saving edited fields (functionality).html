@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Contact Details Profile Saving edited fields (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Contact Details Profile Saving edited fields (functionality)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Global Tools\Customers\Customers List (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>var row=3;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var row</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_label_row_count</td>
+	<td>2,15</td>
+</tr>
+<!--<-setting up store data General Information->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${general_information_label_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_label</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_location</td>
+	<td>${x},16</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${general_information_label}</td>
+	<td></td>
+</tr>
+<!------Starting point of checking for layout for "General Information"------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${general_information_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${general_information_location}</td>
+	<td>${general_information_label}</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>${general_information_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-setting up store data General Information fields->-->
+<!------storing sales rep------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[3]/div/span</td>
+	<td>stored_sales_rep</td>
+</tr>
+<!------storing date registered------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[5]/div</td>
+	<td>stored_date_registered</td>
+</tr>
+<!------Setting up the counter for the checking of general information------>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_field_row_count</td>
+	<td>2,15</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${general_information_field_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_label</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>general_information_field</td>
+	<td>${x},17</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${general_information_label}</td>
+	<td></td>
+</tr>
+<!------Starting point of checking for layout for "Contact Details Field"------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${general_information_field}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>${general_information_field}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing of stored Value from edit page to edit page layout ->-->
+<!------Origin Company------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div/div</td>
+	<td>${stored_origin_company}</td>
+</tr>
+<!------Origin Website ------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[2]/div</td>
+	<td>${stored_origin_website}</td>
+</tr>
+<!------Sales Rep/Team------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[3]/div</td>
+	<td>${stored_sales_rep}</td>
+</tr>
+<!------Remaining Store Credit------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[4]/div</td>
+	<td>$0.00</td>
+</tr>
+<!------Date Registered------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[5]/div</td>
+	<td>${stored_date_registered}</td>
+</tr>
+<!------Last Order Date-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[6]/div</td>
+	<td>(None)</td>
+</tr>
+<!------Applicable Coupons------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[7]/div</td>
+	<td>View</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.failed {color: red; background-color: #ffcccc;}
+.passed {color: green; background-color: #ccffcc;}
+.done {color: #404040; background-color: #ccffcc;}
+.comment {color: #404040; background-color: #d0d0d0;}
+body, table { font-family: Verdana, Arial, sans-serif; font-size: 12pt; }
+table { border-collapse: collapse; border: 1px solid #ccc; }
+th, td { padding-left: 0.3em; padding-right: 0.3em; border: 1px solid #ccc; }
+#suiteSummaryTable thead { font-size: 14pt; font-weight: 800; }
+.test_case thead { font-size: 14pt; font-weight: 400; }
+</style>
+</head>
+<body>
+<table id="suiteSummaryTable" class="selenium">
+<thead><tr class="failed"><td>Test Suite: Global Reports - job orders</td></tr></thead>
+<tbody>
+<tr><td>Test cases: 7 total / <span class="passed">6</span> passed / <span class="failed">1</span> failed</td></tr>
+<tr><td>Commands: 123 total / <span class="passed">102</span> passed / <span class="failed">2</span> failed / <span class="skipped">19</span> skipped</td></tr>
+</tbody></table><br>
+<table id="suiteTable" class="selenium">
+<thead><tr><td>Index of test cases</td></tr></thead>
+<tbody>
+<tr class="passed"><td><a href="#test0">Job order - Redirection to page</a></td></tr>
+<tr class="passed"><td><a href="#test1">Job order - filters UI (layout)</a></td></tr>
+<tr class="done"><td><a href="#test2">Job order - filter selection(functionality)</a></td></tr>
+<tr class="passed"><td><a href="#test3">Job order - html report UI (layout)</a></td></tr>
+<tr class="done"><td><a href="#test4">Job order - column sorting (Functionality)</a></td></tr>
+<tr class="done"><td><a href="#test5">Job order - clear selected filter (functionality)</a></td></tr>
+<tr class="failed"><td><a href="#test6">Job order - Generate Spread Sheet Report (functionality)</a></td></tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test0"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - Redirection to page</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4">Proceeding to job order - global reports</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=li[title=&quot;Reports&quot;] &gt; a &gt; span.menu-item-parent</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//aside[@id='left-panel']/nav/ul/li[2]/ul/li/a/b/em</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=a[title=&quot;Job Orders&quot;] &gt; span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of the redirection of the page</td>
+</tr>
+<tr class="passed">
+	<td>verifyLocation</td>
+	<td>http://qaprism.digitalroominc.com/#/report/global/job-orders</td>
+	<td>http://qaprism.digitalroominc.com/#/report/global/job-orders</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test1"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - filters UI (layout)</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4">Checking of URL if redirected correctly</td>
+</tr>
+<tr class="passed">
+	<td>verifyLocation</td>
+	<td>http://qaprism.digitalroominc.com/#/report/global/job-orders</td>
+	<td>http://aprism.digitalroominc.com/#/report/global/job-orders</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Connecting excel sheet to Selenium</td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Global Reports\Job Orders\Job Orders (layout).csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>getEval</td>
+	<td>row=3;</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of element label if its correct</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=20; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},3</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},4</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of element if its visible & element is present in the page</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=36; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Separate checking for Generate button</td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate Spreadsheet Report</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementNotPresent</td>
+	<td>id=gview_jqGrid</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate Spreadsheet Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>//button[@value='']</td>
+	<td>Generate Spreadsheet Report</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test2"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - filter selection(functionality)</td></tr></thead><tbody><tr class="done">
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Selecting date "From Date"</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=from_date</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr/td[5]</td>
+	<td>1</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Selecting date "To Date"</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=to_date</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=th.picker-switch</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=div.datepicker-months &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev &gt; span.fa.fa-chevron-left</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.month</td>
+	<td>Jan</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[5]/td[7]</td>
+	<td>31</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Selecting filters from multi select boxes</td>
+</tr>
+<tr class="done">
+	<td>addSelection</td>
+	<td>id=company_code</td>
+	<td>label=Digital Room, Inc.</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=option[value=&quot;string:DRI&quot;]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>addSelection</td>
+	<td>id=website_code</td>
+	<td>label=UPrinting</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=option[value=&quot;string:UP&quot;]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>addSelection</td>
+	<td>id=job_order_status</td>
+	<td>label=New Transaction</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=option[value=&quot;string:4&quot;]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Generating HTML report</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test3"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - html report UI (layout)</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4">Connecting excel sheet to Selenium</td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>60000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Global Reports\Job Orders\Job Orders columns (layout).csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeEval</td>
+	<td>row</td>
+	<td>x</td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of element label if its correct</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=22; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>column_name</td>
+	<td>${x},1</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>column_location</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>echo</td>
+	<td>${column_name}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyText</td>
+	<td>${column_location}</td>
+	<td>${column_name}</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${column_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${column_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of elements that are not included in the list</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=5; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>layout_location</td>
+	<td>${x},4</td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyVisible</td>
+	<td>${layout_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="passed">
+	<td>verifyElementPresent</td>
+	<td>${layout_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test4"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - column sorting (Functionality)</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4">Connecting excel sheet to Selenium</td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\Global Reports\Job Orders\Job Orders columns (layout).csv</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clicking column to see descending and ascending functionality</td>
+</tr>
+<tr class="done">
+	<td>for</td>
+	<td>$x=3; $x&lt;=22; $x++</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>storeCellValue</td>
+	<td>column_location</td>
+	<td>${x},2</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${column_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>${column_location}</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test5"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - clear selected filter (functionality)</td></tr></thead><tbody><tr class="done">
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Returning "to date" to current date</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//input[@id='to_date']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Returning "From date" to current date</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//input[@id='from_date']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td>${KEY_ENTER}</td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Clearing Selected filters</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=[Clear]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[3]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of selected filters has been cleared</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+<br><hr><br><a name="test6"></a><table class="test_case"><thead><tr><td colspan="4">Test case: Job order - Generate Spread Sheet Report (functionality)</td></tr></thead><tbody><tr class="comment">
+	<td colspan="4">Clicking the generate spreadsheet button</td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>id=to_date</td>
+	<td></td>
+	<td>Element id=to_date not found</td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section[2]/label[2]/div/ul/li/div/div/table/tbody/tr[4]/td[6]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="done">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Verifying alert pop-up appears</td>
+</tr>
+<tr class="failed">
+	<td>verifyElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+	<td>false</td>
+</tr>
+<tr class="failed">
+	<td>verifyVisible</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+	<td>Element css=div.textoFoto not found</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of pop-up "Found Similar Report"</td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Checking of layout</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>css=h3.modal-title</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>css=div.modal-header</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyText</td>
+	<td>css=h3.modal-title</td>
+	<td>Found Similar Report</td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyText</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td>Download</td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyElementPresent</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyElementPresent</td>
+	<td>//input[@value='Generate New']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>//input[@value='Generate New']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyElementPresent</td>
+	<td>//p[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>//p[2]</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Downloading Excel Sheet</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="comment">
+	<td colspan="4">Generating new Report</td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>click</td>
+	<td>//input[@value='Generate New']</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyVisible</td>
+	<td>css=div.textoFoto &gt; span</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr class="">
+	<td>verifyElementPresent</td>
+	<td>css=div.textoFoto</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+
+</body></html>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Notes & Interactions (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Notes & Interactions (layout)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Global Tools\Customers\Customers List (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>var row=3;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var row</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_label_row_count</td>
+	<td>2,20</td>
+</tr>
+<!--<-setting up store data Notes & Interactions->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${notes_label_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_label</td>
+	<td>${x},20</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_location</td>
+	<td>${x},21</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${notes_label}</td>
+	<td></td>
+</tr>
+<!------Starting point of checking for layout for "Notes & Interactions"------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${notes_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${notes_location}</td>
+	<td>${notes_label}</td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>${notes_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Setting up the counter for the checking of general information------>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_field_row_count</td>
+	<td>2, 22</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${notes_field_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_label</td>
+	<td>${x},20</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>notes_field</td>
+	<td>${x},22</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${notes_label}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${notes_field}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing of stored Value from add page and checking of default layout for elements ->-->
+<!------Tag interaction checkbox------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[1]/div[1]/div/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!------Contact------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[2]/div/div/a/span</td>
+	<td>${stored_complete_name}</td>
+</tr>
+<!------Type------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[3]/div/div/a/span</td>
+	<td>- Select Type -</td>
+</tr>
+<!------Channel------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[4]/div/div/a/span</td>
+	<td>- Select Channel -</td>
+</tr>
+<!------Category 1------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div/div/a/span</td>
+	<td>- Select Category -</td>
+</tr>
+<!------Category 2------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div/div/a/span</td>
+	<td>- Select Category -</td>
+</tr>
+<!------Category 3------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div/div/a/span</td>
+	<td>- Select Category -</td>
+</tr>
+<!------Note------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div[2]/div/textarea</td>
+	<td></td>
+</tr>
+<!------Escalated Interaction checkbox------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[1]/div[2]/div/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>uncheckbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!------Phone------>
+<tr>
+	<td>verifyValue</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>${stored_phone}</td>
+</tr>
+<!------Email------>
+<tr>
+	<td>verifyValue</td>
+	<td>//input[@type='email']</td>
+	<td>${stored_unedited_email}</td>
+</tr>
+<!------Sub Category 1------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[5]/div[2]/div/a/span</td>
+	<td>- Select Subcategory -</td>
+</tr>
+<!------Sub Category 2------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[6]/div[2]/div/a/span</td>
+	<td>- Select Subcategory -</td>
+</tr>
+<!------Sub Category 3------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/form/fieldset[2]/div/div[7]/div[2]/div/a/span</td>
+	<td>- Select Subcategory -</td>
+</tr>
+<!--<-Checking if the dropdowns are enabled or disabled ->-->
+<!------Channel------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[4]/div/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 1------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[5]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Category 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[1]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 1------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[5]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 2------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[6]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Subcategory 3------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[1]/div[7]/div[2]/div@class</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_element</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+<!------Post Button------>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[2]/ng-include[1]/div/form/fieldset[2]/div[3]/div/div/button@disabled</td>
+	<td>element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function disable element-->
+<tr>
+	<td>call</td>
+	<td>disabled_button</td>
+	<td>attribute=$element_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if the element is disabled: ${_result}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

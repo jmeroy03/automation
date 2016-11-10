@@ -1,0 +1,11 @@
+element_name_visible,element_location,element_label_name,element_label_location
+11,,10,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Net 30 Customers report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Net 30 Customers report icon,css=span.widget-icon > i.fa.fa-table,Receivables,//div[@id='ribbon']/ol/li[3]
+Net 30 Customers Report label,css=h2,Net30 Customers,//div[@id='ribbon']/ol/li[4]
+Company Section,css=section.col.col-4,Net30 Customers Report,css=h2
+company Label,css=label.label,Company,css=label.label
+Company multiselect box,id=company_code,[Clear],link=[Clear]
+clear link,link=[Clear],(No Selection = All),css=label.select.select-multiple > em
+(No Selection = All),css=label.select.select-multiple > em,,

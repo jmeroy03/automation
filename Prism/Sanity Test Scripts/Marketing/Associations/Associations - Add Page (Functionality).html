@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Associations - Add Page (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Associations - Add Page (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Adding an association->-->
+<!------Website Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[1]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div/div/div/div/div/div/ul/li</td>
+	<td>webTotalOptionsCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$webTotalOptionsCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Website" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[1]/div/div/div/div/a/span</td>
+	<td>storedWebsiteText</td>
+</tr>
+<!------Association Code Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[2]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>TestAssociation_Code_</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[2]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Association Code" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[2]/div/div/div/div/input</td>
+	<td>storedAssociationCodeText</td>
+</tr>
+<!------Program Name Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[3]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>ProgramName</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[3]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Program Name" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[3]/div/div/div/div/input</td>
+	<td>storedProgramNameText</td>
+</tr>
+<!------Associations Group------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[4]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[4]/div/div/div/div/div/ul/li</td>
+	<td>associationGroupOptionsCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$associationGroupOptionsCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[4]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Associations Group" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[4]/div/div/div/div/a/span</td>
+	<td>storedAssociationGroupText</td>
+</tr>
+<!------Owner Id Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[5]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[5]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Owner Id" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[5]/div/div/div/div/input</td>
+	<td>storedOwnerIdText</td>
+</tr>
+<!------Access Code Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[6]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>AC</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[6]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Access Code" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[6]/div/div/div/div/input</td>
+	<td>storedAccessCodeText</td>
+</tr>
+<!------Contact Name Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[7]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Edsel Quiachon </td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[7]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Contact Name" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[7]/div/div/div/div/input</td>
+	<td>storedContactNameText</td>
+</tr>
+<!------Contact Number Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[8]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[8]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Contact Number " Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[8]/div/div/div/div/input</td>
+	<td>storedContactNumberText</td>
+</tr>
+<!------Rebate Percentage Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[9]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=20</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[9]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Rebate Percentage " Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[9]/div/div/div/div/input</td>
+	<td>storedRebatePercentageText</td>
+</tr>
+<!------Minimum Spend Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[10]/div/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[10]/div/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing "Minimum Spend" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addAssociationForm']/fieldset/div[10]/div/div/div/div/input</td>
+	<td>storedMinimumSpendText</td>
+</tr>
+<!--<-Checking of Save button if enabled->-->
+<!----Save Button Header---->
+<tr>
+	<td>verifyEditable</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<!----Save Button Footer---->
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+<!--<-Submitting Created Association->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

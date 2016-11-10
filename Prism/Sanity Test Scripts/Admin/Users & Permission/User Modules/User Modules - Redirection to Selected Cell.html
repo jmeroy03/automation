@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--<-Selecting random  for row->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr/td[1]</td>
+	<td>currentRowCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$currentRowCount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} == 1</td>
+	<td>selectedRowCountResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${selectedRowCountResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} + 1</td>
+	<td>selectedRowCount</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>selectedRowCount</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Storing Random User Type Code->-->
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${selectedRowCount}]/td[1]</td>
+	<td>storedModuleCodeText</td>
+</tr>
+<!--<-Storing Random User Type->-->
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${selectedRowCount}]/td[2]</td>
+	<td>storedModuleNameText</td>
+</tr>
+<!--<-Redirecting to Selected Department Code Edit Page->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${selectedRowCount}]/td[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!----Checking of the redirection of the page---->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/edit-module/${storedModuleCodeText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+search_options,user_input,Page_URL,layout_id,id_element
+,,,,
+Job Orders,200000,http://qaprism.digitalroominc.com/#/job-order/00200000,JOB # 00200000,//div[@id='content']/div/div/div[2]/h3/strong
+Job Items,200000,http://qaprism.digitalroominc.com/#/job-order/145066,JOB # 00145066,//div[@id='content']/div/div/div[2]/h3/strong
+Customer,496817,http://qaprism.digitalroominc.com/#/edit-customer/496817,496817,css=span.cust-text
+Associations,31,http://qaprism.digitalroominc.com/#/edit-association/31,31,css=div.form-control.disabled
+Users,1134,http://qaprism.digitalroominc.com/#/edit-user/1134,1134,css=div.form-control.disabled
+Tickets,129493,http://qaprism.digitalroominc.com/#/ticket-edit/00129493,00129493,//div[@id='content']/div[3]/div/form/div/div[2]/div/fieldset[2]/div/div/span
+Alerts,10000,http://qaprism.digitalroominc.com/#/alert/10000,Alert # 10000,//div[@id='content']/div/div/div[2]/h3/strong

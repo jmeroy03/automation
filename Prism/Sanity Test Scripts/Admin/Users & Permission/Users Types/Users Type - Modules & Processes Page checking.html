@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test</td></tr>
+</thead><tbody>
+<!--<-Checking of Title Page->-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.page-title.txt-color-blueDark</td>
+	<td>Manage User Type &gt; ${storedUserTypeText}</td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Admin\Users &amp; Permission\Users Types\Modules &amp; Process page.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>rowDropdownCtr</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>2</td>
+	<td>columnCtr</td>
+</tr>
+<!--<-Storing number of  modules->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='permissions']/div/accordion/div/div/div/div/h4/a/span/span</td>
+	<td>totalModuleCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1;$x&lt;=${totalModuleCount};$x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div/div/h4/a/span/span</td>
+	<td>subModuleCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$z=1;$z&lt;=${subModuleCount};$z++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>dropdownName</td>
+	<td>${rowDropdownCtr},1</td>
+</tr>
+<!------Checking for Header dropdown if element is present, visible and has a correct Title------>
+<tr>
+	<td>echo</td>
+	<td>${dropdownName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div/h4/a/span/span</td>
+	<td>${dropdownName}</td>
+</tr>
+<!------Storing number of sub module------>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div/div/div/label</td>
+	<td>totalPermissionCount</td>
+</tr>
+<!------clicking sub module header------>
+<tr>
+	<td>click</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>3</td>
+	<td>rowCtr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$y=1;$y&lt;=${totalPermissionCount};$y++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>elementName</td>
+	<td>${rowCtr},${columnCtr}</td>
+</tr>
+<!------Checking of Element Permission inside the sub module------>
+<tr>
+	<td>echo</td>
+	<td>${elementName}</td>
+	<td></td>
+</tr>
+<!----Permission Element and Label-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div[${y}]/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div[${y}]/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div[${y}]/div/div/label</td>
+	<td>${elementName}</td>
+</tr>
+<!----Checking of On/Off buttong if existing---->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div[${y}]/div/div/label/i</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div[2]/div/div[${y}]/div/div/label/i</td>
+	<td></td>
+</tr>
+<!----Increment "Row" Count for Excel Sheet---->
+<tr>
+	<td>storeEval</td>
+	<td>$rowCtr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!----Increment "Column" Count for Excel Sheet---->
+<tr>
+	<td>storeEval</td>
+	<td>$columnCtr++</td>
+	<td></td>
+</tr>
+<!------Closing sub module Dropdown------>
+<tr>
+	<td>click</td>
+	<td>//div[@id='permissions']/div/accordion/div/div[${x}]/div[${z}]/div/h4/a/span/span</td>
+	<td></td>
+</tr>
+<!------Incrementing Dropdown Name------>
+<tr>
+	<td>storeEval</td>
+	<td>$rowDropdownCtr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

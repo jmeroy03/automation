@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Add customer.html">Customers - Add customer</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Contact Details Profile (layout).html">Customers - Edit page - Contact Details Profile (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Contact Details Profile editing fields (functionality).html">Customers - Edit page - Contact Details Profile editing fields (functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Contact Details Profile Saving edited fields (functionality).html">Customers - Edit page - Contact Details Profile Saving edited fields (functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Customer Characteristic (layout).html">Customers - Edit page - Customer Characteristic (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Customer Characteristic Edit (layout).html">Customers - Edit page - Customer Characteristic Edit (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Data Mining - Edit (layout).html">Customers - Edit page - Data Mining - Edit (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Data Mining (layout).html">Customers - Edit page - Data Mining (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - General Information (layout).html">Customers - Edit page - General Information (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - General Information editing fields (functionality).html">Customers - Edit page - General Information editing fields (functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - General Information Saving edited fields (functionality).html">Customers - Edit page - General Information Saving edited fields (functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Notes & Interactions - Notes (layout & Functionality).html">Customers - Edit page - Notes & Interactions - Notes (layout & Functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Notes & Interactions - Posted Notes (layout).html">Customers - Edit page - Notes & Interactions - Posted Notes (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Notes & Interactions (Functionality).html">Customers - Edit page - Notes & Interactions (Functionality)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Notes & Interactions (layout).html">Customers - Edit page - Notes & Interactions (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Edit page - Notes & Interactions Posted (layout).html">Customers - Edit page - Notes & Interactions Posted (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - List - filters UI (layout).html">Customers - List - filters UI (layout)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - List Page (Functionalities).html">Customers - List Page (Functionalities)</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - redirection to page.html">Customers - redirection to page</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Submit Edited Form of General Information section.html">Customers - Submit Edited Form of General Information section</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Submit Edited Form with checking Notes and Interactions.html">Customers - Submit Edited Form with checking Notes and Interactions</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Submit Edited Form with checking.html">Customers - Submit Edited Form with checking</a></td></tr>
+<tr><td><a href="../Global Tools/Customers/Customers - Submit Form with checking.html">Customers - Submit Form with checking</a></td></tr>
+</tbody></table>
+</body>
+</html>

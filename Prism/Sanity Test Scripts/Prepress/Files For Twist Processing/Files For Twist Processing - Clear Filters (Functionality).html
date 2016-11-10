@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Batch Assignment - Clear Filters (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Batch Assignment - Clear Filters (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Returning to default option->-->
+<!------Clearing All filters that was selected------>
+<tr>
+	<td>click</td>
+	<td>link=[Clear]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[6]</td>
+	<td></td>
+</tr>
+<!------Returning Proof by date to default option "equal"------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div[1]/div/div/div[1]/div/div/fieldset/div[3]/section[1]/div/span/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div[1]/div/div/div[1]/div/div/fieldset/div[3]/section[1]/div/span/div/div/ul/li[1]</td>
+	<td></td>
+</tr>
+<!------Removing date------>
+<tr>
+	<td>click</td>
+	<td>id=proof_by_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-trash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=proof_by_date</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=proof_by_date</td>
+	<td></td>
+</tr>
+<!------Submitting Cleared Filters------>
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Checking of total records in the current table->-->
+<!-------Checking of records for 50 records or default option------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=5</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 5 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=0</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 10 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 15 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 20 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=3</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 25 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=4</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 50 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=5</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!-------Checking of records for 100 records------->
+<tr>
+	<td>select</td>
+	<td>//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select</td>
+	<td>index=6</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>9000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.getElementsByClassName('jqgrow ui-row-ltr ui-widget-content').length;dd;</td>
+	<td>number_of_records</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//td[@id='jqGridPager_left']/div/strong/span[2]</td>
+	<td>${number_of_records}</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${number_of_records}</td>
+	<td></td>
+</tr>
+<!--<-Checking of redirection->-->
+<!--<-Selecting Random Job Order->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//tr/td[5]</td>
+	<td>rowCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$rowCount</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} + 1</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == ${rowCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} - 1</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[${z}]/td[5]</td>
+	<td>jobOrderId</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[${z}]/td[5]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Checking of the redirection of the page-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/job-order/${jobOrderId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/div/div[2]/h3/strong</td>
+	<td>JOB # 0${jobOrderId}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job order - clear selected filter (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job order - clear selected filter (functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Selecting "no. of days included dropdown"-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label[2]/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td>2${KEY_ENTER}</td>
+</tr>
+<!--Returning "Ending At" to current date-->
+<tr>
+	<td>click</td>
+	<td>id=date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label/div/ul/li/div/div/table/tbody/tr[2]/td[3]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='filter']/form/fieldset/div/section/label/div/ul/li/div/div/table/tbody/tr[2]/td[3]</td>
+	<td></td>
+</tr>
+<!--Clearing Selected filters-->
+<tr>
+	<td>click</td>
+	<td>link=[Clear]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'[Clear]')])[2]</td>
+	<td></td>
+</tr>
+<!--Checking of selected filters has been cleared-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@value=''])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Generate HTML Report</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

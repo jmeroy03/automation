@@ -1,0 +1,27 @@
+element_name_visble,element_location,element_label_name,element_label_location
+27,,17,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Quotes report Form,//section[@id='widget-grid']/div/article,Global Reports,//div[@id='ribbon']/ol/li[2]
+Quotes report icon,css=span.widget-icon > i.fa.fa-table,Quotes,//div[@id='ribbon']/ol/li[3]
+Quotes Report label,css=h2,Quotes Report,css=h2
+from date section,css=section.col.col-4,From Date,css=label.label
+from date label,css=label.label,To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+from date datepicker,id=start_date,Company,css=section.col.col-4 > label.label
+to date section,//div[@id='filter']/form/fieldset/div/section[2],Website,//div[@id='filter']/form/fieldset[2]/div/section[2]/label
+to date label,//div[@id='filter']/form/fieldset/div/section[2]/label,Status,//div[@id='filter']/form/fieldset[2]/div/section[3]/label
+to date datepicker,id=end_date,[Clear],link=[Clear]
+company section,css=section.col.col-4,(No Selection = All),css=label.select.select-multiple > em
+company label,css=section.col.col-4 > label.label,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+company multiselect box,id=company_code,(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[2]/label[2]/em
+Website section,//div[@id='filter']/form/fieldset[2]/div/section[2],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]"
+Website label,//div[@id='filter']/form/fieldset[2]/div/section[2]/label,(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[3]/label[2]/em
+website multiselect box,id=website_code,,
+Status section,//div[@id='filter']/form/fieldset[2]/div/section[3],,
+status label,//div[@id='filter']/form/fieldset[2]/div/section[3]/label,,
+status multiselect box,id=quote_status,,
+clear link,link=[Clear],,
+(No Selection = All),css=label.select.select-multiple > em,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[2]/label[2]/em,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[3]",,
+(No Selection = All),//div[@id='filter']/form/fieldset[2]/div/section[3]/label[2]/em,,

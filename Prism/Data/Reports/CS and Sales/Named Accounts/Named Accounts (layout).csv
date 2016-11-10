@@ -1,0 +1,9 @@
+element_name_visble,element_location,element_label_name,element_label_location
+9,,7,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Daily report Form,//section[@id='widget-grid']/div/article,CS and Sales,//div[@id='ribbon']/ol/li[2]
+Daily report icon,css=span.widget-icon > i.fa.fa-table,Named Account,//div[@id='ribbon']/ol/li[3]
+Daily Report label,css=h2,Named Account Report,css=h2
+Select Month-Year section,css=section.col.col-4,Select Month-Year,css=label.label
+Select Month-Year label,css=label.label,,
+Select Month-Year Datetimepicker,id=month_year,,

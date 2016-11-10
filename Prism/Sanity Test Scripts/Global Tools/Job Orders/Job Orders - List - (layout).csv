@@ -1,0 +1,36 @@
+element_name_visble,element_name_location,element_label,element_location,column_name,column_location,column_attribute
+36,,12,,13,,
+bread crumbs,css=ol.breadcrumb,Global Tools,css=ol.breadcrumb > li,Invoice No.,id=jqgh_jobOrderGrid_job_order_id,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div/span/span[2]@class
+Manage Job Orders,css=div.widget-body-toolbar,Job Orders,//div[@id='ribbon']/ol/li[2],Website Code,id=jqgh_jobOrderGrid_website_code,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div/span/span[2]@class
+Manage Job Orders List icon,css=span.widget-icon > i.fa.fa-list-alt,Manage Job Orders,css=h2,Company Name,id=jqgh_jobOrderGrid_company_name,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div/span/span[2]@class
+Manage Job Orders Label,css=h2,Add,link=Add,Customer Name,id=jqgh_jobOrderGrid_customer_name,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div/span/span[2]@class
+Add Button,link=Add,From Date,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label,Email Address,id=jqgh_jobOrderGrid_email,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div/span/span[2]@class
+From Date Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section,To Date,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label,Phone Number,id=jqgh_jobOrderGrid_phone,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[6]/div/span/span[2]@class
+From Date Label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label,Assigned To,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label,Order Date,id=jqgh_jobOrderGrid_order_date,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[7]/div/span/span[2]@class
+From Date DatePicker,id=from_date,Company,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[4]/label,Due Date,id=jqgh_jobOrderGrid_due_date,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[8]/div/span/span[2]@class
+To Date Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2],Website,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[5]/label,Assigned To,id=jqgh_jobOrderGrid_user_name,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[9]/div/span/span[2]@class
+To Date Label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label,Payment Status,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[6]/label,Total Invoice Amount,id=jqgh_jobOrderGrid_total_amount,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[10]/div/span/span[2]@class
+To Date DatePicker,id=to_date,,,Payment Status,id=jqgh_jobOrderGrid_payment_status,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[11]/div/span/span[2]@class
+Assigned To Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3],,,,,
+Assigned To Label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label,,,,,
+Assigned To Dropdown,//div[@id='user_chosen']/a/span,,,,,
+Company Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[4],,,,,
+Company Label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[4]/label,,,,,
+Company Dropdown,css=#company_chosen > a.chosen-single > span,,,,,
+Website Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[5],,,,,
+Website Label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[5]/label,,,,,
+Website Dropdown,css=#website_chosen > a.chosen-single > span,,,,,
+Payment Status Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[6],,,,,
+Payment Status label,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[6]/label,,,,,
+Payment Status Dropdown,css=#payment_status_chosen > a.chosen-single > span,,,,,
+Job Orders Table,id=gbox_jobOrderGrid,,,,,
+Job Orders Total records label,//td[@id='jqGridPager_left']/div/strong,,,,,
+Pagination Section,id=jqGridPager_right,,,,,
+|<< button,css=span.fa.fa-fast-backward,,,,,
+<< button,css=span.fa.fa-backward,,,,,
+Page label,id=input_jqGridPager,,,,,
+page input,css=input.ui-pg-input,,,,,
+total no. of pages,id=sp_1_jqGridPager,,,,,
+>> button,css=span.fa.fa-forward,,,,,
+>>| button,css=span.fa.fa-fast-forward,,,,,
+no. of shown list dropdown,//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select,,,,,

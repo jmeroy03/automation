@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroominc.com" />
+<title>Re-usable script</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Re-usable script</td></tr>
+</thead><tbody>
+<!--<-Setting Environment->-->
+<tr>
+	<td>function</td>
+	<td>Environment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>http://${env}.digitalroominc.com/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting max random integer for dropdown->-->
+<tr>
+	<td>function</td>
+	<td>random_integer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>&lt;&gt;Math.floor(Math.random()*${max_Int})+1&lt;&gt;</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Return Count: ${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random email->-->
+<tr>
+	<td>function</td>
+	<td>random_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${email}&lt;&gt;Math.floor(Math.random()*1000)&lt;&gt;@uprinting.com</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random site name->-->
+<tr>
+	<td>function</td>
+	<td>random_site_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${site_name}&lt;&gt;Math.floor(Math.random()*1000)&lt;&gt;.com</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random name->-->
+<tr>
+	<td>function</td>
+	<td>random_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${name}&lt;&gt;Math.floor(Math.random()*1000)&lt;&gt;</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random phone number->-->
+<tr>
+	<td>function</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>(888)888-&lt;&gt;Math.floor(Math.random()*9999)+1000&lt;&gt;</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random extension number->-->
+<tr>
+	<td>function</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>&lt;&gt;Math.floor(Math.random()*9999)+1000&lt;&gt;</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting random cash generator->-->
+<tr>
+	<td>function</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>&lt;&gt;Math.floor(Math.random()*1000)+500&lt;&gt;</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting checkbox functionality for "Checked" checkbox->-->
+<tr>
+	<td>function</td>
+	<td>checkbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/ng-not-empty/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Checkbox Did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting checkbox functionality for "Un-checked" checkbox->-->
+<tr>
+	<td>function</td>
+	<td>uncheckbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/ng-not-empty/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Checkbox Did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for checkbox if its "Checked" or "Unchecked"->-->
+<tr>
+	<td>function</td>
+	<td>randomCheckbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/ng-not-empty/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Checkbox is checked&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${attribute_checker}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Checkbox is un-checked&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;System detected that the checkbox shows a result neither true nor false please check attribute section or checkbox&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('System detected that the checkbox shows a result neither true nor false please check attribute section or checkbox');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting Ascending/Descding Arrow->-->
+<tr>
+	<td>function</td>
+	<td>sorting_icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_check; var x = &quot;${attribute}&quot;; var n = x.match(/ui-state-disabled/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_check=true; } else {&nbsp;&nbsp;attribute_check=false;}</td>
+	<td>attribute_check</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_check}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_check}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Disabled Element->-->
+<tr>
+	<td>function</td>
+	<td>disabled_element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/chosen-disabled/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Disabled element did not taly with the expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Disabled Element did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Enabled Element->-->
+<tr>
+	<td>function</td>
+	<td>enabled_element</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/chosen-disabled/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Enabled element did not taly with the expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Enabled Element did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Disabled Button->-->
+<tr>
+	<td>function</td>
+	<td>disabled_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/disabled/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Disabled Button did not taly with the expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Disabled Button did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Enabled Button->-->
+<tr>
+	<td>function</td>
+	<td>enabled_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/disabled/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Pass</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Enabled Button did not taly with the expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Enabled Button did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting checkbox functionality for Image "Check" checkbbox->-->
+<tr>
+	<td>function</td>
+	<td>image_checkbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/fa-check/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Image is set to check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Image Checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Image Checkbox Did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Setting checkbox functionality for "Un-checked" checkbox->-->
+<tr>
+	<td>function</td>
+	<td>image_crossbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/fa-times/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Image was set to Cross</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Image Checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Image Checkbox Did not taly with the expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of selected radio button->-->
+<tr>
+	<td>function</td>
+	<td>radio_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/${word_attr}/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker_2; var y = &quot;${attribute_2}&quot;; var n = y.match(/ng-valid-parse/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker_2=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker_2=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Option is set to Yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Yes</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${attribute_checker_2}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Option is set to Yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>No</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;No Radio Button is currently selected&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('No Radio Button is currently selected');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of Color Attribute->-->
+<tr>
+	<td>function</td>
+	<td>background_color</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/green/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker_2; var y = &quot;${attribute_2}&quot;; var n = y.match(/blueLight/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker_2=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker_2=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job item Header color is set to Green</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Yes</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${attribute_checker_2}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job item Header color is set to Light Blue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>No</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;None of the indicated color appears on the header. Double check the color if the header&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('None of the indicated color appears on the header. Double check the color if the header');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of attribute->-->
+<tr>
+	<td>function</td>
+	<td>element_attribute</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/${word_attr}/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker_2; var y = &quot;${attribute_2}&quot;; var n = y.match(/${word_attr_2}/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker_2=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker_2=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Header 4 shows &quot;Approved By Date&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>true</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${attribute_checker_2}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Header 4 shows &quot;Proof By Date&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>false</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Any of the mentioned header id not appear on the header section&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Any of the mentioned header id not appear on the header section');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>return</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Filechecker "Checked" image Checker->-->
+<tr>
+	<td>function</td>
+	<td>checked_filechecker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/text-success/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Image is set to check in the file checker pop-up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Check element shows a different result in the filechecker&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Check element shows a different result in the filechecker');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Filechecker "Crossed Out" image Checker->-->
+<tr>
+	<td>function</td>
+	<td>crossed_filechecker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var attribute_checker; var x = &quot;${attribute}&quot;; var n = x.match(/text-danger/g);&nbsp;&nbsp;if (n == null) {&nbsp;&nbsp;attribute_checker=false;&nbsp;&nbsp;} else {&nbsp;&nbsp;attribute_checker=true;&nbsp;&nbsp;}</td>
+	<td>attribute_checker</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${attribute_checker}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${attribute_checker}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Image is set to &quot;Crossed Out&quot;in the file checker pop-up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Check element shows a different result in the filechecker&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Check element shows a different result in the filechecker');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${attribute_checker}</td>
+	<td>_result</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<--SEARCH Job IN IMS-->
+<tr>
+	<td>function</td>
+	<td>SearchIMS</td>
+	<td></td>
+</tr>
+<!--//Open new tab and search order at IMS-->
+<tr>
+	<td>runScript</td>
+	<td>window.open(&quot;${env}&quot;, '_blank');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>IMS - Internal Management System</td>
+	<td></td>
+</tr>
+<!--//Check if already logged in to IMS. If yes no need to log in anymore-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>id=username</td>
+	<td>ims</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${ims}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${ims_email}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${ims_pass}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//select[@id='find_type']</td>
+	<td>${imsDropdown}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=keywords</td>
+	<td>${jobOrderID}</td>
+</tr>
+<tr>
+	<td>sendKeysAndWait</td>
+	<td>id=keywords</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Log-ing in IMS->-->
+<tr>
+	<td>function</td>
+	<td>loginIms</td>
+	<td></td>
+</tr>
+<!--//Open new tab and search order at IMS-->
+<tr>
+	<td>runScript</td>
+	<td>window.open(&quot;${env}&quot;, '_blank');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>20000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>IMS - Internal Management System</td>
+	<td></td>
+</tr>
+<!--//Check if already logged in to IMS. If yes no need to log in anymore-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>id=username</td>
+	<td>ims</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${ims}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${ims_email}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${ims_pass}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Log-ing in IMS->-->
+<tr>
+	<td>function</td>
+	<td>loginPrism</td>
+	<td></td>
+</tr>
+<!--//Check if already logged in to Prism. If yes no need to log in anymore-->
+<tr>
+	<td>store</td>
+	<td>${env}/#/login</td>
+	<td>loginPage</td>
+</tr>
+<tr>
+	<td>storeLocation</td>
+	<td>prismLoginPage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$prismLoginPage == $loginPage </td>
+	<td>prismLogin</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${prismLogin}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>PRiSM - Printing Solutions Management</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>${prism_email}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>${prism_pass}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='Sign In']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>PRiSM - Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFunction</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

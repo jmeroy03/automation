@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Prepress Pulse (Tickets functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Prepress Pulse (Tickets functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Tickets</td>
+	<td></td>
+</tr>
+<!--Checking of available Buttons-->
+<!--Search field-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='tickets']/div/div/div/div/div/span</td>
+	<td></td>
+</tr>
+<!--Search functionality-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>assigned</td>
+</tr>
+<!--Checking of columns-->
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td>Problem Ticket ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td>Ticket Status</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td>Job Order ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td>Job Item ID</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td>Opened By</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td>Date Opened</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_category_problem</td>
+	<td>Underlying Cause</td>
+</tr>
+<!--Column Sorting Checking-->
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_ticket_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_order_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_job_item_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_opened_by</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_datetime_opened</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=jqgh_jqGrid_category_problem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<!--Refresh Button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td>Refresh</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--Checking of select Department button-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='tickets']/div/div/div/div/div/button</td>
+	<td>Select Department</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='tickets']/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='tickets']/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<!--redirected to tickets page-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>new</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div[2]/div/div[3]/div[3]/div/table/tbody/tr[2]/td/a</td>
+	<td>storedProblemTicketId</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div[2]/div/div[3]/div[3]/div/table/tbody/tr[2]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Verifying if page is redirected correctly to problem Ticket page-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/ticket-edit/${storedProblemTicketId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='content']/div/div/div[2]/h3/strong</td>
+	<td>Ticket # ${storedProblemTicketId}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

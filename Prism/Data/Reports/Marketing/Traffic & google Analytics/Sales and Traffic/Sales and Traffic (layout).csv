@@ -1,0 +1,9 @@
+element_name_visble,element_location,element_label_name,element_label_location
+9,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Sales and Traffic report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+Sales and Traffic Icon,css=span.widget-icon > i.fa.fa-table,Traffic & Google Analytics,//div[@id='ribbon']/ol/li[3]
+Sales and Traffic report label,css=h2,Sales and Traffic,//div[@id='ribbon']/ol/li[4]
+As of date section,css=section.col.col-4,Sales and Traffic Report,css=h2
+As of date label,css=label.label,As of date,css=label.label
+As of date datepicker,id=asOfDate,,

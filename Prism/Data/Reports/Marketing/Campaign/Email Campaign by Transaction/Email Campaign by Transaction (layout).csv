@@ -1,0 +1,26 @@
+element_name_visble,element_location,element_label_name,element_label_location
+26,,18,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Email Campaign by Transaction report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+Email Campaign by Transaction,css=span.widget-icon > i.fa.fa-table,Campaign,//div[@id='ribbon']/ol/li[3]
+Email Campaign by Transaction Report label,css=h2,Email Campaign by Transaction,//div[@id='ribbon']/ol/li[4]
+From - to date section,css=section.col.col-3,Email Campaign by Transaction Report,css=h2
+From date label,css=label.label,From Date,css=label.label
+From date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section/label[3]
+To date label,//div[@id='filter']/form/fieldset/div/section/label[3],Campaign,//div[@id='filter']/form/fieldset/div/section[2]/label
+To date datepicker,id=to_date,[Clear],link=[Clear]
+Campaign section,//div[@id='filter']/form/fieldset/div/section[2],(No Selection = All),css=label.select.select-multiple > em
+Campaign label,//div[@id='filter']/form/fieldset/div/section[2]/label,Company,//div[@id='filter']/form/fieldset/div/section[3]/label
+Campaign multiselect box,id=campaign,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+clear link,link=[Clear],(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em
+(No Selection = All),css=label.select.select-multiple > em,Website,//div[@id='filter']/form/fieldset/div/section[4]/label
+Company Section,//div[@id='filter']/form/fieldset/div/section[3],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]"
+Company Label,//div[@id='filter']/form/fieldset/div/section[3]/label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[4]/label[2]/em
+Company Multiselect Box,id=company_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em,,
+Website Section,//div[@id='filter']/form/fieldset/div/section[4],,
+Website label,//div[@id='filter']/form/fieldset/div/section[4]/label,,
+Website Multiselect Box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[3]",,
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[4]/label[2]/em,,

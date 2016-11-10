@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Prepress Pulse</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Prepress Pulse</td></tr>
+</thead><tbody>
+<tr>
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+</tr>
+<!--Verfying if the Prepress Pulse is visible-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid</td>
+	<td></td>
+</tr>
+<!--UI Tabs-->
+<!--Pulse tabs-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Pulse</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#proofer-dashboard &gt; div.row &gt; article.col-sm-12.sortable-grid &gt; #wid-id-0 &gt; header &gt; #Tab &gt; li.active &gt; a &gt; span.hidden-mobile.hidden-tablet</td>
+	<td>Pulse</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-heartbeat</td>
+	<td></td>
+</tr>
+<!--Available Proofers tabs-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Available Proofers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//ul[@id='Tab']/li[2]/a/span)[2]</td>
+	<td>Available Proofers</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=i.fa.fa-users</td>
+	<td></td>
+</tr>
+<!--Tickets tabs-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Tickets</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//ul[@id='Tab']/li[3]/a/span)[2]</td>
+	<td>Tickets</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//ul[@id='Tab']/li[3]/a/i)[2]</td>
+	<td></td>
+</tr>
+<!--Alerts tabs-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//ul[@id='Tab']/li[4]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//ul[@id='Tab']/li[4]/a/span</td>
+	<td>Alerts</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//ul[@id='Tab']/li[4]/a/i</td>
+	<td></td>
+</tr>
+<!--Buttons-->
+<!--Select Department button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='pulse']/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pulse']/div/div/div/div/div/button</td>
+	<td>Select Department</td>
+</tr>
+<!--Select team buttons-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[2]/button</td>
+	<td>Select Team</td>
+</tr>
+<!--Select User button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[3]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='pulse']/div/div/div/div/div[3]/button</td>
+	<td>Select User</td>
+</tr>
+<!--Refresh button-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td>Refresh</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Associations - Add Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Associations - Add Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Prepress\Note Builder\Fix-Ups\Fix-Ups - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageLayoutRowCount</td>
+	<td>2,8</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>addPageFieldRowCount</td>
+	<td>2,10</td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},8</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},9</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${addPageFieldRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},8</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},10</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Dropdown Checking->-->
+<!------File Issue Category------>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[3]/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>fileIssueCategoryDropdownCount</td>
+	<td>2,11</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${fileIssueCategoryDropdownCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>optionDropdownName</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${optionDropdownName}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td>${optionDropdownName}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/div/div/ul/li[${ctr}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[3]/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements fix-up is enabled->-->
+<!------save button on header------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/div/div/div/div/button</td>
+	<td></td>
+</tr>
+<!------save button on footer------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[5]/div/div/button[1]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

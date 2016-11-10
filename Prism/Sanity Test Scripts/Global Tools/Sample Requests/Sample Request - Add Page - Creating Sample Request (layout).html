@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Sample Request - Add Page - Creating Sample Request (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Sample Request - Add Page - Creating Sample Request (layout)</td></tr>
+</thead><tbody>
+<!--<-Adding an Existing Customer->-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='number']</td>
+	<td>496817</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!------Checking of Existing customer details------>
+<!----Company or Name---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[2]/div/div/div/input</td>
+	<td>Uprinting.com</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[2]/div/div/div/input</td>
+	<td>storedCompanyOrNameText</td>
+</tr>
+<!----First Name---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[3]/div/div/div/input</td>
+	<td>Edsel</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[3]/div/div/div/input</td>
+	<td>storedFirstNameText</td>
+</tr>
+<!----Last Name---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[4]/div/div/div/input</td>
+	<td>quiachon</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[4]/div/div/div/input</td>
+	<td>storedLastNameText</td>
+</tr>
+<!----Email---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[5]/div/div/div/input</td>
+	<td>edsel.q@gmail.com</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[5]/div/div/div/input</td>
+	<td>storedEmailText</td>
+</tr>
+<!----Phone---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[6]/div/div/div/input</td>
+	<td>(331) 241-4122</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[6]/div/div/div/input</td>
+	<td>storedPhoneText</td>
+</tr>
+<!----Address 1---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[7]/div/div/div/input</td>
+	<td>3805 N Santom Rd.</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[7]/div/div/div/input</td>
+	<td>storeAddressText</td>
+</tr>
+<!----Address 2---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>storeAddress2Text</td>
+</tr>
+<!----City or Town---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>Stow</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>storeCityOrTownText</td>
+</tr>
+<!----Country---->
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[10]/div/div/div/div/div/a/span</td>
+	<td>United States</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[10]/div/div/div/div/div/a/span</td>
+	<td>storedCountryText</td>
+</tr>
+<!----State or Province---->
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[11]/div/div/div/div/div/a/span</td>
+	<td>Ohio</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[11]/div/div/div/div/div/a/span</td>
+	<td>storedStateOrProvinceText</td>
+</tr>
+<!----Postal Code---->
+<tr>
+	<td>verifyValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td>44224</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td>storedPostalCodeText</td>
+</tr>
+<!--<-Selecting Random "Other Information"->-->
+<!------Industry Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[1]/div/div/div/div/div/div/ul/li</td>
+	<td>industryOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$industryOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[1]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Industry" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div/div/div/div/div/div/a/span</td>
+	<td>storedIndustryText</td>
+</tr>
+<!------Sub Industry Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[2]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li</td>
+	<td>subIndustryOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$subIndustryOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Sub Industry" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[2]/div/div/div/div/div/a/span</td>
+	<td>storedSubIndustryText</td>
+</tr>
+<!------Designation Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[3]/div/div/div/input</td>
+	<td>Testing Designation Field</td>
+</tr>
+<!----Storing "Designation" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[3]/div/div/div/input</td>
+	<td>storedDesignationText</td>
+</tr>
+<!------Where did you learn about us? Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[4]/div/div/div/input</td>
+	<td>Testing &quot;Where did you learn about us?&quot; Field</td>
+</tr>
+<!----Storing "Where did you learn about us?" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[4]/div/div/div/input</td>
+	<td>storedWhereDidYouLearnAboutUsText</td>
+</tr>
+<!------ Products interested in? Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[5]/div/div/div/input</td>
+	<td>Testing &quot; Products interested in??&quot; Field</td>
+</tr>
+<!----Storing " Products interested in?" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[5]/div/div/div/input</td>
+	<td>storedProductsInterestedInText</td>
+</tr>
+<!------ When is your next print job? Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[6]/div/div/div/input</td>
+	<td>Testing &quot;When is your next print job?&quot; Field</td>
+</tr>
+<!----Storing "When is your next print job?" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[6]/div/div/div/input</td>
+	<td>storedWhenIsYourNextPrintJobText</td>
+</tr>
+<!------How much printing do you do each year? Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[7]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[7]/div/div/div/div/div/div/ul/li</td>
+	<td>howMuchPrintingDoYouDoEachYearOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$howMuchPrintingDoYouDoEachYearOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[7]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "How much printing do you do each year?" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[7]/div/div/div/div/div/a/span</td>
+	<td>storedHowMuchPrintingDoYouDoEachYearText</td>
+</tr>
+<!------How many years have you been in business? Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>1000</td>
+</tr>
+<!----Storing "When is your next print job?" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>storedHowMuchyearsYouHaveBeenInBusinessText</td>
+</tr>
+<!------How many employees do you have? Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[9]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[9]/div/div/div/div/div/div/ul/li</td>
+	<td>howManyEmployeesDoYouHaveOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$howManyEmployeesDoYouHaveOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/fieldset[2]/div[9]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "How many employees do you have?" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div[2]/div/div/fieldset[2]/div[9]/div/div/div/div/div/a/span</td>
+	<td>storedHowManyEmployeesDoYouHaveText</td>
+</tr>
+<!--<- Random Selection of Sample Kit Details->-->
+<!------Company Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[13]</td>
+	<td>Digital Room, Inc.${KEY_ENTER}</td>
+</tr>
+<!----Storing "Company" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div/div/div/div/div/div/a/span</td>
+	<td>storedCompanyText</td>
+</tr>
+<!------Website Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[2]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li</td>
+	<td>websiteOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$websiteOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Website" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[2]/div/div/div/div/div/a/span</td>
+	<td>storedWebsiteText</td>
+</tr>
+<!------Date Requested Date Picker Field------>
+<tr>
+	<td>click</td>
+	<td>id=date_requested</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[6]/td[4]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div/ul/li[1]/div/div[1]/table/tbody/tr[6]/td[4]</td>
+	<td></td>
+</tr>
+<!----Storing "Date Request" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>id=date_requested</td>
+	<td>storedDateRequestText</td>
+</tr>
+<!------Sample Kit Type Field------>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[4]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[4]/div/div/div/div/div/div/ul/li</td>
+	<td>sampleKitTypeOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$sampleKitTypeOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[4]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing "Sample Kit Type" Field---->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[4]/div/div/div/div/div/a/span</td>
+	<td>storedSampleKitTypeText</td>
+</tr>
+<!------Comments Field------>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[5]/div/div/div/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<!----Storing "Comments" Field---->
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addSampleRequestForm']/div/div[2]/div/fieldset[2]/div[5]/div/div/div/textarea</td>
+	<td>storedCommentsText</td>
+</tr>
+<!--<-Submitting Created Sample Kit->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

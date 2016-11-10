@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Associations - List Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Associations - List Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Prepress\Auto Assignment\Control Module\Control Module - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name_row_count</td>
+	<td>2,3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name_visible_row_count</td>
+	<td>2,1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>column_name_count</td>
+	<td>2,5</td>
+</tr>
+<!--<-Checking of element label if its correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${element_label_name_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},4</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${element_name_visible_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Order Value Ranges sub menu contents->-->
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>priorityFieldCount</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[1]/div/div[2]/uib-accordion/div/span/ng-include/div/div[1]</td>
+	<td>orderValueRangesCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1; $x &lt;=&nbsp;&nbsp;${orderValueRangesCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div/h4/a/span/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$ctr = 1; $ctr &lt;= 3; $ctr++</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority label->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td>Priority ${ctr}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority Field->-->
+<tr>
+	<td>echo</td>
+	<td>Testing Priority Field: ${priorityFieldCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul/li/input)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority Field if enabled->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[1]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[1]/h4/a/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul/li/input)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$priorityFieldCount++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[1]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[1]/h4/a/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div/h4/a/span/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for Order Value Ranges sub menu contents->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span/ng-include/div/div[1]</td>
+	<td>orderValueRangesCount</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=1; $x &lt;=&nbsp;&nbsp;${orderValueRangesCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div/h4/a/span/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$ctr = 1; $ctr &lt;= 3; $ctr++</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority label->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td>Priority ${ctr}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[2]/div/div/div/div[${ctr}]/div/label</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority Field->-->
+<tr>
+	<td>echo</td>
+	<td>Testing Proofing Categories and Prioritization - Priority Field: ${priorityFieldCount}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul/li/input)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<!--<-Checking for priority Field if enabled->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[1]/h4/a/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//div[@id='select_1_chosen']/ul/li/input)[${priorityFieldCount}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$priorityFieldCount++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/span/div/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div[1]/h4/a/span/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-18']/div/div/div[2]/div[2]/div/div[2]/uib-accordion/div/span[${x}]/ng-include/div/div/h4/a/span/span/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

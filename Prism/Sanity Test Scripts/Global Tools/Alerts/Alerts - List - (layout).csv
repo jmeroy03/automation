@@ -1,0 +1,49 @@
+element_name_visble,element_name_location,element_label,element_location,column_name,column_location,column_attribute
+49,,24,,14,,
+bread crumbs,css=ol.breadcrumb,Global Tools,css=ol.breadcrumb > li,Alert No.,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div/span/span[2]@class
+Manage Job Orders,css=div.widget-body-toolbar,Alerts,//div[@id='ribbon']/ol/li[2],Invoice/Quote/Customer No.,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div/span/span[2]@class
+Manage Job Orders List icon,css=span.widget-icon > i.fa.fa-list-alt,Manage Alerts,css=h2,Opened By,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[3]/div/span/span[2]@class
+Manage Job Orders Label,css=h2,Add,link=Add,Attention,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[4]/div/span/span[2]@class
+Add Button,link=Add,Opened By,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label,Assigned To,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[5]/div/span/span[2]@class
+Filter Button,//button[@value=''],[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/strong/a,Date Opened,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[6]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[6]/div/span/span[2]@class
+Opened By section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/em,Accomplish By,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[7]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[7]/div/span/span[2]@class
+Opened By Multiselect box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/select,Attention,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label,Type,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[8]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[8]/div/span/span[2]@class
+Opened By,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label,[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/strong/a,Status,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[9]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[9]/div/span/span[2]@class
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/strong/a,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/em,Priority,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[10]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[10]/div/span/span[2]@class
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section/label[2]/em,Assigned To,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label,Item No.,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[11]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[11]/div/span/span[2]@class
+Attention section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2],[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label[2]/strong/a,Product,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[12]/div,//div[3]/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[12]/div/span/span[2]@class
+Attention Multiselect box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/select,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label[2]/em,,,
+Attention,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label,Type,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label,,,
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/strong/a,[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label[2]/strong/a,,,
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[2]/label[2]/em,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label[2]/em,,,
+Assigned To Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3],Status,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label,,,
+Assigned To Multiselect Box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label[2]/select,[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label[2]/strong/a,,,
+Assigned To,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label[2]/em,,,
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label[2]/strong/a,Priority,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label,,,
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div/section[3]/label[2]/em,[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label[2]/strong/a,,,
+Type Selection,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section,(No Selection = All),//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label[2]/em,,,
+Type Multiselect Box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label[2]/select,,,,,
+Type,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label,,,,,
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label[2]/strong/a,,,,,
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section/label[2]/em,,,,,
+Status Section,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2],,,,,
+Status Multiselect Box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label[2]/select,,,,,
+Status,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label,,,,,
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label[2]/strong/a,,,,,
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[2]/label[2]/em,,,,,
+Priority Selection,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3],,,,,
+Priority MultiSelect box,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label[2]/select,,,,,
+Priority,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label,,,,,
+[Clear],//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label[2]/strong/a,,,,,
+(No Selection = All) ,//div[@id='wid-id-18']/div/div/div/div/form/fieldset/div[2]/section[3]/label[2]/em,,,,,
+Alerts Table,id=gview_alertGrid,,,,,
+Alerts Total records label,//td[@id='jqGridPager_left']/div/strong,,,,,
+Pagination Section,id=jqGridPager_right,,,,,
+|<< button,css=span.fa.fa-fast-backward,,,,,
+<< button,css=span.fa.fa-backward,,,,,
+Page label,id=input_jqGridPager,,,,,
+page input,css=input.ui-pg-input,,,,,
+total no. of pages,id=sp_1_jqGridPager,,,,,
+>> button,css=span.fa.fa-forward,,,,,
+>>| button,css=span.fa.fa-fast-forward,,,,,
+no. of shown list dropdown,//td[@id='jqGridPager_right']/table/tbody/tr/td[8]/select,,,,,

@@ -1,0 +1,12 @@
+column_name,html_column
+Agent,id=jqgh_gridCurrentAssignedItems_prepress_agent
+User Type,id=jqgh_gridCurrentAssignedItems_user_type
+Job Order ID,id=jqgh_gridCurrentAssignedItems_job_order_id
+Job Item ID,id=jqgh_gridCurrentAssignedItems_job_item_id
+Item Name,id=jqgh_gridCurrentAssignedItems_item_name
+Turnaround,id=jqgh_gridCurrentAssignedItems_turnaround
+Assigned Date/Time,id=jqgh_gridCurrentAssignedItems_assigned_datetime
+Idle Time,id=jqgh_gridCurrentAssignedItems_idle_time
+Assigned by,id=jqgh_gridCurrentAssignedItems_assignor
+Start Date/Time,id=jqgh_gridCurrentAssignedItems_proofing_start_datetime
+Duration,id=jqgh_gridCurrentAssignedItems_duration

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Hourly HeartBeat (Date by filter)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hourly HeartBeat (Date by filter)</td></tr>
+</thead><tbody>
+<tr>
+	<td>call</td>
+	<td>Environment</td>
+	<td>env=$environment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@type='text'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.prev</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div/div/div/ul/li/div/div/table/tbody/tr/td[6]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-0']/div/div/div/div/div/div/div/ul/li/div/div/table/tbody/tr/td[6]</td>
+	<td></td>
+</tr>
+<!--Clicking and selecting date in the date picker-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Checking Hourly Heartbeat if its collapsable-->
+<tr>
+	<td>click</td>
+	<td>css=a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.button-icon.jarviswidget-toggle-btn</td>
+	<td></td>
+</tr>
+<!--Clicking Generating report button-->
+<tr>
+	<td>click</td>
+	<td>link=Generate Report</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

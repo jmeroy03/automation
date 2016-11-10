@@ -1,0 +1,12 @@
+element_name_visble,element_location,element_label_name,element_label_location
+12,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Auto Upgrade and Downgrade report Form,//section[@id='widget-grid']/div/article,Shipping,//div[@id='ribbon']/ol/li[2]
+Auto Upgrade and Downgrade report icon,css=span.widget-icon > i.fa.fa-table,Auto Upgrade and Downgrade,//div[@id='ribbon']/ol/li[3]
+Auto Upgrade and Downgrade Report label,css=h2,Auto Upgrade and Downgrade Report,css=h2
+From Date section,css=section.col.col-3,From Date,css=label.label
+From Date label,css=label.label,To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+From Date datepicker,id=from_date,,
+To Date section,//div[@id='filter']/form/fieldset/div/section[2],,
+To Date label,//div[@id='filter']/form/fieldset/div/section[2]/label,,
+To Date datepicker,id=to_date,,

@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test 3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test 3</td></tr>
+</thead><tbody>
+<!--<-Refreshing page for returning default options->-->
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$repeat=1; $repeat&lt;=5; $repeat++</td>
+	<td></td>
+</tr>
+<!--<-Selecting Random Job Order->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr</td>
+	<td>rowCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$rowCount</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} + 1</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result}</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${z}]/td[1]/a</td>
+	<td>jobOrderId</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${z}]/td[1]/a</td>
+	<td>jobOrderId_${repeat}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${z}]/td[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<Access IMS>-->
+<!--//Open IMS and Search Job Order-->
+<tr>
+	<td>store</td>
+	<td>Reviews</td>
+	<td>imsDropdown</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>SearchIMS</td>
+	<td>env=$ims_environment, ims_email=$ims_email, ims_pass=$ims_pass, imsDropdown=$imsDropdown, jobOrderID=$jobOrderId,KEY_ENTER=$KEY_ENTER</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//td[2]/div/div/a</td>
+	<td>driSpecs</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${driSpecs} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus;</td>
+	<td>imsDiffSiteSpecs</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus;</td>
+	<td>imsSpecs</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus;</td>
+	<td>imsSpecs</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>JO ${jobOrderId}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/section/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>rowCountPrism</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$section=1; $section&lt;=${rowCountPrism}; $section++</td>
+	<td></td>
+</tr>
+<!--<-Clicking First available Header->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header</td>
+	<td></td>
+</tr>
+<!------Storing Element If element is present------>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>itemHeader1</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>itemHeader2</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>itemHeader3</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>itemHeader4</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>itemHeader5</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>itemHeader6</td>
+</tr>
+<!------Checking for Elements in the header that are not present------>
+<tr>
+	<td>if</td>
+	<td>${itemHeader1} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][0]</td>
+	<td>jobItemIdArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>${jobItemIdArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader2} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][2]</td>
+	<td>jobItemStatusArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>${jobItemStatusArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader3} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][5]</td>
+	<td>jobItemTurnAroundArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>${jobItemTurnAroundArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader4} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approved_datetime</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proof_by_date</td>
+	<td>word_2</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]@ng-if</td>
+	<td>elementChecker</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>element_attribute</td>
+	<td>attribute=$elementChecker, attribute_2=$elementChecker, word_attr=$word, word_attr_2=$word_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approvedBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3][1]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>Approved by: ${approvedByArray}</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proofBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${approvedByArray}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader5} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader6} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6][1]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>Ship by: ${shipByArray}</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${shipByArrayy}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking parent item has a child item->-->
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section/ng-include/section/div/article/div/header</td>
+	<td>subItemHeader</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>$subItemHeader == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section/ng-include/section/div/article/div/header</td>
+	<td>subRowCountPrism</td>
+</tr>
+<!--<-Checking of content for Child item->-->
+<tr>
+	<td>for</td>
+	<td>$ctr=1; $ctr&lt;=${subRowCountPrism}; $ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$a++</td>
+	<td></td>
+</tr>
+<!--<-Clicking First available Header->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span</td>
+	<td></td>
+</tr>
+<!------Storing Element If element is present------>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>itemHeader1</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>itemHeader2</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>itemHeader3</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>itemHeader4</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>itemHeader5</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>itemHeader6</td>
+</tr>
+<!------Next Step for elements that are not present------>
+<tr>
+	<td>if</td>
+	<td>${itemHeader1} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][0]</td>
+	<td>jobItemIdArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[1]</td>
+	<td>${jobItemIdArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader2} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][2]</td>
+	<td>jobItemStatusArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[3]</td>
+	<td>${jobItemStatusArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader3} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][5]</td>
+	<td>jobItemTurnAroundArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[5]</td>
+	<td>${jobItemTurnAroundArray}</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader4} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approved_datetime</td>
+	<td>word</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proof_by_date</td>
+	<td>word_2</td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]@ng-if</td>
+	<td>elementChecker</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>element_attribute</td>
+	<td>attribute=$elementChecker, attribute_2=$elementChecker, word_attr=$word, word_attr_2=$word_2</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${_result} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>approvedBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3][1]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>Approved By: ${approvedByArray}</td>
+</tr>
+<tr>
+	<td>elseIf</td>
+	<td>${_result} == false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>proofBy</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[7]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][3]</td>
+	<td>approvedByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${approvedByArray}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader5} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[9]</td>
+	<td>proofByText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Proof By: ${proogByText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${itemHeader6} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6][1]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[2]/div/section[${ctr}]/ng-include/section/div/article/div/header/h2/strong/span[11]</td>
+	<td>Ship By: ${shipByArray}</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>noUpload</td>
+	<td>headerIndicator</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][6]</td>
+	<td>shipByArray</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${shipByArrayy}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$a++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Proceeding to job order - global reports-->
+<tr>
+	<td>click</td>
+	<td>css=li[title=&quot;Global Tools&quot;] &gt; a &gt; span.menu-item-parent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a[title=&quot;Reviews&quot;] &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--Checking of the redirection of the page-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/reviews-list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job order that are used: ${jobOrderId_1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job order that are used: ${jobOrderId_2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job order that are used: ${jobOrderId_3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job order that are used: ${jobOrderId_4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Job order that are used: ${jobOrderId_5}</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

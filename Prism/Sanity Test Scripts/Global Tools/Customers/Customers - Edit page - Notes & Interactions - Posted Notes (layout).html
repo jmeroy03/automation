@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Notes & Interactions Posted (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Notes & Interactions Posted (layout)</td></tr>
+</thead><tbody>
+<!--<-Checking of Notes data if its correct ->-->
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div/ul/li/div/span</td>
+	<td>${stored_test_notes}</td>
+</tr>
+<!--<-Storing interaction Date->-->
+<tr>
+	<td>storeText</td>
+	<td>css=span.timeline-seperator.text-center &gt; span</td>
+	<td>stored_notes_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_notes_date &gt; $stored_interaction_date)</td>
+	<td>date_comparison_posted_notes</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>(${date_comparison_posted_notes} == true)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;Posted Interaction date has been created first before the notes&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;Expected Result for the created Interaction and Notes did not taly, kindly check the Dates&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('Expected Result for the created Interaction and Notes did not taly, kindly check the Dates');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking for additional Layout if there are any->-->
+<tr>
+	<td>verifyXpathCount</td>
+	<td>//div[@id='profile']/div[2]/ng-include/div/div/div/div</td>
+	<td>2</td>
+</tr>
+</tbody></table>
+</body>
+</html>

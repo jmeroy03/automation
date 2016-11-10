@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Problem Tickets - Adding Job Order in Problem tickets</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Problem Tickets - Adding Job Order in Problem tickets</td></tr>
+</thead><tbody>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='number'])[6]</td>
+	<td>${jobOrderId}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div/div/div/span[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Storing count of Job item from instered job orders->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div[2]/table/tbody/tr</td>
+	<td>jobItemRowCount</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>descriptionCtr</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$ctrx=1; $ctrx&lt;=${jobItemRowCount}; $ctrx++</td>
+	<td></td>
+</tr>
+<!------Comparing Item No. from IMS Job order item to prism Job order item------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][0]</td>
+	<td>jobItemNoArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div[2]/table/tbody/tr[${ctrx}]/td[2]/div[1]</td>
+	<td>Item No.: ${jobItemNoArray}</td>
+</tr>
+<!------Comparing Account Type from IMS to prism Account Type------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][1][2]</td>
+	<td>accountTypeArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div[2]/table/tbody/tr[${ctrx}]/td[2]/div[2]</td>
+	<td>Account Type: ${accountTypeArray}</td>
+</tr>
+<!------Comparing "Amount" from IMS to prism "Amount"------>
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${descriptionCtr}][8]</td>
+	<td>amountArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[2]/div/fieldset[2]/div[2]/div[2]/table/tbody/tr[${ctrx}]/td[3]/span</td>
+	<td>${amountArray}</td>
+</tr>
+<!--<-Incrementing counter for stored array->-->
+<tr>
+	<td>storeEval</td>
+	<td>$descriptionCtr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing of total priced from IMS to Prism->-->
+<!------Comparing "Printing" from IMS to prism "Printing"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div</td>
+	<td>${printingTotal}</td>
+</tr>
+<!------Comparing "Discounts" from IMS to prism "Discounts"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[2]</td>
+	<td>${discountTotal}</td>
+</tr>
+<!------Comparing "Tax" from IMS to prism "Tax"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[3]</td>
+	<td>${taxTotal}</td>
+</tr>
+<!------Comparing "Shipping Total" from IMS to prism "ShippingTotal"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[4]</td>
+	<td>${shippingTotal}</td>
+</tr>
+<!------Comparing "Grand Total" from IMS to prism "Grand Total"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[5]</td>
+	<td>${grandTotal}</td>
+</tr>
+<!------Comparing "Payment" from IMS to prism "Payment"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[6]</td>
+	<td>${paymentTotal}</td>
+</tr>
+<!------Comparing "Balance Due" from IMS to prism "Balance Due"------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div[2]/div/fieldset[2]/div[2]/div[2]/table/tfoot/tr/td[2]/div[7]</td>
+	<td>${balanceDueTotal}</td>
+</tr>
+<!--<-Selecting All Job item->-->
+<tr>
+	<td>click</td>
+	<td>css=span.margin-right-0</td>
+	<td></td>
+</tr>
+<!--<-Submitting created Problem Ticket->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

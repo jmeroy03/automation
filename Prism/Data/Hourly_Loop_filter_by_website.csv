@@ -1,0 +1,16 @@
+Next Day Flyers,id=gra-NDF,"Websites: UP, NDF",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[2]/label
+Print Runner,id=gra-PR,"Websites: UP, NDF, PR",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[3]/label
+Prints Made Easy,id=gra-PME,"Websites: UP, NDF, PR, PME",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[4]/label
+Business Cards 24,id=gra-BC24,"Websites: UP, NDF, PR, PME, BC24",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[5]/label
+Postcards.com,id=gra-PC,"Websites: UP, NDF, PR, PME, BC24, PC",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[6]/label
+YouPrint,id=gra-YP,"Websites: UP, NDF, PR, PME, BC24, PC, YP",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[7]/label
+YouPrint Labels,id=gra-YPL,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[8]/label
+24HourPrint,id=gra-RPS,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[9]/label
+Digital Room,id=gra-DR,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[10]/label
+Live Nation Printing,id=gra-D-LNP,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[11]/label
+V12 Group,id=gra-CPV12,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[12]/label
+NNA Services,id=gra-D-NNA,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12, D-NNA",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[13]/label
+PrintPlace,id=gra-PP,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12, D-NNA, PP",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[14]/label
+48 Hour Print,id=gra-48HP,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12, D-NNA, PP, 48HP",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[15]/label
+Bargain Basement Printing,id=gra-BBP,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12, D-NNA, PP, 48HP, BBP",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[16]/label
+Hotcards,id=gra-HC,"Websites: UP, NDF, PR, PME, BC24, PC, YP, YPL, RPS, DR, D-LNP, CPV12, D-NNA, PP, 48HP, BBP, HC",//div[@id='wid-id-0']/div/div/div/div/div[2]/div/ul/li[17]/label

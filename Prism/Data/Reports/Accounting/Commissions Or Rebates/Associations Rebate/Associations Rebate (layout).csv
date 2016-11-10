@@ -1,0 +1,16 @@
+element_name_visble,element_location,element_label_name,element_label_location
+16,,12,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Associations report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Associations report icon,css=span.widget-icon > i.fa.fa-table,Commissions/Rebates,//div[@id='ribbon']/ol/li[3]
+Associations Report label,css=h2,Associations Rebate,//div[@id='ribbon']/ol/li[4]
+Lock from - to date section,css=section.col.col-4,Associations Report,css=h2
+Lock from date label,css=label.label,Lock From Date,css=label.label
+Lock from date datepicker,id=from_date,Lock To Date,//div[@id='filter']/form/fieldset/div/section/label[3]
+Lock to date label,//div[@id='filter']/form/fieldset/div/section/label[3],Owner,//div[@id='filter']/form/fieldset/div/section[2]/label
+Lock to date datepicker,id=to_date,[Clear],link=[Clear]
+Owner section,//div[@id='filter']/form/fieldset/div/section[2],(No Selection = All),css=label.select.select-multiple > em
+Owner label,//div[@id='filter']/form/fieldset/div/section[2]/label,,
+Owner multiselect box,id=association_owners,,
+clear link,link=[Clear],,
+(No Selection = All),css=label.select.select-multiple > em,,

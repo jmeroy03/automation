@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Hourly HeartBeat (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hourly HeartBeat (functionality)</td></tr>
+</thead><tbody>
+<!--Click the Filter by website button Checking-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Uprinting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gra-UP</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-1']/div/div/div/div/div[2]/div/ul/li/label</td>
+	<td>UPrinting</td>
+</tr>
+<!--Looping test for dropdown contents as well as label website checking-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Cumulative_Loop_filter_by_website - (Prod).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1</td>
+	<td>row</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${row}&lt;=17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>web_name</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>website</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>web_value</td>
+	<td>${x},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>dropdown_name</td>
+	<td>${x},4</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${web_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${dropdown_name}</td>
+	<td>${web_name}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>${website}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${web_value}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>$row++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

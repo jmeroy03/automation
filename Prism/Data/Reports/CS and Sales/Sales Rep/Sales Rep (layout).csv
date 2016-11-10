@@ -1,0 +1,12 @@
+element_name_visble,element_location,element_label_name,element_label_location
+12,,8,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Sales Rep report Form,//section[@id='widget-grid']/div/article,CS and Sales,//div[@id='ribbon']/ol/li[2]
+Sales Rep report icon,css=span.widget-icon > i.fa.fa-table,Sales Rep,//div[@id='ribbon']/ol/li[3]
+Sales Rep Report label,css=h2,Sales Rep Report,css=h2
+Select Month and Year section,css=section.col.col-3,Select Month and Year,css=label.label
+Select Month and Year label,css=label.label,Exclude NDF Reps,css=label.checkbox
+Select Month and Year datepicker,id=as_of_month_year,,
+Exclude NDF Reps  section,//section[2]/label[2],,
+Exclude NDF Reps label,css=label.checkbox,,
+Exclude NDF Reps checkbox,css=label.checkbox > i,,

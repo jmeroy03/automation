@@ -1,0 +1,20 @@
+element_name_visble,element_location,element_label_name,element_label_location
+20,,15,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Monthly report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Monthly report icon,css=span.widget-icon > i.fa.fa-table,Sales and Revenue,//div[@id='ribbon']/ol/li[3]
+Monthly Report label,css=h2,Monthly,//div[@id='ribbon']/ol/li[4]
+No. of Months Included - Ending at section,css=section.col.col-4,Monthly Report,css=h2
+No. of Months Included label,css=label.label,No. of Months Included,css=label.label
+No. of Months Included dropdown,//div[@id='filter']/form/fieldset/div/section/label[2]/div/a/span,Company,//div[@id='filter']/form/fieldset/div/section[2]/label
+Company section,//div[@id='filter']/form/fieldset/div/section[2],[Clear],link=[Clear]
+Company label,//div[@id='filter']/form/fieldset/div/section[2]/label,(No Selection = All),css=label.select.select-multiple > em
+Company Multiselect box,id=company_code,Website,//div[@id='filter']/form/fieldset/div/section[3]/label
+clear link,link=[Clear],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+(No Selection = All),css=label.select.select-multiple > em,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em
+Website section,//div[@id='filter']/form/fieldset/div/section[3],Ending At,//div[@id='filter']/form/fieldset/div/section/label[3]
+Website label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Website Multiselect box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em,,
+Ending At Date picker,id=month_year,,

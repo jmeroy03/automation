@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Contact Details Profile editing fields (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Contact Details Profile editing fields (functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/ng-include[1]/div/form/fieldset[1]/h3/a[3]/i</td>
+	<td></td>
+</tr>
+<!--<-Editing random company name->-->
+<tr>
+	<td>type</td>
+	<td>name=company_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>uprinting_test_site</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=company_name</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>name=company_name</td>
+	<td>stored_company_name</td>
+</tr>
+<!--<-Editing random first name->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>edsel</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[4]</td>
+	<td>stored_fname</td>
+</tr>
+<!--<-Editing random last name->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Quiachon</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td>stored_lname</td>
+</tr>
+<!--<-Editing random email->-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='email']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>edsel.q.uprinting.</td>
+	<td>enter_email</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_email</td>
+	<td>email=$enter_email</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@type='email']</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//input[@type='email']</td>
+	<td>stored_email</td>
+</tr>
+<!--<-Editing random primary no.->-->
+<tr>
+	<td>type</td>
+	<td>name=contact_number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>name=contact_number</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>name=contact_number</td>
+	<td>stored_primary_no</td>
+</tr>
+<!--<-Editing random alternate no.->-->
+<tr>
+	<td>type</td>
+	<td>document.formContactDetails.contact_number[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>document.formContactDetails.contact_number[1]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>document.formContactDetails.contact_number[1]</td>
+	<td>stored_alternate_no</td>
+</tr>
+<!--<-Editing random ext no. for primary->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>stored_ext_no_primary</td>
+</tr>
+<!--<-Editing random ext no. for alternate->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>stored_ext_no_alternate</td>
+</tr>
+<!--<-Editing random fax no.->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[10]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[10]</td>
+	<td>stored_fax_no</td>
+</tr>
+<!--<-Editing Random selection of country dropdown->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[9]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[9]/div/div/a/span</td>
+	<td>stored_country</td>
+</tr>
+<!--<-Editing random mailing ghost no.->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@type='text'])[12]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[12]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[12]</td>
+	<td>stored_ghost_no</td>
+</tr>
+<!--<-Editing random USPS CRID->-->
+<tr>
+	<td>type</td>
+	<td>//input[@type='test']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@type='test']</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//input[@type='test']</td>
+	<td>stored_USPS_ID</td>
+</tr>
+<!--<-Editing selection of preferred method of contact->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[14]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div[2]/div/div/div/div[1]/div[1]/ng-include[1]/div/form/fieldset[2]/div[14]/div[1]/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[14]/div/div/a/span</td>
+	<td>stored_contact_method</td>
+</tr>
+<!--<-Editing random selection of Contact Frequency->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[15]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/ng-include[1]/div/form/fieldset[2]/div[15]/div[1]/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include/div/form/fieldset[2]/div[15]/div/div/a/span</td>
+	<td>stored_contact_frequency</td>
+</tr>
+</tbody></table>
+</body>
+</html>

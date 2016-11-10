@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Add Page (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Add Page (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Adding a File issue->-->
+<!------File Name------>
+<tr>
+	<td>store</td>
+	<td>File_Issue_name_</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=fixup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=fixup</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing File Name Text---->
+<tr>
+	<td>storeValue</td>
+	<td>name=fixup</td>
+	<td>storedFileIssueNameText</td>
+</tr>
+<!--<-Not Applicable Websites->-->
+<tr>
+	<td>clickAt</td>
+	<td>css=input.default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/div/div/ul/li</td>
+	<td>notApplicableWebsiteOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$notApplicableWebsiteOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[2]/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing File Name Text---->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='select_1_chosen']/ul/li/span</td>
+	<td>storedNotApplicableWebsiteText</td>
+</tr>
+<!--<-Default Description->-->
+<tr>
+	<td>type</td>
+	<td>name=description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=description</td>
+	<td>Testing the default description for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----Storing Default Description Text---->
+<tr>
+	<td>storeValue</td>
+	<td>name=description</td>
+	<td>storedDefaultDescriptionText</td>
+</tr>
+<!------Adding additional Description------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[4]</td>
+	<td></td>
+</tr>
+<!------Checking Website Specific Description Label------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[4]/label/span</td>
+	<td>Website Specific Description</td>
+</tr>
+<!------Verifiy Website Specific Description Appears after selecting Clicking add button from default description------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[4]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=appendbutton</td>
+	<td></td>
+</tr>
+<!------Checking of Visiblity------>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[4]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=appendbutton</td>
+	<td></td>
+</tr>
+<!--<-Website Specific Description->-->
+<tr>
+	<td>clickAt</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[4]/div/div/div[1]/div/div/ul/li</td>
+	<td>websiteSpecificDescriptionOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$websiteSpecificDescriptionOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[4]/div/div/div[1]/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing File Name Text---->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[4]/div/div/div/div/a/span</td>
+	<td>storedWebsiteSpecificDescriptionDropdownText</td>
+</tr>
+<!--<-Website Specific Description Text Box->-->
+<tr>
+	<td>type</td>
+	<td>id=appendbutton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=appendbutton</td>
+	<td>Testing the Website Specific Description Text Box for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----Storing Default Description Text---->
+<tr>
+	<td>storeValue</td>
+	<td>id=appendbutton</td>
+	<td>storedWebsiteSpecificDescriptionText</td>
+</tr>
+<!--<-Next Steps/Customer Actions->-->
+<tr>
+	<td>type</td>
+	<td>css=div.col-md-5 &gt; div.input-group.input-group-sm &gt; #appendbutton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=div.col-md-5 &gt; div.input-group.input-group-sm &gt; #appendbutton</td>
+	<td>Testing the &quot;Next Steps/Customer Actions&quot; field for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----StoringNext Steps/Customer Actions Text---->
+<tr>
+	<td>storeValue</td>
+	<td>css=div.col-md-5 &gt; div.input-group.input-group-sm &gt; #appendbutton</td>
+	<td>storedNextStepsCustomerActionsText</td>
+</tr>
+<!------Adding additional Next Step or Customer Actions------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<!------Verifiy Additional field for Next Steps/Customer Actions Appears after selecting Clicking add button from the previous field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@id='appendbutton'])[3]</td>
+	<td></td>
+</tr>
+<!------Checking of Visiblity------>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//input[@id='appendbutton'])[3]</td>
+	<td></td>
+</tr>
+<!--<-Next Steps/Customer Actions 2nd field->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='appendbutton'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='appendbutton'])[3]</td>
+	<td>Testing the &quot;Next Steps/Customer Actions&quot; 2nd field for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----StoringNext Steps/Customer Actions Text---->
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@id='appendbutton'])[3]</td>
+	<td>stored2ndNextStepsCustomerActionsText</td>
+</tr>
+<!------Adding 3rd additional Next Step or Customer Actions------>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[6]</td>
+	<td></td>
+</tr>
+<!------Verifiy Additional field for Next Steps/Customer Actions Appears after selecting Clicking add button from the previous field------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//input[@id='appendbutton'])[4]</td>
+	<td></td>
+</tr>
+<!------Checking of Visiblity------>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//input[@id='appendbutton'])[4]</td>
+	<td></td>
+</tr>
+<!--<-Next Steps/Customer Actions 2nd field->-->
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='appendbutton'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='appendbutton'])[4]</td>
+	<td>Testing the &quot;Next Steps/Customer Actions&quot; 3rd field for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----StoringNext Steps/Customer Actions Text---->
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@id='appendbutton'])[4]</td>
+	<td>stored3rdNextStepsCustomerActionsText</td>
+</tr>
+<!--<-File Issue Category Dropdown->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[8]/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[8]/div/div/div/div/ul/li</td>
+	<td>storedFileIssueCategoryOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$storedFileIssueCategoryOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[8]/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!----Storing File Issue Category Text---->
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[8]/div/div/div/a/span</td>
+	<td>storedFileIssueCategoryText</td>
+</tr>
+<!--<-Hide File Issue Checkbox->-->
+<tr>
+	<td>click</td>
+	<td>css=label &gt; span.text-muted</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[9]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>storedHideFileIssueText</td>
+</tr>
+<!--<-Fix-ups Dropdown->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[10]/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[10]/div/div/div/div/ul/li</td>
+	<td>storedFixUpsOptionCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$storedFixUpsOptionCount</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[10]/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!--<-Verifying Save buttons has been enabled->-->
+<!------Save Button Header------>
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//button[@type='button'])[3]</td>
+	<td></td>
+</tr>
+<!------Save Button Footer------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<!--<-Storing First Row Data in the Add file Table->-->
+<!------storing Id column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td</td>
+	<td>storeIdText</td>
+</tr>
+<!------storing Id column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[2]</td>
+	<td>storeIFixUpText</td>
+</tr>
+<!------storing Id column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[3]</td>
+	<td>storedDescriptionColumnText</td>
+</tr>
+<!------storing Id column------>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[4]</td>
+	<td>storeStatusColumnText</td>
+</tr>
+<!------Verifying element for Remove column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[@id='wid-id-18']/div/div/form/table/tbody/tr/td[5]</td>
+	<td></td>
+</tr>
+<!--<-Saving Additional File Issue->-->
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.modal-footer &gt; button.btn.btn-primary</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

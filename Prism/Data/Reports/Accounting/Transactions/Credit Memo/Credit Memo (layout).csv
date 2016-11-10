@@ -1,0 +1,39 @@
+element_name_visble,element_location,element_label_name,element_label_location
+39,,25,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Credit Memo report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Credit Memo report icon,css=span.widget-icon > i.fa.fa-table,Transactions,//div[@id='ribbon']/ol/li[3]
+Credit Memo Report label,css=h2,Credit Memo,//div[@id='ribbon']/ol/li[4]
+from date section,css=section.col.col-4,Credit Memo Report,css=h2
+from date label,css=label.label,From Date,css=label.label
+from date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+ to date label,//div[@id='filter']/form/fieldset/div/section[2]/label,Date,//div[@id='filter']/form/fieldset/div/section[3]/label
+to date datepicker,id=to_date,Company,//div[@id='filter']/form/fieldset/div[2]/section/label
+Date Section,//div[@id='filter']/form/fieldset/div/section[3],[Clear],link=[Clear]
+Date Label,//div[@id='filter']/form/fieldset/div/section[3]/label,(No Selection = All),css=label.select.select-multiple > em
+Date dropdown,css=#date_option_chosen > a.chosen-single > span,Website,//div[@id='filter']/form/fieldset/div[2]/section[2]/label
+Company Section,//div[@id='filter']/form/fieldset/div[2]/section,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+Company Label,//div[@id='filter']/form/fieldset/div[2]/section/label,(No Selection = All),//div[@id='filter']/form/fieldset/div[2]/section[2]/label[2]/em
+Company Multiselect box,id=company_code,Status,//div[@id='filter']/form/fieldset/div[2]/section[3]/label
+[Clear] link,link=[Clear],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[3]"
+(No Selection = All) label,css=label.select.select-multiple > em,(No Selection = All),//div[@id='filter']/form/fieldset/div[2]/section[3]/label[2]/em
+Website section,//div[@id='filter']/form/fieldset/div[2]/section[2],Origin of Issue,//div[@id='filter']/form/fieldset/div[3]/section/label
+Website label,//div[@id='filter']/form/fieldset/div[2]/section[2]/label,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[4]"
+Website multiselect box,id=website_code,(No Selection = All),//div[@id='filter']/form/fieldset/div[3]/section/label[2]/em
+[Clear] link,"xpath=(//a[contains(text(),'[Clear]')])[2]",Underlying Cause,//div[@id='filter']/form/fieldset/div[3]/section[2]/label
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div[2]/section[2]/label[2]/em,[Clear],"xpath=(//a[contains(text(),'[Clear]')])[5]"
+Status section,//div[@id='filter']/form/fieldset/div[2]/section[3],(No Selection = All),//div[@id='filter']/form/fieldset/div[3]/section[2]/label[2]/em
+Status label,//div[@id='filter']/form/fieldset/div[2]/section[3]/label,,
+Status Multiselect box,id=credit_memo_status_id,,
+[Clear] link,"xpath=(//a[contains(text(),'[Clear]')])[3]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div[2]/section[3]/label[2]/em,,
+Origin of Issue section,//div[@id='filter']/form/fieldset/div[3]/section,,
+Origin of Issue label,//div[@id='filter']/form/fieldset/div[3]/section/label,,
+Origin of Issue Multiselect box,id=ticket_category_id,,
+[Clear] link,"xpath=(//a[contains(text(),'[Clear]')])[4]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div[3]/section/label[2]/em,,
+Underlying Cause Section,//div[@id='filter']/form/fieldset/div[3]/section[2],,
+Underlying Cause Label,//div[@id='filter']/form/fieldset/div[3]/section[2]/label,,
+Underlying Cause Multiselect Box,id=ticket_category_problem_id,,
+[Clear] link,"xpath=(//a[contains(text(),'[Clear]')])[5]",,
+(No Selection = All) label,//div[@id='filter']/form/fieldset/div[3]/section[2]/label[2]/em,,

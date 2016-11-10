@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Item Specifications - Edit Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Item Specifications - Edit Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Storing  Item Specification List->-->
+<!------Storing id------>
+<tr>
+	<td>storeText</td>
+	<td>link=3</td>
+	<td>storedIdText</td>
+</tr>
+<!------Storing Proofing Category------>
+<tr>
+	<td>storeText</td>
+	<td>//tr[@id='3']/td[2]/a</td>
+	<td>storedProofingCategoryText</td>
+</tr>
+<!------Storing Order Value Flag------>
+<tr>
+	<td>storeText</td>
+	<td>//tr[@id='3']/td[3]/span</td>
+	<td>storedOrderedValueFlagText</td>
+</tr>
+<!------Storing Exclusive Flag------>
+<tr>
+	<td>storeText</td>
+	<td>//tr[@id='3']/td[4]/span</td>
+	<td>storedExclusiveFlagText</td>
+</tr>
+<!------Storing Proofing Category Type------>
+<tr>
+	<td>storeText</td>
+	<td>//tr[@id='3']/td[5]/a</td>
+	<td>storedProofingCategoryTypeText</td>
+</tr>
+<!--<-Accessing Proofing Category that uses Order Specs->-->
+<tr>
+	<td>click</td>
+	<td>link=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<-Checking of the redirection of the page->-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/proofing-category-edit/${storedIdText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Prepress\Auto Assignment\Item Specifications\Item Specifications - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageLayoutRowCount</td>
+	<td>2,10</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageFieldRowCount</td>
+	<td>2,9</td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},9</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},10</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageFieldRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},9</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},10</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking Tabs if the description is the same->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[2]/div/ul/li/a</td>
+	<td>totalTabCount</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$totalTabCount - 1</td>
+	<td>totalTabCountResult</td>
+</tr>
+<!----comparing tabs---->
+<tr>
+	<td>for</td>
+	<td>$x=1; $x &lt;= ${totalTabCountResult}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/div/div[${x}]/form/div[1]/div/input</td>
+	<td>storedDescriptionText</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/ul/li[${x}]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/ul/li[${x}]/a</td>
+	<td>${storedDescriptionText}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/ul/li[${x}]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/ul/li[${x}]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking Order Specs Element are visible->-->
+<tr>
+	<td>click</td>
+	<td>css=#accordion-order-specs-3 &gt; div.panel.panel-default &gt; div.panel-heading &gt; h4.panel-title &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>1</td>
+	<td>attibuteValueCell</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>storedAttributeValueCount</td>
+	<td>2,11</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x &lt;= ${storedAttributeValueCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>storedAttributeValue</td>
+	<td>${x},11</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/div/div[4]/form/div[3]/div/div/div[2]/div/div[${attibuteValueCell}]/div/div/label</td>
+	<td>${storedAttributeValue}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/div/div[4]/form/div[3]/div/div/div[2]/div/div[${attibuteValueCell}]/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[3]/div/div/div/div/div[2]/div[2]/div/div/div[4]/form/div[3]/div/div/div[2]/div/div[${attibuteValueCell}]/div/div/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$attibuteValueCell++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Comparing of Stored Data from List Table to Edit Page->-->
+<!------Description Text Box------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div/div/input</td>
+	<td>${storedProofingCategoryText}</td>
+</tr>
+<!------Category Dropdown------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='wid-id-18']/div/div/form/div[2]/div/div/a/span</td>
+	<td>${storedProofingCategoryTypeText}</td>
+</tr>
+<!------Order Value Flag checkbox------>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[3]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function uncheckbox-->
+<tr>
+	<td>call</td>
+	<td>uncheckbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$storedOrderedValueFlagText == &quot;Yes&quot;</td>
+	<td>storedOrderedValueFlagResult</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} == ${storedOrderedValueFlagResult}</td>
+	<td>storedOrderedValueFlagCheckBoxResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${storedOrderedValueFlagCheckBoxResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Order Value Checkbox Has been checked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Order Value Checkbox Has an Error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('List and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;List and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Exclusive Flag checkbox------>
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[4]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function uncheckbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$storedExclusiveFlagText == &quot;Yes&quot;</td>
+	<td>storedExclusiveFlagResult</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} == ${storedExclusiveFlagResult}</td>
+	<td>storedExclusiveFlagCheckBoxResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${storedExclusiveFlagCheckBoxResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Exclusive Checkbox Has been checked</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verified Exclusive Checkbox Has an Error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('List and Edit checkbox Did not taly with expected result');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error(&quot;List and Edit checkbox Did not taly with expected result&quot;);</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

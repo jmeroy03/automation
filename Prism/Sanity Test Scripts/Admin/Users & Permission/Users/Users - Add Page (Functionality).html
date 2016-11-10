@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Add Page (Functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Add Page (Functionality)</td></tr>
+</thead><tbody>
+<!--<-Adding a File issue->-->
+<!------Subject Name------>
+<tr>
+	<td>store</td>
+	<td>Testing_Announcement_Only_</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=subject</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=subject</td>
+	<td>${_result}</td>
+</tr>
+<!----Storing Subject Name Text---->
+<tr>
+	<td>storeValue</td>
+	<td>name=subject</td>
+	<td>storedSubjectNameText</td>
+</tr>
+<!--<-Description->-->
+<tr>
+	<td>type</td>
+	<td>name=alert_notification_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=alert_notification_description</td>
+	<td>Testing the description for this section! Testing only Do not process! Thanks.</td>
+</tr>
+<!----Storing Description Text---->
+<tr>
+	<td>storeValue</td>
+	<td>name=alert_notification_description</td>
+	<td>storedAnnouncementDescriptionText</td>
+</tr>
+<!--<-Selecting Start Datetime->-->
+<tr>
+	<td>clickAt</td>
+	<td>id=start_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].cellIndex; }</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1 + ${current_column_date}</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current column count: ${current_column_date}</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].parentNode.rowIndex; }</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${current_row_date} - 1</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current row count: ${current_row_date}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[3]/div/div/div/div[2]/form/fieldset/div[3]/div/div/div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div[2]/form/fieldset/div[3]/div/div/div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=start_datetime</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<!--<-Selecting End Datetime->-->
+<tr>
+	<td>clickAt</td>
+	<td>id=end_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addAnnouncementForm']/fieldset/div[4]/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.glyphicon.glyphicon-screenshot</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].cellIndex; }</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1 + ${current_column_date}</td>
+	<td>current_column_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current column count: ${current_column_date}</td>
+	<td></td>
+</tr>
+<!------Storing Column count for xpath of current date------>
+<tr>
+	<td>storeEval</td>
+	<td>var r = window.document.getElementsByClassName('day active today');&nbsp;&nbsp;for (var i =0; i &lt; r.length; i++){&nbsp;&nbsp;&nbsp;r[i].parentNode.rowIndex; }</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${current_row_date} - 1</td>
+	<td>current_row_date</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Current row count: ${current_row_date}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[3]/div/div/div/div[2]/form/fieldset/div[4]/div/div/div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div[2]/form/fieldset/div[4]/div/div/div/ul/li[1]/div/div[1]/table/tbody/tr[${current_row_date}]/td[${current_column_date}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=end_datetime</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<!--<-Verifying Save buttons has been enabled->-->
+<!------Save Button Header------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//button[@type='submit button']</td>
+	<td></td>
+</tr>
+<!------Save Button Footer------>
+<tr>
+	<td>verifyEditable</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+<!--<-Saving Additional File Issue->-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='submit button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--<-Checking Announcement->-->
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[2]/h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//div[2]/h4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[2]/h4/span</td>
+	<td>${storedAnnouncementDescriptionText}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Add customer</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Add customer</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for origin Company->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div/div/div/div/div/a/span</td>
+	<td>stored_origin_company</td>
+</tr>
+<!--<-Random selection of data  for origin website->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[2]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count_origin_website</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[2]/div/div/div/div/a/span</td>
+	<td>stored_origin_website</td>
+</tr>
+<!--<-Adding random company name->-->
+<tr>
+	<td>store</td>
+	<td>uprinting_test_site</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[5]</td>
+	<td>stored_company_name</td>
+</tr>
+<!--<-Adding random first name->-->
+<tr>
+	<td>store</td>
+	<td>edsel</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[6]</td>
+	<td>stored_fname</td>
+</tr>
+<!--<-Adding random last name->-->
+<tr>
+	<td>store</td>
+	<td>Quiachon</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[7]</td>
+	<td>stored_lname</td>
+</tr>
+<!--<-Storing First and Last name->-->
+<tr>
+	<td>store</td>
+	<td>${stored_fname} ${stored_lname}</td>
+	<td>stored_complete_name</td>
+</tr>
+<!--<-Adding random email->-->
+<tr>
+	<td>store</td>
+	<td>edsel.q.uprinting.</td>
+	<td>enter_email</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_email</td>
+	<td>email=$enter_email</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@type='email']</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//input[@type='email']</td>
+	<td>stored_email</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//input[@type='email']</td>
+	<td>stored_unedited_email</td>
+</tr>
+<!--<-Adding random primary no.->-->
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>stored_primary_no</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[8]</td>
+	<td>stored_phone</td>
+</tr>
+<!--<-Adding random alternate no.->-->
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[10]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>xpath=(//input[@type='text'])[10]</td>
+	<td>stored_alternate_no</td>
+</tr>
+<!--<-Adding random ext no. for primary->-->
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[9]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[7]/div[2]/div/div[2]/input</td>
+	<td>stored_ext_no_primary</td>
+</tr>
+<!--<-Adding random ext no. for alternate->-->
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[11]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[8]/div[2]/div/div[2]/input</td>
+	<td>stored_ext_no_alternate</td>
+</tr>
+<!--<-Adding random fax no.->-->
+<tr>
+	<td>call</td>
+	<td>random_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[12]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[9]/div/div/div/div/input</td>
+	<td>stored_fax_no</td>
+</tr>
+<!--<-Random selection of country dropdown->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[10]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[10]/div/div/div/div/a/span</td>
+	<td>stored_country</td>
+</tr>
+<!--<-Adding random mailing ghost no.->-->
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>xpath=(//input[@type='text'])[14]</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[11]/div/div/div/div/input</td>
+	<td>stored_ghost_no</td>
+</tr>
+<!--<-Adding random USPS CRID->-->
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//input[@type='test']</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[12]/div/div/div/div/input</td>
+	<td>stored_USPS_ID</td>
+</tr>
+<!--<-Random selection of preferred method of contact->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[13]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[13]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[13]/div/div/div/div/a/span</td>
+	<td>stored_contact_method</td>
+</tr>
+<!--<-Random selection of Contact Frequency->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[14]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[14]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[14]/div/div/div/div/a/span</td>
+	<td>stored_contact_frequency</td>
+</tr>
+<!--<-Clicking VIP checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[15]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[15]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_VIP for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_VIP</td>
+</tr>
+<!--<-Clicking Price Sensitive checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[16]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[16]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_price_sensitive for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_price_sensitive</td>
+</tr>
+<!--Storing xpath for pr additional elements-->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div/div/div/div/div/a/span</td>
+	<td>xpath_ctr</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>Print Runner, LLC</td>
+	<td>origin_site</td>
+</tr>
+<!--xpath counter adjustment-->
+<tr>
+	<td>storeEval</td>
+	<td>$xpath_ctr==$origin_site</td>
+	<td>compare_text</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${compare_text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${compare_text}==true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>17</td>
+	<td>ctr</td>
+</tr>
+<!--<-Clicking  PR Pro checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_event_sponsorship for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_pr_pro</td>
+</tr>
+<!--<-Random Gallery Id->-->
+<tr>
+	<td>call</td>
+	<td>random_ext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div[2]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div[2]/div/div/div/input</td>
+	<td>store_private_gallery_id</td>
+</tr>
+<!--<-Random selection of radio button for Show Delivery via Van?->-->
+<tr>
+	<td>storeEval</td>
+	<td>2</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div[3]/div/div/div/div[${_result}]/label/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div[3]/div/div/div/div[${_result}]/label/span</td>
+	<td>store_show_delivery_via_van</td>
+</tr>
+<!--increment for counter-->
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>17</td>
+	<td>ctr</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Clicking trade checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_trade for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_trade</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking Reseller checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_reseller for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_reseller</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Adding random reseller code->-->
+<tr>
+	<td>store</td>
+	<td>reseller_code</td>
+	<td>enter_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_name</td>
+	<td>name=$enter_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>stored_reseller_code</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking NPO checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_npo for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_npo</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking Event Sponsorship checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_event_sponsorship for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_event_sponsorship</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking Net 30 checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_net_30 for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_net_30</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Adding random cash for Approved Limit->-->
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>stored_approved_limit</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking Price Override checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/label/span</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_trade for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_price_override</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for Pricing Tier->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_pricing_tier</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for Shipping Tier->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_shipping_tier</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for Customer Revnue Type->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_customer_revenue_type</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for Business Type->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_business_type</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of year buiness started->-->
+<tr>
+	<td>clickAt</td>
+	<td>id=year</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-years &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev &gt; span.fa.fa-chevron-left</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.datepicker-years &gt; table.table-condensed &gt; thead &gt; tr &gt; th.prev &gt; span.fa.fa-chevron-left</td>
+	<td></td>
+</tr>
+<!--Getting the number of date present in the datepicker-->
+<tr>
+	<td>storeEval</td>
+	<td>var date= window.document.getElementsByClassName('year').length;date;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//div[3]/table/tbody/tr/td/span[${_result}]</td>
+	<td>${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/table/tbody/tr/td/span[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>id=year</td>
+	<td>stored_origin_business_year</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Adding random company website->-->
+<tr>
+	<td>store</td>
+	<td>www.uprinting.test.site.</td>
+	<td>enter_site_name</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_site_name</td>
+	<td>site_name=$enter_site_name</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/input</td>
+	<td>stored_company_website</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for Who do you primarily print for?->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_who_dypf</td>
+</tr>
+<!--Storing xpath for pr additional elements-->
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>xpath_ctr_add</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>For Clients</td>
+	<td>for_clients</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>For My Company</td>
+	<td>for_my_company</td>
+</tr>
+<!--xpath counter adjustment-->
+<tr>
+	<td>storeEval</td>
+	<td>$xpath_ctr_add==$for_clients</td>
+	<td>compare_text_business</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$xpath_ctr_add==$for_my_company</td>
+	<td>compare_text_business_2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${compare_text}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>(${compare_text_business} == true) || (${compare_text_business_2} == true)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking How big is your design firm/agency? or How many employees does your company have?->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_design_firm</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for How did you hear about us?->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_how_did_you_hear</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Random selection of data  for How many times do you print in a year?->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/div/div/a/span</td>
+	<td>stored_how_many_times</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking  Variable Data Printing checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/label/span</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_event_sponsorship for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_variable_data_printing</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking  Mailing Service checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/label/span</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_mailing_service</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$ctr++</td>
+	<td></td>
+</tr>
+<!--<-Clicking   Design Services checkbox->-->
+<tr>
+	<td>click</td>
+	<td>//form[@id='addCustomerForm']/div/div[${ctr}]/div/div/label/span</td>
+	<td></td>
+</tr>
+<!--inserting local variable to function-->
+<tr>
+	<td>storeAttribute</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[${ctr}]/div/div/label/input@class</td>
+	<td>checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${checkbox_attribute}</td>
+	<td></td>
+</tr>
+<!--calling function checkbox-->
+<tr>
+	<td>call</td>
+	<td>checkbox</td>
+	<td>attribute=$checkbox_attribute</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Result if checkbox is ticked: ${_result}</td>
+	<td></td>
+</tr>
+<!--result stored in stored_checkbox_mailing_service  for comparison-->
+<tr>
+	<td>store</td>
+	<td>${_result}</td>
+	<td>stored_checkbox_design_service</td>
+</tr>
+</tbody></table>
+</body>
+</html>

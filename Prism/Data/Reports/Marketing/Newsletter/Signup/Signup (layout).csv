@@ -1,0 +1,35 @@
+element_name_visble,element_location,element_label_name,element_label_location
+35,,22,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Signup report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+Signup Orders,css=span.widget-icon > i.fa.fa-table,Newsletter,//div[@id='ribbon']/ol/li[3]
+Signup Report label,css=h2,Signup,//div[@id='ribbon']/ol/li[4]
+From - Filter by Website Section,css=section.col.col-4,Newsletter Signup Report,css=h2
+From date label,css=label.label,From Date,css=label.label
+From date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+Filter by Website label,//div[@id='filter']/form/fieldset/div/section[3]/label,Company,//div[@id='filter']/form/fieldset/div/section[3]/label
+Filter by Website Multiselect Box,id=website_code,Filter by Website,//div[@id='filter']/form/fieldset/div/section/label[3]
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",[Clear],link=[Clear]
+(No Selection = All),css=label > em,(No Selection = All),css=label > em
+Exclude Selected Websites checkbox,css=label > span,Exclude Selected Websites,css=label > span > em
+Exclude Selected Websites label,css=label > span > em,Filter by State,//div[@id='filter']/form/fieldset/div/section[2]/label[3]
+To Date - Filter by State Section,//div[@id='filter']/form/fieldset/div/section[2],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+To date label,//div[@id='filter']/form/fieldset/div/section[2]/label,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/div/div/label/em
+To date datepicker,id=to_date,Exclude Selected States,//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/div[2]/div/label/span/em
+Filter by State label,//div[@id='filter']/form/fieldset/div/section[2]/label[3],Filter by Subscribe Types,//div[@id='filter']/form/fieldset/div/section[3]/label[3]
+Filter by State Multiselect Box,id=state_code,Filter By Phone,//div[@id='filter']/form/fieldset/div/section[3]/label[5]
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",Filter by Domain (No value = All),//div[@id='filter']/form/fieldset/div/section[3]/label[7]
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/div/div/label/em,Exclude Domains,css=section.col.col-4 > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span > em
+Exclude Selected State checkbox,//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/div[2]/div/label/span,,
+Exclude Selected State label,//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/div[2]/div/label/span/em,,
+Company - Filters Subscribe Types - Filter by Phone - Filter by Domain section,//div[@id='filter']/form/fieldset/div/section[3],,
+Company Label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Company dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[2]/div/a/span,,
+Filter by Subscribe Types label,//div[@id='filter']/form/fieldset/div/section[3]/label[3],,
+Filter by Subscribe Types dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[4]/div/a/span,,
+Filter By Phone label,//div[@id='filter']/form/fieldset/div/section[3]/label[5],,
+Filter By Phone dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[6]/div/a/span,,
+Filter by Domain (No value = All) label,//div[@id='filter']/form/fieldset/div/section[3]/label[7],,
+Filter by Domain (No value = All) text box,xpath=(//input[@type='text'])[8],,
+Exclude Domain checkbox,css=section.col.col-4 > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span,,
+Exclude Domain label,css=section.col.col-4 > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span > em,,

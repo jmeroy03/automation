@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>test5</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test5</td></tr>
+</thead><tbody>
+<tr>
+	<td>storeEval</td>
+	<td>0</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1</td>
+	<td>section</td>
+</tr>
+<!------Display Specs checking------>
+<!----Project Name checking---->
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][1][0]</td>
+	<td>imsProjectNameSpecsArray</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[1]/div[1]/div/div[2]/div/div[1]/div</td>
+	<td>${imsProjectNameSpecsArray}</td>
+</tr>
+<!----Project Name checking---->
+<tr>
+	<td>storeEval</td>
+	<td>$imsSpecs[${a}][1][1]</td>
+	<td>imsTitleSpecsArray</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/section[${section}]/ng-include/section/div/article/div/div/div/div[1]/div[1]/div/div[2]/div/div[2]/div</td>
+	<td>imsTitleText</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>Project Name: ${imsTitleText}</td>
+	<td>${imsTitleSpecsArray}</td>
+</tr>
+</tbody></table>
+</body>
+</html>

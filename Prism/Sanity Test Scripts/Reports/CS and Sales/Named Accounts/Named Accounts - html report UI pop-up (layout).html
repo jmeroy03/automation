@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job order - html report UI (layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job order - html report UI (layout)</td></tr>
+</thead><tbody>
+<!--Connecting excel sheet to Selenium-->
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--Storing data from table-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//th/div</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>delete storedVars['stored_array']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$loop=3; $loop&lt;=${count}; $loop++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//tr[@id='1261']/td[${loop}]</td>
+	<td>stored_data</td>
+</tr>
+<tr>
+	<td>push</td>
+	<td>${stored_data}</td>
+	<td>stored_array</td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Selecting Existing customer Id from QA and Prod-->
+<tr>
+	<td>click</td>
+	<td>css=td[title=&quot;Robin Bauer&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>windowFocus</td>
+	<td>css=div.modal-header</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<!--Checking of additional layout-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h3.modal-title</td>
+	<td>Customers Assigned to Robin Bauer</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.modal-footer.ng-scope &gt; button.btn.btn-primary</td>
+	<td>Generate Spreadsheet</td>
+</tr>
+<!--Connecting to CSV file-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Reports\CS and Sales\Named Accounts\Named Accounts - html report UI pop-up (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>var row=3;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${row}</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_layout_name_row_count</td>
+	<td>2,3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_column_name_row_count</td>
+	<td>2,1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_data_checking_count</td>
+	<td>2,5</td>
+</tr>
+<!--Checking of column label if its correct-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${pop_up_column_name_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_column_name</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_column_location</td>
+	<td>${x},2</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pop_up_column_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${pop_up_column_location}</td>
+	<td>${pop_up_column_name}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${pop_up_column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${pop_up_column_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Checking of elements that are not included in the list-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${pop_up_layout_name_row_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_layout_name</td>
+	<td>${x},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_layout_location</td>
+	<td>${x},4</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pop_up_layout_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${pop_up_layout_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${pop_up_layout_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--Comparing of stored data from previous table-->
+<tr>
+	<td>store</td>
+	<td>0</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${pop_up_data_checking_count}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_data_label</td>
+	<td>${x},5</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>pop_up_data_value</td>
+	<td>${x},6</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars.stored_array[${a}]</td>
+	<td>stored_array_data</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${pop_up_data_label}: &quot;${stored_array_data}&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${pop_up_data_value}</td>
+	<td>${stored_array_data}</td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>$a++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

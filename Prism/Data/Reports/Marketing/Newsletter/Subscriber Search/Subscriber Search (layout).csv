@@ -1,0 +1,31 @@
+element_name_visble,element_location,element_label_name,element_label_location
+31,,19,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Subscriber Search report Form,//section[@id='widget-grid']/div/article,Marketing,//div[@id='ribbon']/ol/li[2]
+Subscriber Search Orders,css=span.widget-icon > i.fa.fa-table,Newsletter,//div[@id='ribbon']/ol/li[3]
+Subscriber Search Report label,css=h2,Subscriber Search,//div[@id='ribbon']/ol/li[4]
+From Date - Filter by Email Section,css=section.col.col-4,Newsletter Subscriber Search Report,css=h2
+From date label,css=label.label,From Date,css=label.label
+From date datepicker,id=from_date,To Date,//div[@id='filter']/form/fieldset/div/section/label[3]
+To date label,//div[@id='filter']/form/fieldset/div/section[3]/label,Company,//div[@id='filter']/form/fieldset/div/section[3]/label
+To date datepicker,id=website_code,Filter by Website,//div[@id='filter']/form/fieldset/div/section[2]/label
+Filter by Email (No value = All) label,//div[@id='filter']/form/fieldset/div/section/label[5],[Clear],link=[Clear]
+Filter by Email (No value = All)  text box,xpath=(//input[@type='text'])[5],(No Selection = All),css=div.checkbox.exclude-checkbox > label > em
+Exclude Emails label,css=label > span > em,Exclude Selected Websites,css=label.select.select-multiple > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span > em
+Exclude Emails Checkbox,css=label > span,Filter by Email (No value = All),//div[@id='filter']/form/fieldset/div/section/label[5]
+Filter by Website Section,//div[@id='filter']/form/fieldset/div/section[2],Exclude Emails,css=label > span > em
+Filter by Website label,//div[@id='filter']/form/fieldset/div/section[2]/label,Filter by Subscriber Type,//div[@id='filter']/form/fieldset/div/section[3]/label[2]
+Filter by Website Multiselect Box,id=website_code,Filter by Domain (No value = All),//div[@id='filter']/form/fieldset/div/section[3]/label[3]
+[Clear],link=[Clear],Exclude Domains,//div[@id='filter']/form/fieldset/div/section[3]/div[3]/div/div/label/span/em
+(No Selection = All),css=div.checkbox.exclude-checkbox > label > em,,
+Exclude Selected Websites,css=label.select.select-multiple > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span > em,,
+Exclude Selected Websites checkbox,css=label.select.select-multiple > div.row > div.col.col-md-6 > div.checkbox.exclude-checkbox > label > span,,
+Company - Filter by Domain section,//div[@id='filter']/form/fieldset/div/section[3],,
+Company label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Company dropdown,//div[@id='filter']/form/fieldset/div/section[3]/div/a/span,,
+Filter by Subscriber Type label,//div[@id='filter']/form/fieldset/div/section[3]/label[2],,
+Filter by Subscriber Type dropdown,//div[@id='filter']/form/fieldset/div/section[3]/div[2]/a/span,,
+Filter by Domain (No value = All) label,//div[@id='filter']/form/fieldset/div/section[3]/label[3],,
+Filter by Domain (No value = All) text box,xpath=(//input[@type='text'])[8],,
+Exclude Domains,//div[@id='filter']/form/fieldset/div/section[3]/div[3]/div/div/label/span/em,,
+Exclude Domains checkbox,//div[@id='filter']/form/fieldset/div/section[3]/div[3]/div/div/label/span,,

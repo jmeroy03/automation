@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Job Orders</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Job Orders</td></tr>
+</thead><tbody>
+<!--<-Selecting Available Filters->-->
+<!------Creating Department Multiselect Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=department</td>
+	<td>label=Contact Center</td>
+</tr>
+<!------Creating Team Multiselect Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=teamName</td>
+	<td>label=Team Marky</td>
+</tr>
+<!------Opened By Multiselect Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=openedBy</td>
+	<td>label=Marky Umali</td>
+</tr>
+<!------Complaint Type Multi Select Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=complaintType</td>
+	<td>label=Printing Issues</td>
+</tr>
+<!------Attention Multi Select Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=attention</td>
+	<td>label=Contact Center</td>
+</tr>
+<!------Designated To Multi Select Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=ticketAssignee</td>
+	<td>label=Marky Umali</td>
+</tr>
+<!------Manager Multi Select Box------>
+<tr>
+	<td>addSelection</td>
+	<td>id=ticketManager</td>
+	<td>label=Claire Mapalo</td>
+</tr>
+<!------Selecting  Open/Closed Dropdown------>
+<tr>
+	<td>clickAt</td>
+	<td>css=#ticketStatus_chosen &gt; a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div[1]/div/div/form/fieldset/div[2]/section[4]/label[2]/div/div/ul/li[2]</td>
+	<td></td>
+</tr>
+<!--<-Clicking the Search Button->-->
+<tr>
+	<td>click</td>
+	<td>//button[@value='']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>15000</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Edit Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Edit Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Checking of Title Page->-->
+<tr>
+	<td>verifyText</td>
+	<td>css=h1.page-title.txt-color-blueDark</td>
+	<td>Manage User Type &gt; ${storedUserTypeText}</td>
+</tr>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Admin\Users &amp; Permission\Users Types\Users Types - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageLayoutRowCount</td>
+	<td>2,14</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageElementRowCount</td>
+	<td>2,16</td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},14</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},15</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageElementRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},14</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},16</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Verification for elements are disabled->-->
+<!------User Type Code Field Not editable------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=div.form-control.disabled</td>
+	<td></td>
+</tr>
+<!--<-Checking of stored data from List page to edit page->-->
+<!------User Type Code Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//div[@id='info']/div/form/div/div/div/div</td>
+	<td>${storedUserTypeCodeText}</td>
+</tr>
+<!------User Type Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='info']/div/form/div[2]/div/div/input</td>
+	<td>${storedUserTypeText}</td>
+</tr>
+<!------User Type Description Field------>
+<tr>
+	<td>verifyValue</td>
+	<td>//div[@id='info']/div/form/div[3]/div/textarea</td>
+	<td>${storedUserTypeDescriptionText}</td>
+</tr>
+<!--<-History Page->-->
+<tr>
+	<td>click</td>
+	<td>link=History</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!--<-Checking of page elements for Department Teams->-->
+<!------Refresh button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[7]</td>
+	<td>Refresh</td>
+</tr>
+<!------Transaction Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td>Transaction</td>
+</tr>
+<!------Transaction Note Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td>Transaction Note</td>
+</tr>
+<!------User Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_user_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_user_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_user_full_name</td>
+	<td>User</td>
+</tr>
+<!------Transaction Date Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td>Transaction Date</td>
+</tr>
+<!------Total Records Section------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//td[@id='jqGridPager_left']/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//td[@id='jqGridPager_left']/div/strong</td>
+	<td></td>
+</tr>
+<!------Pagination Section------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqGridPager_right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqGridPager_right</td>
+	<td></td>
+</tr>
+<!--<-History Page->-->
+<tr>
+	<td>click</td>
+	<td>link=Modules &amp; Processes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!--Checking of the redirection of the page-->
+<tr>
+	<td>verifyLocation</td>
+	<td>http://${environment}.digitalroom.com/#/edit-user-type/${storedUserTypeCodeText}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

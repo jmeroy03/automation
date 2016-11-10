@@ -1,0 +1,79 @@
+element_name_visble,element_name_location,element_label,element_location,column Name,column Location,column Attribute,Module Code,Module Name,add_element_name_visble,add_element_name_location,add_element_field_name_location,edit_element_name_visble,edit_element_name_location,edit_element_field_name_location,Process List
+8,,7,,4,,,23,,12,,5,17,,5,
+bread crumbs,css=ol.breadcrumb,Admin,css=ol.breadcrumb > li,Module Code,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[1]/div/span/span[2]@class,ALERT_NOTIFICATIONS,Alert Notifications,Module Code *,//div[3]/div/div/div/div/form/div[1]/label,//div[3]/div/div/div/div/form/div[1]/div/div/input,Module Code,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[1]/label,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[1]/div/div/div,Third Party Shipper
+User Module,css=div.widget-body-toolbar,Users & Permissions,//div[@id='ribbon']/ol/li[2],Module Name,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div,//div[3]/div/div/div/div/div[2]/div/div/div[3]/div[2]/div/table/thead/tr/th[2]/div/span/span[2]@class,ALERTS,Alert Module,Module Name *,//div[3]/div/div/div/div/form/div[2]/label,//div[3]/div/div/div/div/form/div[2]/div/div/input,Module Name *,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[2]/label,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[2]/div/div/input,Accounting
+User Module Icon,css=span.widget-icon > i.fa.fa-th-large,User Modules,//div[@id='ribbon']/ol/li[3],,,,ANNOUNCEMENTS,Announcements,Module Group *,//div[3]/div/div/div/div/form/div[3]/label,//div[3]/div/div/div/div/form/div[3]/div/div/a/span,Module Group *,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[3]/label,//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[3]/div/div/a/span,Administrator
+Manage Module label,css=h2,Manage Modules,css=h2,,,,ASSOCIATIONS,Associations,Add Module,css=h2,,Info,//ul[@id='myTab']/li/a/span[2],,Contact Center Manager
+Add button,link=Add,Add,link=Add,,,,COGS,Cost Of Goods Sold,Save,//div[3]/div/div/div/div/div/div/div/div/button,,Processes,//ul[@id='myTab']/li[2]/a/span[2],,Custom + CS Level 2
+User Types Table,id=gbox_jqGrid,,,,,,COMPANIES,Companies,Save,//div[3]/div/div/div/div/form/div[4]/div/div/button[1],,Delete,xpath=(//button[@type='button'])[5],,Custom Agent
+,,,,,,,CUSTOMER_SERVICE,Customer Service and Sales Module,Back,css=div.col-md-12 > button.btn.btn-default,,Update,xpath=(//button[@type='button'])[3],,Custom Lead
+,,,,,,,CUSTOMERS,Customers,Admin,css=ol.breadcrumb > li,,Reset,xpath=(//button[@type='button'])[4],,CS OIC 2
+,,,,,,,FILES,Files,Users & Permissions,//div[@id='ribbon']/ol/li[2],,Update,//button[@type='submit button'],,Customer Service OIC
+,,,,,,,HOLIDAYS,Holidays,User Modules,//div[@id='ribbon']/ol/li[3],,Back,xpath=(//button[@type='button'])[7],,Customer Service Representative 1
+,,,,,,,IMPOSITION,Imposition Module,,,,Reset,xpath=(//button[@type='button'])[6],,Customer Service Representative 2 - PR
+,,,,,,,INTERACTIONS,Interactions,,,,Admin,css=ol.breadcrumb > li,,CSR Team Lead
+,,,,,,,JOB_ORDERS,Job Orders,,,,Users & Permissions,//div[@id='ribbon']/ol/li[2],,CS Texas
+,,,,,,,OLYMPUS_ETL,Olympus ETL Application,,,,User Modules,//div[@id='ribbon']/ol/li[3],,Design Lead
+,,,,,,,PREPRESS,Prepress,,,,Enable All,//div[@id='info']/div/div/div/div/span/span/div/label,,Design Team TSR
+,,,,,,,REPORTS,Reports,,,,,,,Guest Researcher
+,,,,,,,SAMPLE_REQUESTS,Sample Requests,,,,,,,HR Staff
+,,,,,,,SHIPPING,Shipping Module,,,,,,,IMS Development Team
+,,,,,,,TEST,TEST,,,,,,,InContact
+,,,,,,,TICKETS,Tickets Module,,,,,,,Marketing
+,,,,,,,USERS,Users,,,,,,,Marketing 2
+,,,,,,,WEBSITES,Websites,,,,,,,Marketing (LA)
+,,,,,,,,,,,,,,,Marketing Manager
+,,,,,,,,,,,,,,,Marketing Manager 2
+,,,,,,,,,,,,,,,Marketing Manager 3
+,,,,,,,,,,,,,,,Marketing Manager (LA)
+,,,,,,,,,,,,,,,Marketing (Print Runner)
+,,,,,,,,,,,,,,,Mailing Sales and Production
+,,,,,,,,,,,,,,,MMS Development
+,,,,,,,,,,,,,,,NDF Guest
+,,,,,,,,,,,,,,,NDF Manager
+,,,,,,,,,,,,,,,None
+,,,,,,,,,,,,,,,NPO CSR
+,,,,,,,,,,,,,,,Executive and Product Team
+,,,,,,,,,,,,,,,Order Status
+,,,,,,,,,,,,,,,Production QA + Custom Module
+,,,,,,,,,,,,,,,Prepress Endorsement 1
+,,,,,,,,,,,,,,,Prepress Endorsement 2
+,,,,,,,,,,,,,,,Prepress Imposition Team
+,,,,,,,,,,,,,,,Production Manager
+,,,,,,,,,,,,,,,Production Manager 2
+,,,,,,,,,,,,,,,Prepress 1
+,,,,,,,,,,,,,,,Prepress 1 Arlington
+,,,,,,,,,,,,,,,Novice Proofer
+,,,,,,,,,,,,,,,Prepress 2 Arlington
+,,,,,,,,,,,,,,,Proofer A
+,,,,,,,,,,,,,,,Prepress 3 Arlington
+,,,,,,,,,,,,,,,Proofer B
+,,,,,,,,,,,,,,,Prepress 4 Arlington
+,,,,,,,,,,,,,,,Prepress 4 Auto
+,,,,,,,,,,,,,,,PP Downloader
+,,,,,,,,,,,,,,,Print Product Lead
+,,,,,,,,,,,,,,,Prepress Manager
+,,,,,,,,,,,,,,,Prepress Manager2
+,,,,,,,,,,,,,,,Prepress Manager 4
+,,,,,,,,,,,,,,,Prepress QA
+,,,,,,,,,,,,,,,Prepress Senior Proofer
+,,,,,,,,,,,,,,,Prepress Trainee
+,,,,,,,,,,,,,,,Prepress Team Lead
+,,,,,,,,,,,,,,,Prepress Team Lead Arlington
+,,,,,,,,,,,,,,,Prepress Temp
+,,,,,,,,,,,,,,,Pressman
+,,,,,,,,,,,,,,,Production QA
+,,,,,,,,,,,,,,,Press Room Manager
+,,,,,,,,,,,,,,,Production
+,,,,,,,,,,,,,,,PR Team Lead
+,,,,,,,,,,,,,,,Software Developer
+,,,,,,,,,,,,,,,Software Developer L2
+,,,,,,,,,,,,,,,Service Desk Team
+,,,,,,,,,,,,,,,Shipper
+,,,,,,,,,,,,,,,Shipping Manager
+,,,,,,,,,,,,,,,Shipping Manager 2
+,,,,,,,,,,,,,,,SMS Development Team
+,,,,,,,,,,,,,,,Marketing 2 (SMS)
+,,,,,,,,,,,,,,,Operations Analyst (SMS)
+,,,,,,,,,,,,,,,Strategic Planning
+,,,,,,,,,,,,,,,Software QA

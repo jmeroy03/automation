@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Problem Tickets - Getting Data from to compare for Prism Problem Ticket</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Problem Tickets - Getting Data from to compare for Prism Problem Ticket</td></tr>
+</thead><tbody>
+<!--<-Selecting Random Job Order->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr</td>
+	<td>rowCount</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$rowCount</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${_result}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${_result} + 1</td>
+	<td>z</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${z}]/td[1]/a</td>
+	<td>jobOrderId</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div[2]/div/div/div[3]/div[3]/div/table/tbody/tr[${z}]/td[1]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<!--<Access IMS>-->
+<!--//Open IMS and Search Job Order-->
+<tr>
+	<td>store</td>
+	<td>Job Orders</td>
+	<td>imsDropdown</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>SearchIMS</td>
+	<td>env=$ims_environment, ims_email=$ims_email, ims_pass=$ims_pass, imsDropdown=$imsDropdown, jobOrderID=$jobOrderId,KEY_ENTER=$KEY_ENTER</td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>//td[2]/div/div/a</td>
+	<td>driSpecs</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${driSpecs} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;var itemTotalNode = trNode.querySelectorAll('[id^=e4]');&nbsp;&nbsp;&nbsp;var itemTotal = itemTotalNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2, itemTotal);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus.sort();</td>
+	<td>imsDiffSiteSpecs</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[1]/td[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;var itemTotalNode = trNode.querySelectorAll('[id^=e4]');&nbsp;&nbsp;&nbsp;var itemTotal = itemTotalNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2, itemTotal);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus.sort();</td>
+	<td>imsSpecs</td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var jobItems = window.document.querySelectorAll('[id^=ref]'); var key = []; var jobItemStatus = []; var fileStatus; var itemPrice; for (var i = 0; i &lt; jobItems.length; i++) {&nbsp;&nbsp;&nbsp;var parent = jobItems[i].childNodes[1].innerText;&nbsp;&nbsp;&nbsp;var trNode = jobItems[i].parentNode;&nbsp;&nbsp;&nbsp;var productNode = trNode.querySelectorAll('#e1 strong');&nbsp;&nbsp;&nbsp;var product = productNode[0].innerText;&nbsp;&nbsp;&nbsp;var jobItemStatusNode = trNode.querySelectorAll('[id^=job_item_status_]');&nbsp;&nbsp;&nbsp;var fileStatusNode = trNode.querySelectorAll('[id^=job_item_file_status_]');&nbsp;&nbsp;&nbsp;var itemSpecsNode = trNode.querySelectorAll('[id^=e1]');&nbsp;&nbsp;&nbsp;var itemSpecs = itemSpecsNode[0].innerText;&nbsp;&nbsp;&nbsp;var fileApprovedNode = trNode.querySelectorAll('[id^=job_item_approved_]');&nbsp;&nbsp;&nbsp;var turnAroundNode = trNode.querySelectorAll('#e2 strong');&nbsp;&nbsp;&nbsp;var shipByNode = trNode.querySelectorAll('[id^=job_item_due_]');&nbsp;&nbsp;&nbsp;var itemsNode = trNode.querySelectorAll('[id^=div_item_order_specs_]');&nbsp;&nbsp;&nbsp;var items = itemsNode[0].innerText;&nbsp;&nbsp;&nbsp;var itemTotalNode = trNode.querySelectorAll('[id^=e4]');&nbsp;&nbsp;&nbsp;var itemTotal = itemTotalNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var items2 = items.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fileApproved = fileApprovedNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = fileApproved.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var itemSpecs2 = itemSpecs.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2.splice(- 1, 1);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var x = itemSpecs2[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var y = x.split(&quot;: &quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var z = y[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itemSpecs2[1] = z;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileStatusNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = fileStatusNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileStatus = 'No file';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (fileApproved[0] != &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileApproved = 'No Approved Date Time';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (turnAroundNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var turnAround = turnAroundNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = turnAround.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;turnAround = 'No Turn Around';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipByNode.length != 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var shipBy = shipByNode[0].innerText;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = shipBy.split('\u000A');&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (shipBy[0] === &quot;&quot;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipBy = 'Weight: 0';&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key.push(jobItems[i].getAttribute('id').substring(4,20), itemSpecs2, jobItemStatusNode[0].innerText, fileApproved, fileStatus, turnAround, shipBy, items2, itemTotal);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jobItemStatus.push(key);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key = [];&nbsp;&nbsp;&nbsp;} jobItemStatus.sort();</td>
+	<td>imsSpecs</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_sub_total</td>
+	<td>printingTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_discount</td>
+	<td>discountTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_tax</td>
+	<td>taxTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_shipping_total</td>
+	<td>shippingTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_total_amount</td>
+	<td>grandTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_payment_total</td>
+	<td>paymentTotal</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=div_balance_due</td>
+	<td>balanceDueTotal</td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

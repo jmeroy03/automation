@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com" />
+<title>Problem Tickets - Creating Random Alerts (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Problem Tickets - Creating Random Alerts (functionality)</td></tr>
+</thead><tbody>
+<!--<-Random selection of "Alerts" Field->-->
+<!--<-Selecting Random "Status" Field->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[1]/div/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[1]/div/div/div/div/div/div/ul/li</td>
+	<td>totalStatusOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalStatusOptions</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[1]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!------Storing Status Field------>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[1]/div/div/div/div/div/a</td>
+	<td>storedStatusFieldText</td>
+</tr>
+<!--<-Selecting random options "Complaint Type" field->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[2]/div/div/div/div/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li</td>
+	<td>totalComplaintTypeOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalComplaintTypeOptions</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[2]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!------Storing "Complaint Type" Field------>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[2]/div/div/div/div/div/a</td>
+	<td>storedComplaintTypeFieldText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${complaintTypeFieldText}</td>
+	<td></td>
+</tr>
+<!--<-1 week of "Client's Deadline" Date Picker->-->
+<tr>
+	<td>clickAt</td>
+	<td>id=from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[3]/div/div/div/label/div/ul/li/div/div/table/tbody/tr[5]/td[6]</td>
+	<td></td>
+</tr>
+<!------Storing "Client's Deadline" Date picker------>
+<tr>
+	<td>storeValue</td>
+	<td>id=from_date</td>
+	<td>storedClientsDeadLineDate</td>
+</tr>
+<!--<-Inserting Text in "Details" Field->-->
+<tr>
+	<td>click</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[4]/div/div/div/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[4]/div/div/div/textarea</td>
+	<td>!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.!@#$%^&amp;*()_+1234567890-=This is only a test please to do not process. Thanks.</td>
+</tr>
+<!------Storing "Details" Field------>
+<tr>
+	<td>click</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[4]/div/div/div/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[4]/div/div/div/textarea</td>
+	<td>storedDetailsFieldText</td>
+</tr>
+<!--<-Random selection of "Attention" Field->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[5]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[5]/div/div/div/div/div/div/ul/li</td>
+	<td>totalAttentionOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalAttentionOptions</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[5]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!------Storing "Attention" Field------>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[5]/div/div/div/div/div/a/span</td>
+	<td>storedAttentionFieldText</td>
+</tr>
+<!--<-Random selection of "Designated To" Field->-->
+<tr>
+	<td>clickAt</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[6]/div/div/div/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[6]/div/div/div/div/div/div/ul/li</td>
+	<td>totalDesignatedToOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalDesignatedToOptions</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[6]/div/div/div/div/div/div/ul/li[${_result}]</td>
+	<td></td>
+</tr>
+<!------Storing "Designated To" Field------>
+<tr>
+	<td>storeText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[6]/div/div/div/div/div/a/span</td>
+	<td>storedDesignatedToFieldText</td>
+</tr>
+<!--<-Random selection of Resolution Field->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[7]/div/div/div/select/option</td>
+	<td>totalResolutionOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalResolutionOptions</td>
+</tr>
+<!--<-Random selection of "Resolution" MultiSelect Box->-->
+<tr>
+	<td>storeXpathCount</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[7]/div/div/div/select/option</td>
+	<td>totalResolutionOptions</td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$totalResolutionOptions</td>
+</tr>
+<!------Storing "Resolution" MultiSelect Box------>
+<tr>
+	<td>storeText</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[7]/div/div/div/select/option[${_result}]</td>
+	<td>totalResolutionOptionsText</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[7]/div/div/div/select</td>
+	<td>${totalResolutionOptionsText}</td>
+</tr>
+<!------checking of layout for selected option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Refund&quot;</td>
+	<td>resolutionResultRefund</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultRefund} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Inserting Random Price "Refund"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Reprint option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Reprint&quot;</td>
+	<td>resolutionResultReprint</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultReprint} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Inserting Random Price "Reprinting Cost / Upgrade Turnaround"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Inserting Random Price "Reshipping Cost / Upgrade Shipping"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedReprintingCostUpgradeTurnaroundText}.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedReshippingCostUpgradeShippingText}.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Store Credit option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Store Credit&quot;</td>
+	<td>resolutionResultStoreCredit</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultStoreCredit} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Inserting Random Price "Store Credit"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedStoreCreditText}.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>var x = (${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText});</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Upgrade Shipping option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Upgrade Shipping&quot;</td>
+	<td>resolutionResultUpgradeShipping</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultUpgradeShipping} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Inserting Random Price "Reshipping Cost / Upgrade Shipping"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedReshippingCostUpgradeShippingText}.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Upgrade Turnaround option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Upgrade Turnaround&quot;</td>
+	<td>resolutionResultUpgradeTurnaround</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultUpgradeTurnaround} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Inserting Random Price "Reshipping Cost / Upgrade Shipping"->-->
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_cash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>${_result}</td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedReprintingCostUpgradeTurnaroundText}.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Settled (No Loss) option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Settled (No Loss)&quot;</td>
+	<td>resolutionResultSettledNoLoss</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultSettledNoLoss} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Discount option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Discount&quot;</td>
+	<td>resolutionResultDiscount</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultDiscount} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>storeValue</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>$${storedDiscountForErrorText}.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Checking for Settled (No Loss) option------>
+<tr>
+	<td>storeEval</td>
+	<td>$totalResolutionOptionsText == &quot;Free Design Service&quot;</td>
+	<td>resolutionResultFreeDesignService</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${resolutionResultFreeDesignService} == true</td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[8]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[9]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[10]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[11]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/div/div/div/form/div[1]/div[1]/div/fieldset[2]/div[12]/div/div/div/input</td>
+	<td></td>
+</tr>
+<!--<-Storing Price Fields->-->
+<!------Reprinting Cost / Upgrade Turnaround ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReprintingCostUpgradeTurnaroundText</td>
+</tr>
+<!------ Reshipping Cost / Upgrade Shipping------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedReshippingCostUpgradeShippingText</td>
+</tr>
+<!------Refund * ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedRefundText</td>
+</tr>
+<!------ Store Credit------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedStoreCreditText</td>
+</tr>
+<!------Discount for Error ------>
+<tr>
+	<td>store</td>
+	<td>0.00</td>
+	<td>storedDiscountForErrorText</td>
+</tr>
+<!--<-Computing for the total of amount lost->-->
+<tr>
+	<td>storeEval</td>
+	<td>(${storedReprintingCostUpgradeTurnaroundText}) + (${storedReshippingCostUpgradeShippingText}) + (${storedRefundText}) + (${storedStoreCreditText}) + (${storedDiscountForErrorText})</td>
+	<td>computedTotalAmountLost</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='addTicketForm']/div/div/div/fieldset[2]/div[13]/div/div/div/span</td>
+	<td>$${computedTotalAmountLost}.00</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

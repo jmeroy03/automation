@@ -1,0 +1,19 @@
+element_name_visble,element_location,element_label_name,element_label_location
+19,,14,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Accounts Receivables report Form,//section[@id='widget-grid']/div/article,Accounting,//div[@id='ribbon']/ol/li[2]
+Accounts Receivables report icon,css=span.widget-icon > i.fa.fa-table,Receivables,//div[@id='ribbon']/ol/li[3]
+Accounts Receivables Report label,css=h2,Accounts Receivables,//div[@id='ribbon']/ol/li[4]
+As of Date - to date section,css=section.col.col-4,Accounts Receivable Report,css=h2
+As of Date label,css=label.label,As of Date,css=label.label
+As of Date datepicker,id=as_of_date,Company,//div[@id='filter']/form/fieldset/div/section[2]/label
+Company section,//div[@id='filter']/form/fieldset/div/section[2],[Clear],link=[Clear]
+Company label,//div[@id='filter']/form/fieldset/div/section[2]/label,(No Selection = All),css=label.select.select-multiple > em
+Company Multiselect box,id=company_code,Website,//div[@id='filter']/form/fieldset/div/section[3]/label
+clear link,link=[Clear],[Clear],"xpath=(//a[contains(text(),'[Clear]')])[2]"
+(No Selection = All),css=label.select.select-multiple > em,(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em
+Website section,//div[@id='filter']/form/fieldset/div/section[3],,
+Website label,//div[@id='filter']/form/fieldset/div/section[3]/label,,
+Website Multiselect box,id=website_code,,
+clear link,"xpath=(//a[contains(text(),'[Clear]')])[2]",,
+(No Selection = All),//div[@id='filter']/form/fieldset/div/section[3]/label[2]/em,,

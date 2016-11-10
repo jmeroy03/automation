@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>File Issues - Edit Page (Layout)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">File Issues - Edit Page (Layout)</td></tr>
+</thead><tbody>
+<!--<-Connecting excel sheet to Selenium->-->
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Sanity Test Scripts\Admin\Users &amp; Permission\Users\Users - List - (layout).csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageLayoutRowCount</td>
+	<td>2,12</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>editPageElementRowCount</td>
+	<td>2,14</td>
+</tr>
+<!--<-Checking of element label if it has a correct->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageLayoutRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_name</td>
+	<td>${x},12</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_label_location</td>
+	<td>${x},13</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_label_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${element_label_location}</td>
+	<td>${element_label_name}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_label_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Checking of element if its visible & element is present in the page->-->
+<tr>
+	<td>for</td>
+	<td>$x=3; $x&lt;=${editPageElementRowCount}; $x++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_name</td>
+	<td>${x},12</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>element_location</td>
+	<td>${x},14</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${element_name}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${element_location}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+<!--<-Verification for elements that are disabled in Users modules->-->
+<!------User ID Field Not editable------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>css=div.form-control.disabled</td>
+	<td></td>
+</tr>
+<!------Username Field Editable------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//form[@id='editUserForm']/div[2]/div/div/div</td>
+	<td></td>
+</tr>
+<!------Badge Id Field Editable------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//form[@id='editUserForm']/div[3]/div/div/div</td>
+	<td></td>
+</tr>
+<!------Update Button Header is disabled------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/div/div/div/button[1]</td>
+	<td></td>
+</tr>
+<!------Update Button Footer is disabled------>
+<tr>
+	<td>verifyNotEditable</td>
+	<td>//div[3]/div/section/div[2]/article/div/div/div/div[1]/div/form/div[16]/div/div/button[1]</td>
+	<td></td>
+</tr>
+<!--<-Checking of stored data from List page to edit page->-->
+<!------User Id Field------>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.form-control.disabled</td>
+	<td>${storedUserIdCellText}</td>
+</tr>
+<!------FIrst & Last Name Field------>
+<tr>
+	<td>storeValue</td>
+	<td>name=firstname</td>
+	<td>storedFnameText</td>
+</tr>
+<tr>
+	<td>storeValue</td>
+	<td>name=lastname</td>
+	<td>storedLnameText</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${storedFnameText} ${storedLnameText}</td>
+	<td>storedCompleteNameText</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>$storedCompleteNameText == $storedUserNameCellText</td>
+	<td>nameResult</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${nameResult} == true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>&quot;The Stored Name from List Page tallies with the combined First and Last name of the randomly selected User&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>else</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>LOG.error('The Name from Edit page ${storedCompleteNameText} doesnt Tally with the stored text from List page ${storedUserNameCellText}')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>alert('The Name from Edit page ${storedCompleteNameText} doesnt Tally with the stored text from List page ${storedUserNameCellText}');</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+<!------Location Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editUserForm']/div[14]/div/div/a/span</td>
+	<td>${storedLocationCellText}</td>
+</tr>
+<!------User Type Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editUserForm']/div[10]/div/div/a/span</td>
+	<td>${storedUserTypeCellText}</td>
+</tr>
+<!------Department Field------>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='editUserForm']/div[8]/div/div/a/span</td>
+	<td>${storedUserDepartmentCellText}</td>
+</tr>
+<!------Team Field------>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.chosen-single.chosen-default &gt; span</td>
+	<td>${convertedStoredTeam}</td>
+</tr>
+<!------Status Field------>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[5]</td>
+	<td>${convertedStoredStatus}</td>
+</tr>
+<!--<-Redirecting to History Page->-->
+<tr>
+	<td>click</td>
+	<td>//ul[@id='myTab']/li[2]/a/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>8000</td>
+	<td></td>
+</tr>
+<!--<-Checking of page elements for History Tab->-->
+<!------Refresh button------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>xpath=(//button[@type='button'])[8]</td>
+	<td>Refresh</td>
+</tr>
+<!------Transaction Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction</td>
+	<td>Transaction</td>
+</tr>
+<!------Transaction Note Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction_notes</td>
+	<td>Transaction Note</td>
+</tr>
+<!------Transaction By Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_full_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_full_name</td>
+	<td>Transaction By</td>
+</tr>
+<!------Transaction Date Column------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=jqgh_jqGrid_transaction_datetime</td>
+	<td>Transaction Date</td>
+</tr>
+<!------Total Status Record Label------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//td[@id='jqGridPager_left']/div/strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>//td[@id='jqGridPager_left']/div/strong</td>
+	<td></td>
+</tr>
+<!------Pagination Section------>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=jqGridPager_right</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>id=jqGridPager_right</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

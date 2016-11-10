@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/#/dashboard" />
+<title>Search panel</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Search panel</td></tr>
+</thead><tbody>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://C:\Automation\Prism\Data\Header\search_panel.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>KEY_ENTER</td>
+	<td></td>
+</tr>
+<!--Storing "enter" key as variable-->
+<!--Selecting and testing Search panel-->
+<tr>
+	<td>for</td>
+	<td>$row=3; $row&lt;=9; $row++</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>search_options</td>
+	<td>${row},1</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>user_input</td>
+	<td>${row},2</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>page_url</td>
+	<td>${row},3</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>layout_id</td>
+	<td>${row},4</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>id_element</td>
+	<td>${row},5</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${search_options}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=div &gt; b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input[type=&quot;text&quot;]</td>
+	<td>${search_options}${KEY_ENTER}</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.chosen-single &gt; span</td>
+	<td>${search_options}</td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>css=a.chosen-single &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=search_box</td>
+	<td>${user_input}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.input-group-btn &gt; button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementNotPresent</td>
+	<td>//div[@id='content']/div/div/div/div/div/h1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotLocation</td>
+	<td>http://qaprism.digitalroom.com/#/404</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyLocation</td>
+	<td>${page_url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>${id_element}</td>
+	<td>${layout_id}</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>${id_element}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyVisible</td>
+	<td>${id_element}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endFor</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

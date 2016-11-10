@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qaprism.digitalroom.com/" />
+<title>Customers - Edit page - Contact Details Profile editing fields (functionality)</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Customers - Edit page - Contact Details Profile editing fields (functionality)</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>//div[3]/div/div/div[2]/div/div/div/div[1]/div[1]/ng-include[2]/div/form/fieldset[1]/h3/a[3]/i</td>
+	<td></td>
+</tr>
+<!------Checking of Origin Company if the it's Dot Sites, Chan Printing or 48 Hour Print------>
+<tr>
+	<td>storeEval</td>
+	<td>($stored_origin_company == &quot;Dot Sites&quot;) || $stored_origin_company == &quot;Chan Printing&quot; || $stored_origin_company == &quot;48 Hour Print&quot;</td>
+	<td>site_exception</td>
+</tr>
+<tr>
+	<td>if</td>
+	<td>${site_exception} == false</td>
+	<td></td>
+</tr>
+<!--<-Editing Random selection of Origin Website dropdown->-->
+<tr>
+	<td>clickAt</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[2]/div/div/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>var dd = window.document.querySelectorAll('.chosen-container-active .active-result').length;dd;</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Max available count: ${count}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>call</td>
+	<td>random_integer</td>
+	<td>max_Int=$count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>(${_result}) + 1</td>
+	<td>total_count</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>//div/div/div/ul/li[${total_count}]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='profile']/div/ng-include[2]/div/form/fieldset[2]/div[2]/div/div/a/span</td>
+	<td>stored_origin_website</td>
+</tr>
+<tr>
+	<td>endIf</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

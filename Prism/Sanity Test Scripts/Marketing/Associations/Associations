@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../../../Global Functions/Re-usable Functions.html">Re-usable Functions</a></td></tr>
+<tr><td><a href="Associations - Redirection to page.html">Associations - Redirection to page</a></td></tr>
+<tr><td><a href="Associations - List Page (Layout).html">Associations - List Page (Layout)</a></td></tr>
+<tr><td><a href="Associations - List Page (Functionality).html">Associations - List Page (Functionality)</a></td></tr>
+<tr><td><a href="Associations - Add Page (Layout).html">Associations - Add Page (Layout)</a></td></tr>
+<tr><td><a href="Associations - Add Page (Functionality).html">Associations - Add Page (Functionality)</a></td></tr>
+<tr><td><a href="Associations - Edit Page (Layout).html">Associations - Edit Page (Layout)</a></td></tr>
+<tr><td><a href="Associations - Edit Page (Functionality).html">Associations - Edit Page (Functionality)</a></td></tr>
+<tr><td><a href="Associations - Generate Spread Sheet Report (functionality).html">Associations - Generate Spread Sheet Report (functionality)</a></td></tr>
+</tbody></table>
+</body>
+</html>

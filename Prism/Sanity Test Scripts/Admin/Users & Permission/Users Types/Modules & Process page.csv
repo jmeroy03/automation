@@ -1,0 +1,24 @@
+Header Dropdown name,Reports,Alert Module,Customers, Imposition Module ,Interactions,Job Orders,Sample Request,Tickets Module,Associations,Alert Notifications,Announcements,Cost of Gold,Customer Service and Sales Module,Files,Olympus ETL Application ,TEST,Users,Companies,Holidays,Shipping Module,Websites,Prepress
+,,,,,,,,,,,,,,,,,,,,,,
+Reports,View Accounting Reports,Add an Alert,Add Customer,Add Imposition,Add Interaction,Batch Item Assignment,Delete sample request,Close Ticket,Delete Association,Delete Alert Notification,Delete Announcement,Add COGS Factors,File Escalation TV Report Permission,Switch File Location,Process code for Olympus ETL Application,test,Delete User,Delete Company,Delete Holiday,Add/Delete Facility Override,Delete Website,View Prepress Break Period Widget
+Alert Module,View CS and Sales Reports,Delete an Alert,Delete Customer,View Imposition Dashboard,Escalate Interaction,Item Assignment,View sample request history,Update Ticket Manager Section,Add and Edit Association,Add and Edit Alert Notification,Add and Edit Announcement,Update COGS Factors,,,,,Add Department,Add/Edit Company,Add and Edit Holiday,Add and Edit Shipping LFP,Add/Edit Website,Add and Edit File Issue Categories
+Customers,View Global Reports,Permission for alert department team,Edit Customer Standard Fields,Update Imposition,,Update job item due date,Mark sample request as sent,Reopen Ticket,View Association,View Alert Notification,View Announcement,View COGS Factors,,,,,Delete Department,View Company,View Holiday,Add and Edit Shipping Substrate,View Website,Prepress TV Report
+Imposition Module,View Marketing Reports,Edit an Alert,Edit Customer Assigned Sales Rep/Team,View Imposition,,Add Job Order,Add/Edit sample request,Add and Edit Ticket,,,,Add COGS Values,,,,,Edit Department,,,,,Proofing Categories and Order Value Ranges Maintenance
+Interactions,View Shipping Reports,View Alert,Edit Customer Global Hold Out Field,,,Delete Job Order,View sample requests,View Tickets,,,,Delete COGS Values,,,,,Add and Edit User,,,,,Auto Assignment Control Module
+Job Orders,,,Edit Customer NPO Fields,,,Add and Delete Job Order FTP,,,,,,Update COGS Values,,,,,View User,,,,,View Prepress Department Filter
+Sample Requests,,,Edit Customer PR Pro and Pricing Tier Fields,,,Add Job Item,,,,,,View COGS Values,,,,,,,,,,View File Queue Widget
+Tickets Module,,,Edit Customer Term Fields,,,Delete Job Item,,,,,,,,,,,,,,,,Add and Edit File Fix-ups
+Associations,,,Edit Customer Trade and Resale Fields,,,Update Job Item Status,,,,,,,,,,,,,,,,Add and Edit File Issues
+Alert Notifications,,,View Customer,,,View Job Order,,,,,,,,,,,,,,,,Permission to use Upload Widget Proofing Tools
+Announcements,,,,,,,,,,,,,,,,,,,,,,Prepress TV Report
+Cost Of Goods Sold,,,,,,,,,,,,,,,,,,,,,,View Proofer Dashboard
+Customer Service and Sales Module,,,,,,,,,,,,,,,,,,,,,,View Proofer Team Status
+Files,,,,,,,,,,,,,,,,,,,,,,Remove proofer from available proofers
+Olympus ETL Application,,,,,,,,,,,,,,,,,,,,,,Cancel twist process for job items
+TEST,,,,,,,,,,,,,,,,,,,,,,Permission to Resubmit Twist Files
+Users,,,,,,,,,,,,,,,,,,,,,,Permission for Twist File Widget
+Companies,,,,,,,,,,,,,,,,,,,,,,
+Holidays,,,,,,,,,,,,,,,,,,,,,,
+Shipping Module,,,,,,,,,,,,,,,,,,,,,,
+Websites,,,,,,,,,,,,,,,,,,,,,,
+Prepress,,,,,,,,,,,,,,,,,,,,,,

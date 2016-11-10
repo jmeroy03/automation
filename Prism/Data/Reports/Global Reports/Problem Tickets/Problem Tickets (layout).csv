@@ -1,0 +1,47 @@
+element_name_visble,element_location,element_label_name,element_label_location
+47,,24,
+bread crumbs,css=ol.breadcrumb,Reports,css=ol.breadcrumb > li
+Problem Ticket report Form,//section[@id='widget-grid']/div/article,Global Reports,//div[@id='ribbon']/ol/li[2]
+Problem Ticket report icon,css=span.widget-icon > i.fa.fa-table,Problem Tickets,//div[@id='ribbon']/ol/li[3]
+Problem Ticket Report label,css=h2,Problem Tickets Report,css=h2
+"From date, Complaint Type, Resolution, Creating team, Attention and Only PTs for NPOs Section",css=section.col.col-4,From Date,css=label.label
+"To Date, Origin of issue, Status, Opened By, Designated To and Only PTs for items qty=250 section",//div[@id='filter']/form/fieldset/div/section[2],To Date,//div[@id='filter']/form/fieldset/div/section[2]/label
+"Date Condition, Underlying Cause, Creating Department, Closed by, Website and Company section",//div[@id='filter']/form/fieldset/div/section[3],Date Condition,//div[@id='filter']/form/fieldset/div/section[3]/label
+From date label,css=label.label,Complaint Type,//div[@id='filter']/form/fieldset/div/section/label[3]
+From date date picker,id=from_date,Origin of Issue,//div[@id='filter']/form/fieldset/div/section[2]/label[3]
+To date label,//div[@id='filter']/form/fieldset/div/section[2]/label,Underlying Cause,//div[@id='filter']/form/fieldset/div/section[3]/label[3]
+To date date picker,id=to_date,Resolution,//div[@id='filter']/form/fieldset/div/section/label[5]
+Date condition label,//div[@id='filter']/form/fieldset/div/section[3]/label,Status,//div[@id='filter']/form/fieldset/div/section[2]/label[5]
+Date Condition dropdown,link=Opened,Creating Department,//div[@id='filter']/form/fieldset/div/section[3]/label[5]
+Complaint Type label,//div[@id='filter']/form/fieldset/div/section/label[3],Creating Team,//div[@id='filter']/form/fieldset/div/section/label[7]
+Complaint Type dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/a,Opened By,//div[@id='filter']/form/fieldset/div/section[2]/label[7]
+Origin of issue label,//div[@id='filter']/form/fieldset/div/section[2]/label[3],Closed by,//div[@id='filter']/form/fieldset/div/section[3]/label[7]
+Origin of issue Dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[4]/div/a,Attention,//div[@id='filter']/form/fieldset/div/section/label[9]
+Underlying Cause label,//div[@id='filter']/form/fieldset/div/section[3]/label[3],Designated To,//div[@id='filter']/form/fieldset/div/section[2]/label[9]
+Underlying Cause dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[4]/div/a,Website,//div[@id='filter']/form/fieldset/div/section[3]/label[9]
+Resolution label,//div[@id='filter']/form/fieldset/div/section/label[5],Only PTs for NPOs.,css=label > span > em
+Resolution dropdown,//div[@id='filter']/form/fieldset/div/section/label[6]/div/a,Only PTs for items qty = 250,//div[@id='filter']/form/fieldset/div/section[2]/div/label/span/em
+Status label,//div[@id='filter']/form/fieldset/div/section[2]/label[5],Company,//div[@id='filter']/form/fieldset/div/section[3]/label[11]
+Status dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[6]/div/a,,
+Creating Department label,//div[@id='filter']/form/fieldset/div/section[3]/label[5],,
+Creating Department dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[6]/div/a,,
+creating team label,//div[@id='filter']/form/fieldset/div/section/label[7],,
+creating dropdown,//div[@id='filter']/form/fieldset/div/section/label[8]/div/a,,
+opened by label,//div[@id='filter']/form/fieldset/div/section[2]/label[7],,
+opened by dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[8]/div/a,,
+Closed by label,//div[@id='filter']/form/fieldset/div/section[3]/label[7],,
+Closed by dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[8]/div/a,,
+Attention label,//div[@id='filter']/form/fieldset/div/section/label[9],,
+Attention dropdown,//div[@id='filter']/form/fieldset/div/section/label[10]/div/a,,
+Designed To label,//div[@id='filter']/form/fieldset/div/section[2]/label[9],,
+Designed To dropdown,//div[@id='filter']/form/fieldset/div/section[2]/label[10]/div/a,,
+Website label,//div[@id='filter']/form/fieldset/div/section[3]/label[9],,
+Website dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[10]/div/a,,
+Only PTs for NPOs Section,css=label > span,,
+Only PTs for NPOs label,css=label > span > em,,
+Only PTs for NPOs checkbox,css=div.checkbox.exclude-checkbox > label,,
+Only PTs for items qty = 250 Section,//div[@id='filter']/form/fieldset/div/section[3]/label[11],,
+Only PTs for items qty = 250 label,//div[@id='filter']/form/fieldset/div/section[2]/div/label/span/em,,
+Only PTs for items qty = 250 checkbox,//div[@id='filter']/form/fieldset/div/section[2]/div/label/span,,
+Company label,//div[@id='filter']/form/fieldset/div/section[2]/div/label,,
+Company dropdown,//div[@id='filter']/form/fieldset/div/section[3]/label[12]/div/a,,

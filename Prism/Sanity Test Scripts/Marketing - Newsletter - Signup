@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="../Global Functions/Re-usable Functions.html">Re-usable Functions</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - Redirection to page.html">Signup - Redirection to page</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - filters UI (layout).html">Signup - filters UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - filter selection(functionality).html">Signup - filter selection(functionality)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - filter selection (exclude functionality).html">Signup - filter selection (exclude functionality)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - html report UI (layout).html">Signup - html report UI (layout)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - column sorting (Functionality).html">Signup - column sorting (Functionality)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - clear selected filter (functionality).html">Signup - clear selected filter (functionality)</a></td></tr>
+<tr><td><a href="Reports/Marketing/Newsletter/Signup/Signup - Generate Spread Sheet Report (functionality).html">Signup - Generate Spread Sheet Report (functionality)</a></td></tr>
+</tbody></table>
+</body>
+</html>
